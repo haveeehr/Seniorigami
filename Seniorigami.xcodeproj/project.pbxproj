@@ -13,6 +13,13 @@
 		3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CC5261C2EEE009FA130 /* Main.storyboard */; };
 		3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CC8261C2EEF009FA130 /* Assets.xcassets */; };
 		3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CCA261C2EEF009FA130 /* LaunchScreen.storyboard */; };
+		3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CD5261C31EE009FA130 /* PlayNow.storyboard */; };
+		3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CD8261C320C009FA130 /* Favourite.storyboard */; };
+		3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CDD261C322E009FA130 /* Gallery.storyboard */; };
+		3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CE0261C3294009FA130 /* GalleryViewController.swift */; };
+		3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEC261C3534009FA130 /* PlayNowViewController.swift */; };
+		3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEF261C356A009FA130 /* FavouriteViewController.swift */; };
+		3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CF8261C38EB009FA130 /* StepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		3B830CC8261C2EEF009FA130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B830CCB261C2EEF009FA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B830CCD261C2EEF009FA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B830CD5261C31EE009FA130 /* PlayNow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayNow.storyboard; sourceTree = "<group>"; };
+		3B830CD9261C320C009FA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Seniorigami/Base.lproj/Favourite.storyboard; sourceTree = "<group>"; };
+		3B830CDD261C322E009FA130 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		3B830CE0261C3294009FA130 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3B830CEC261C3534009FA130 /* PlayNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNowViewController.swift; sourceTree = "<group>"; };
+		3B830CEF261C356A009FA130 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		3B830CF8261C38EB009FA130 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		3B830CBE261C2EEE009FA130 /* Seniorigami */ = {
 			isa = PBXGroup;
 			children = (
+				3B830CF2261C35E8009FA130 /* Default */,
+				3B830CE6261C34A0009FA130 /* Play Now */,
+				3B830CE5261C3491009FA130 /* Favourite */,
+				3B830CE4261C341E009FA130 /* Gallery */,
+			);
+			path = Seniorigami;
+			sourceTree = "<group>";
+		};
+		3B830CE4261C341E009FA130 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				3B830CE0261C3294009FA130 /* GalleryViewController.swift */,
+				3B830CDD261C322E009FA130 /* Gallery.storyboard */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		3B830CE5261C3491009FA130 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				3B830CD8261C320C009FA130 /* Favourite.storyboard */,
+				3B830CEF261C356A009FA130 /* FavouriteViewController.swift */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		3B830CE6261C34A0009FA130 /* Play Now */ = {
+			isa = PBXGroup;
+			children = (
+				3B830CD5261C31EE009FA130 /* PlayNow.storyboard */,
+				3B830CEC261C3534009FA130 /* PlayNowViewController.swift */,
+				3B830CF8261C38EB009FA130 /* StepsViewController.swift */,
+			);
+			path = "Play Now";
+			sourceTree = "<group>";
+		};
+		3B830CF2261C35E8009FA130 /* Default */ = {
+			isa = PBXGroup;
+			children = (
 				3B830CBF261C2EEE009FA130 /* AppDelegate.swift */,
-				3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */,
 				3B830CC3261C2EEE009FA130 /* ViewController.swift */,
+				3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */,
 				3B830CC5261C2EEE009FA130 /* Main.storyboard */,
 				3B830CC8261C2EEF009FA130 /* Assets.xcassets */,
 				3B830CCA261C2EEF009FA130 /* LaunchScreen.storyboard */,
 				3B830CCD261C2EEF009FA130 /* Info.plist */,
 			);
-			path = Seniorigami;
+			path = Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
+				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
+				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
+				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
+				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
+				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
+				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
+				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +220,14 @@
 				3B830CCB261C2EEF009FA130 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B830CD8261C320C009FA130 /* Favourite.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B830CD9261C320C009FA130 /* Base */,
+			);
+			name = Favourite.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3RR7Q3QN2;
-				INFOPLIST_FILE = Seniorigami/Info.plist;
+				INFOPLIST_FILE = Seniorigami/Default/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +375,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3RR7Q3QN2;
-				INFOPLIST_FILE = Seniorigami/Info.plist;
+				INFOPLIST_FILE = Seniorigami/Default/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
