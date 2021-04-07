@@ -35,36 +35,6 @@
             <point key="canvasLocation" x="3436.2318840579715" y="27.455357142857142"/>
         </scene>
         <!--Difficulty-->
-        <scene sceneID="0VY-jg-Xvr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Difficulty" id="b7j-Ng-XpU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="AgD-fb-RD3"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lUK-HN-hjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3078" y="468"/>
-        </scene>
-        <!--Congratulations-->
-        <scene sceneID="oDG-Rb-eoD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Congratulations" id="IPX-Js-aQK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="8AB-mH-D42"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hBe-FR-x7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3078" y="638"/>
-        </scene>
-        <!--StepByStep-->
-        <scene sceneID="gwZ-9x-0pl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StepByStep" id="OdU-Lh-iYI" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Kdb-mS-1v2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dFR-eC-iiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3078" y="563"/>
-        </scene>
-        <!--Difficulty-->
         <scene sceneID="4lj-Rt-6a6">
             <objects>
                 <viewControllerPlaceholder storyboardName="Difficulty" id="Hp1-BM-Oxk" sceneMemberID="viewController">
@@ -88,9 +58,6 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="bC4-Dz-30B" kind="relationship" relationship="rootViewController" id="Ei0-j4-mGy"/>
-                        <segue destination="b7j-Ng-XpU" kind="show" id="iES-tX-fd3"/>
-                        <segue destination="OdU-Lh-iYI" kind="show" id="KW3-9E-ABy"/>
-                        <segue destination="IPX-Js-aQK" kind="show" id="Fb7-6O-f91"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sS-BC-v6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
