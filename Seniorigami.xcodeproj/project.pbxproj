@@ -20,6 +20,9 @@
 		3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEC261C3534009FA130 /* PlayNowViewController.swift */; };
 		3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEF261C356A009FA130 /* FavouriteViewController.swift */; };
 		3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CF8261C38EB009FA130 /* StepsViewController.swift */; };
+		3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */; };
+		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
+		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		3B830CEC261C3534009FA130 /* PlayNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNowViewController.swift; sourceTree = "<group>"; };
 		3B830CEF261C356A009FA130 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		3B830CF8261C38EB009FA130 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Difficulty.storyboard; sourceTree = "<group>"; };
+		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
+		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		3B830CBE261C2EEE009FA130 /* Seniorigami */ = {
 			isa = PBXGroup;
 			children = (
+				3BC0DF07261CA92800AF0630 /* Congratulations */,
+				3BC0DF02261CA84200AF0630 /* Origami-Steps */,
+				3BC0DEFC261CA72100AF0630 /* Selection */,
 				3B830CF2261C35E8009FA130 /* Default */,
 				3B830CE6261C34A0009FA130 /* Play Now */,
 				3B830CE5261C3491009FA130 /* Favourite */,
@@ -101,7 +110,6 @@
 			children = (
 				3B830CD5261C31EE009FA130 /* PlayNow.storyboard */,
 				3B830CEC261C3534009FA130 /* PlayNowViewController.swift */,
-				3B830CF8261C38EB009FA130 /* StepsViewController.swift */,
 			);
 			path = "Play Now";
 			sourceTree = "<group>";
@@ -118,6 +126,31 @@
 				3B830CCD261C2EEF009FA130 /* Info.plist */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		3BC0DEFC261CA72100AF0630 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
+		3BC0DF02261CA84200AF0630 /* Origami-Steps */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */,
+				3B830CF8261C38EB009FA130 /* StepsViewController.swift */,
+			);
+			path = "Origami-Steps";
+			sourceTree = "<group>";
+		};
+		3BC0DF07261CA92800AF0630 /* Congratulations */ = {
+			isa = PBXGroup;
+			children = (
+				3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */,
+			);
+			path = Congratulations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,11 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
+				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
+				3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */,
 				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
+				3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JavierFransiscus.Seniorigami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JavierFransiscus.Seniorigami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

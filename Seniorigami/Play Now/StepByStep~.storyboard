@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="Hp1-BM-Oxk" kind="show" id="wfB-RJ-Tbh"/>
+                                    <segue destination="sdA-1D-wm1" kind="show" id="6Ic-57-l0X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,45 +34,55 @@
             </objects>
             <point key="canvasLocation" x="3436.2318840579715" y="27.455357142857142"/>
         </scene>
-        <!--Difficulty-->
-        <scene sceneID="0VY-jg-Xvr">
+        <!--Steps-->
+        <scene sceneID="adT-lO-E5H">
             <objects>
-                <viewControllerPlaceholder storyboardName="Difficulty" id="b7j-Ng-XpU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="AgD-fb-RD3"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lUK-HN-hjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="UIViewController-uu6-IL-Hj7" id="uu6-IL-Hj7" customClass="StepsViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPW-Vv-qQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7c8-Ee-o34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Steps" largeTitleDisplayMode="never" id="1ym-C5-NX5">
+                        <barButtonItem key="rightBarButtonItem" title="Finish" id="ghq-W8-8iW">
+                            <connections>
+                                <segue destination="h6z-qu-eDh" kind="show" id="X7t-Be-AoK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="stepsNavigationBar" destination="1ym-C5-NX5" id="Jle-IL-OvZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSt-sT-f6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="468"/>
+            <point key="canvasLocation" x="5143" y="27"/>
         </scene>
         <!--Congratulations-->
-        <scene sceneID="oDG-Rb-eoD">
+        <scene sceneID="VuA-Zz-g8Q">
             <objects>
-                <viewControllerPlaceholder storyboardName="Congratulations" id="IPX-Js-aQK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="8AB-mH-D42"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hBe-FR-x7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="h6z-qu-eDh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ceB-Vh-3r8">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYQ-nR-7oI">
+                                <rect key="frame" x="180" y="528" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qKK-ts-060"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Congratulations" id="2ii-L6-FrC">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ywN-PY-8O2"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUC-DO-yrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3078" y="638"/>
-        </scene>
-        <!--StepByStep-->
-        <scene sceneID="gwZ-9x-0pl">
-            <objects>
-                <viewControllerPlaceholder storyboardName="StepByStep" id="OdU-Lh-iYI" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Kdb-mS-1v2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dFR-eC-iiy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3078" y="563"/>
-        </scene>
-        <!--Difficulty-->
-        <scene sceneID="4lj-Rt-6a6">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Difficulty" id="Hp1-BM-Oxk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RVi-Pl-IuT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XpD-6e-TR8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4268" y="27"/>
+            <point key="canvasLocation" x="6014" y="27"/>
         </scene>
         <!--Play Now-->
         <scene sceneID="gdJ-3g-G2X">
@@ -88,22 +98,21 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="bC4-Dz-30B" kind="relationship" relationship="rootViewController" id="Ei0-j4-mGy"/>
-                        <segue destination="b7j-Ng-XpU" kind="show" id="iES-tX-fd3"/>
-                        <segue destination="OdU-Lh-iYI" kind="show" id="KW3-9E-ABy"/>
-                        <segue destination="IPX-Js-aQK" kind="show" id="Fb7-6O-f91"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sS-BC-v6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2527.536231884058" y="27.455357142857142"/>
         </scene>
-        <!--UIViewController-h6z-qu-eDh-->
-        <scene sceneID="0ce-Lj-pOK">
+        <!--Difficulty-->
+        <scene sceneID="ZEP-3k-VcH">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-h6z-qu-eDh" storyboardName="Congratulations" referencedIdentifier="UIViewController-h6z-qu-eDh" id="SWs-sd-eo5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xko-lb-836" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Difficulty" id="sdA-1D-wm1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eLp-lk-6iQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pj-hE-gHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6014" y="27"/>
+            <point key="canvasLocation" x="4280" y="27"/>
         </scene>
     </scenes>
     <resources>
