@@ -27,6 +27,13 @@
 		514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */; };
 		514674CE261F41870042A13A /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */; };
 		514674D1261F456D0042A13A /* Origamis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674D0261F456D0042A13A /* Origamis.swift */; };
+		78758CA2261EB922005BFC36 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA1261EB922005BFC36 /* Database.swift */; };
+		78758CA6261EB92F005BFC36 /* Origami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA5261EB92F005BFC36 /* Origami.swift */; };
+		78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA8261EB94F005BFC36 /* Favourite.swift */; };
+		78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAB261EB95E005BFC36 /* Gallery.swift */; };
+		78758CAF261EB96A005BFC36 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAE261EB96A005BFC36 /* Log.swift */; };
+		78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CB1261EC4CD005BFC36 /* Instruction.swift */; };
+		78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CBC261EEF5C005BFC36 /* Mode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
 		514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
 		514674D0261F456D0042A13A /* Origamis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origamis.swift; sourceTree = "<group>"; };
+		78758CA1261EB922005BFC36 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		78758CA5261EB92F005BFC36 /* Origami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origami.swift; sourceTree = "<group>"; };
+		78758CA8261EB94F005BFC36 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
+		78758CAB261EB95E005BFC36 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		78758CAE261EB96A005BFC36 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		78758CB1261EC4CD005BFC36 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
+		78758CBC261EEF5C005BFC36 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,7 @@
 		3B830CBE261C2EEE009FA130 /* Seniorigami */ = {
 			isa = PBXGroup;
 			children = (
+				78758CA0261EB910005BFC36 /* Models */,
 				3BC0DF07261CA92800AF0630 /* Congratulations */,
 				3BC0DF02261CA84200AF0630 /* Origami-Steps */,
 				3BC0DEFC261CA72100AF0630 /* Selection */,
@@ -177,6 +192,16 @@
 			isa = PBXGroup;
 			children = (
 				514674D0261F456D0042A13A /* Origamis.swift */,
+		78758CA0261EB910005BFC36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78758CA1261EB922005BFC36 /* Database.swift */,
+				78758CA5261EB92F005BFC36 /* Origami.swift */,
+				78758CA8261EB94F005BFC36 /* Favourite.swift */,
+				78758CAB261EB95E005BFC36 /* Gallery.swift */,
+				78758CAE261EB96A005BFC36 /* Log.swift */,
+				78758CB1261EC4CD005BFC36 /* Instruction.swift */,
+				78758CBC261EEF5C005BFC36 /* Mode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,15 +283,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78758CA6261EB92F005BFC36 /* Origami.swift in Sources */,
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
 				514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */,
+				78758CAF261EB96A005BFC36 /* Log.swift in Sources */,
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
 				514674D1261F456D0042A13A /* Origamis.swift in Sources */,
 				514674C9261EC56B0042A13A /* OrigamisViewController.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
+				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
+				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
+				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
+				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
+				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
