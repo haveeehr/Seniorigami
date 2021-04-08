@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h6z-qu-eDh">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,44 +11,62 @@
         <!--Congratulations-->
         <scene sceneID="VuA-Zz-g8Q">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-h6z-qu-eDh" id="h6z-qu-eDh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-h6z-qu-eDh" id="h6z-qu-eDh" customClass="CongratulationsViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ceB-Vh-3r8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYQ-nR-7oI">
-                                <rect key="frame" x="180" y="528" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nk-ay-8sz">
+                                <rect key="frame" x="20" y="64" width="350" height="726"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYQ-nR-7oI">
+                                        <rect key="frame" x="109" y="664" width="132" height="22"/>
+                                        <state key="normal" title=" Take a photo" image="camera.fill" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openCamera:" destination="h6z-qu-eDh" eventType="touchUpInside" id="MZg-IP-3hs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pYQ-nR-7oI" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="PFv-N0-h4k"/>
+                                    <constraint firstAttribute="bottom" secondItem="pYQ-nR-7oI" secondAttribute="bottom" constant="40" id="lkl-xE-FQi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qKK-ts-060"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qKK-ts-060" firstAttribute="trailing" secondItem="8nk-ay-8sz" secondAttribute="trailing" constant="20" id="4uQ-uD-kby"/>
+                            <constraint firstItem="8nk-ay-8sz" firstAttribute="leading" secondItem="qKK-ts-060" secondAttribute="leading" constant="20" id="U3N-l3-f3u"/>
+                            <constraint firstItem="8nk-ay-8sz" firstAttribute="top" secondItem="qKK-ts-060" secondAttribute="top" constant="20" id="UyZ-P0-1b1"/>
+                            <constraint firstItem="qKK-ts-060" firstAttribute="bottom" secondItem="8nk-ay-8sz" secondAttribute="bottom" constant="20" id="cRf-oG-EHa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Congratulations" id="2ii-L6-FrC">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="ywN-PY-8O2">
                             <connections>
-                                <segue destination="d4K-Zd-TUc" kind="show" id="keS-ag-NEq"/>
+                                <action selector="backToHome:" destination="h6z-qu-eDh" id="FXW-47-XkJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="congratulationCardView" destination="8nk-ay-8sz" id="3y9-nE-Bre"/>
+                        <outlet property="takeAPhotoButton" destination="pYQ-nR-7oI" id="p0i-4g-4T0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUC-DO-yrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7833.3333333333339" y="26.785714285714285"/>
-        </scene>
-        <!--PlayNow-->
-        <scene sceneID="T5S-9M-cZz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PlayNow" id="d4K-Zd-TUc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="i2T-r6-iz7"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vZc-5K-oxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8594.927536231884" y="26.785714285714285"/>
+            <point key="canvasLocation" x="7832.3076923076924" y="26.303317535545023"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
