@@ -23,6 +23,10 @@
 		3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */; };
 		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
 		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
+		514674C9261EC56B0042A13A /* OrigamisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674C8261EC56B0042A13A /* OrigamisViewController.swift */; };
+		514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */; };
+		514674CE261F41870042A13A /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */; };
+		514674D1261F456D0042A13A /* Origamis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674D0261F456D0042A13A /* Origamis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Difficulty.storyboard; sourceTree = "<group>"; };
 		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
 		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
+		514674C8261EC56B0042A13A /* OrigamisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamisViewController.swift; sourceTree = "<group>"; };
+		514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
+		514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
+		514674D0261F456D0042A13A /* Origamis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origamis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +139,10 @@
 		3BC0DEFC261CA72100AF0630 /* Selection */ = {
 			isa = PBXGroup;
 			children = (
+				514674CF261F45540042A13A /* Models */,
+				514674CA261F41310042A13A /* Cells */,
 				3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */,
+				514674C8261EC56B0042A13A /* OrigamisViewController.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -151,6 +162,23 @@
 				3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */,
 			);
 			path = Congratulations;
+			sourceTree = "<group>";
+		};
+		514674CA261F41310042A13A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */,
+				514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		514674CF261F45540042A13A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				514674D0261F456D0042A13A /* Origamis.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
+				514674CE261F41870042A13A /* OrigamiCollectionViewCell.xib in Resources */,
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
@@ -230,8 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
+				514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */,
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
+				514674D1261F456D0042A13A /* Origamis.swift in Sources */,
+				514674C9261EC56B0042A13A /* OrigamisViewController.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
