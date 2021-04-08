@@ -30,6 +30,8 @@
 		78758CAF261EB96A005BFC36 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAE261EB96A005BFC36 /* Log.swift */; };
 		78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CB1261EC4CD005BFC36 /* Instruction.swift */; };
 		78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CBC261EEF5C005BFC36 /* Mode.swift */; };
+		78758CD3261F0184005BFC36 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78758CD1261F0184005BFC36 /* FavouriteCollectionViewCell.xib */; };
+		78758CD6261F0622005BFC36 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CD5261F0622005BFC36 /* FavouriteCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		78758CAE261EB96A005BFC36 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		78758CB1261EC4CD005BFC36 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		78758CBC261EEF5C005BFC36 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		78758CD1261F0184005BFC36 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		78758CD5261F0622005BFC36 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		3B830CE5261C3491009FA130 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
+				78758CCA261F0139005BFC36 /* Cells */,
 				3B830CD8261C320C009FA130 /* Favourite.storyboard */,
 				3B830CEF261C356A009FA130 /* FavouriteViewController.swift */,
 			);
@@ -182,6 +187,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		78758CCA261F0139005BFC36 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78758CD1261F0184005BFC36 /* FavouriteCollectionViewCell.xib */,
+				78758CD5261F0622005BFC36 /* FavouriteCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +255,7 @@
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
+				78758CD3261F0184005BFC36 /* FavouriteCollectionViewCell.xib in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
@@ -265,6 +280,7 @@
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
 				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
+				78758CD6261F0622005BFC36 /* FavouriteCollectionViewCell.swift in Sources */,
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
