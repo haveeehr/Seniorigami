@@ -23,6 +23,7 @@ class GenericCard: UIView {
     private func setup() {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
+        
     }
 
 }
