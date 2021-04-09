@@ -27,13 +27,13 @@
 		514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */; };
 		514674CE261F41870042A13A /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */; };
 		514674D1261F456D0042A13A /* Origamis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514674D0261F456D0042A13A /* Origamis.swift */; };
-		78758CA2261EB922005BFC36 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA1261EB922005BFC36 /* Database.swift */; };
-		78758CA6261EB92F005BFC36 /* Origami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA5261EB92F005BFC36 /* Origami.swift */; };
-		78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA8261EB94F005BFC36 /* Favourite.swift */; };
-		78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAB261EB95E005BFC36 /* Gallery.swift */; };
-		78758CAF261EB96A005BFC36 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAE261EB96A005BFC36 /* Log.swift */; };
-		78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CB1261EC4CD005BFC36 /* Instruction.swift */; };
-		78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CBC261EEF5C005BFC36 /* Mode.swift */; };
+		51F4B119261F7533009D51F4 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B112261F7533009D51F4 /* Mode.swift */; };
+		51F4B11A261F7533009D51F4 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B113261F7533009D51F4 /* Instruction.swift */; };
+		51F4B11B261F7533009D51F4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B114261F7533009D51F4 /* Database.swift */; };
+		51F4B11C261F7533009D51F4 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B115261F7533009D51F4 /* Gallery.swift */; };
+		51F4B11D261F7533009D51F4 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B116261F7533009D51F4 /* Favourite.swift */; };
+		51F4B11E261F7533009D51F4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B117261F7533009D51F4 /* Log.swift */; };
+		51F4B11F261F7533009D51F4 /* Origami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F4B118261F7533009D51F4 /* Origami.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,13 +59,13 @@
 		514674CB261F41870042A13A /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
 		514674CC261F41870042A13A /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
 		514674D0261F456D0042A13A /* Origamis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origamis.swift; sourceTree = "<group>"; };
-		78758CA1261EB922005BFC36 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		78758CA5261EB92F005BFC36 /* Origami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origami.swift; sourceTree = "<group>"; };
-		78758CA8261EB94F005BFC36 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
-		78758CAB261EB95E005BFC36 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
-		78758CAE261EB96A005BFC36 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		78758CB1261EC4CD005BFC36 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
-		78758CBC261EEF5C005BFC36 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		51F4B112261F7533009D51F4 /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = Seniorigami/Models/Mode.swift; sourceTree = SOURCE_ROOT; };
+		51F4B113261F7533009D51F4 /* Instruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Instruction.swift; path = Seniorigami/Models/Instruction.swift; sourceTree = SOURCE_ROOT; };
+		51F4B114261F7533009D51F4 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Database.swift; path = Seniorigami/Models/Database.swift; sourceTree = SOURCE_ROOT; };
+		51F4B115261F7533009D51F4 /* Gallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gallery.swift; path = Seniorigami/Models/Gallery.swift; sourceTree = SOURCE_ROOT; };
+		51F4B116261F7533009D51F4 /* Favourite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favourite.swift; path = Seniorigami/Models/Favourite.swift; sourceTree = SOURCE_ROOT; };
+		51F4B117261F7533009D51F4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Seniorigami/Models/Log.swift; sourceTree = SOURCE_ROOT; };
+		51F4B118261F7533009D51F4 /* Origami.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Origami.swift; path = Seniorigami/Models/Origami.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,6 @@
 		3B830CBE261C2EEE009FA130 /* Seniorigami */ = {
 			isa = PBXGroup;
 			children = (
-				78758CA0261EB910005BFC36 /* Models */,
 				3BC0DF07261CA92800AF0630 /* Congratulations */,
 				3BC0DF02261CA84200AF0630 /* Origami-Steps */,
 				3BC0DEFC261CA72100AF0630 /* Selection */,
@@ -191,17 +190,14 @@
 		514674CF261F45540042A13A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				51F4B114261F7533009D51F4 /* Database.swift */,
+				51F4B116261F7533009D51F4 /* Favourite.swift */,
+				51F4B115261F7533009D51F4 /* Gallery.swift */,
+				51F4B113261F7533009D51F4 /* Instruction.swift */,
+				51F4B117261F7533009D51F4 /* Log.swift */,
+				51F4B112261F7533009D51F4 /* Mode.swift */,
+				51F4B118261F7533009D51F4 /* Origami.swift */,
 				514674D0261F456D0042A13A /* Origamis.swift */,
-		78758CA0261EB910005BFC36 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				78758CA1261EB922005BFC36 /* Database.swift */,
-				78758CA5261EB92F005BFC36 /* Origami.swift */,
-				78758CA8261EB94F005BFC36 /* Favourite.swift */,
-				78758CAB261EB95E005BFC36 /* Gallery.swift */,
-				78758CAE261EB96A005BFC36 /* Log.swift */,
-				78758CB1261EC4CD005BFC36 /* Instruction.swift */,
-				78758CBC261EEF5C005BFC36 /* Mode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,22 +279,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78758CA6261EB92F005BFC36 /* Origami.swift in Sources */,
+				51F4B11D261F7533009D51F4 /* Favourite.swift in Sources */,
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
 				514674CD261F41870042A13A /* OrigamiCollectionViewCell.swift in Sources */,
-				78758CAF261EB96A005BFC36 /* Log.swift in Sources */,
+				51F4B11C261F7533009D51F4 /* Gallery.swift in Sources */,
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
+				51F4B11E261F7533009D51F4 /* Log.swift in Sources */,
 				514674D1261F456D0042A13A /* Origamis.swift in Sources */,
 				514674C9261EC56B0042A13A /* OrigamisViewController.swift in Sources */,
+				51F4B11A261F7533009D51F4 /* Instruction.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
-				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
-				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
-				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
-				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
+				51F4B11F261F7533009D51F4 /* Origami.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
-				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
+				51F4B119261F7533009D51F4 /* Mode.swift in Sources */,
+				51F4B11B261F7533009D51F4 /* Database.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
