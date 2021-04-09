@@ -8,13 +8,20 @@
 import UIKit
 
 class CongratulationsViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
-    
+    var name: String = "Plane"
+    var selectedOrigami = Origami()
+    let date = Date()
+    let dateFormatter = DateFormatter()
     @IBOutlet weak var congratulationCardView: UIView!
+    @IBOutlet weak var crownImage: UIImageView!
+    @IBOutlet weak var selectedOrigamiQuotesLabel: UILabel!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var takeAPhotoButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
 
         // Do any additional setup after loading the view.
@@ -22,6 +29,9 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         
     }
     func setupView(){
+        
+        crownImage.image = #imageLiteral(resourceName: "crown")
+        
         congratulationCardView.layer.cornerRadius = 10
         congratulationCardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         congratulationCardView.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
@@ -37,6 +47,17 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         
         congratulationCardView.layer.masksToBounds = true
         
+        selectedOrigami = Database.shared.getOrigami(byName: name)
+        selectedOrigamiQuotesLabel.text = selectedOrigami.quote
+        
+        takeAPhotoButton.layer.cornerRadius = 21
+
+        dateFormatter.dateFormat = "d MMMM yyyy"
+        dateLabel.text = dateFormatter.string(from: date)
+        
+        nameTextField.layer.cornerRadius = 20
+        nameTextField.clipsToBounds = true
+//        nameTextField.borderStyle
     }
     
     @IBAction func openCamera(_ sender: Any) {

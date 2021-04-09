@@ -83,6 +83,17 @@ class Database{
     func getModeList()->[Mode]{
         return modes
     }
+    
+    func getOrigami(byName name: String) ->Origami{
+        for i in 0 ... origamis.count {
+            if origamis[i].name == name {
+                return origamis[i]
+            }else{
+                return origamis[0]
+            }
+        }
+        return origamis[0]
+    }
 }
 
 
