@@ -3,8 +3,8 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4O-XX-UwN">
-                                <rect key="frame" x="184" y="402" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Hp1-BM-Oxk" kind="show" id="wfB-RJ-Tbh"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xBP-59-Ng0">
+                                <rect key="frame" x="0.0" y="140" width="390" height="621"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5vz-oB-ktv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundGray"/>
+                        <constraints>
+                            <constraint firstItem="xBP-59-Ng0" firstAttribute="leading" secondItem="OPu-fH-Q1a" secondAttribute="leading" id="SDa-W9-kB3"/>
+                            <constraint firstItem="5vz-oB-ktv" firstAttribute="trailing" secondItem="xBP-59-Ng0" secondAttribute="trailing" id="bl2-1j-gjN"/>
+                            <constraint firstItem="xBP-59-Ng0" firstAttribute="top" secondItem="5vz-oB-ktv" secondAttribute="top" id="cAZ-T9-yA1"/>
+                            <constraint firstItem="5vz-oB-ktv" firstAttribute="bottom" secondItem="xBP-59-Ng0" secondAttribute="bottom" id="dcj-CH-Y7r"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Play Now" id="jp3-Sg-c4c"/>
+                    <connections>
+                        <outlet property="tableView" destination="xBP-59-Ng0" id="Mcw-mW-2Wi"/>
+                        <segue destination="Hp1-BM-Oxk" kind="show" identifier="segueDifficulty" id="nEm-d3-jGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwn-ox-qPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,8 +81,8 @@
     </scenes>
     <resources>
         <image name="play.fill" catalog="system" width="116" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="backgroundGray">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

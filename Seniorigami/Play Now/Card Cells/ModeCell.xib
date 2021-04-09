@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ModeCell" rowHeight="166" id="KGk-i7-Jjw" customClass="ModeCell" customModule="Seniorigami" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVL-4G-oaW" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
+                        <rect key="frame" x="20" y="0.0" width="310" height="148"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-Yb-Bo1">
+                                <rect key="frame" x="135" y="0.0" width="175" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="s27-or-xk9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-na-k2e">
+                                <rect key="frame" x="30" y="30" width="122" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="darkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kt-pw-yPT" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
+                                <rect key="frame" x="30" y="90" width="61.5" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="PBh-Ar-KtV"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" name="darkGray"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DSF-Yb-Bo1" secondAttribute="bottom" id="7am-kw-3Cu"/>
+                            <constraint firstItem="8xS-na-k2e" firstAttribute="centerY" secondItem="DVL-4G-oaW" secondAttribute="centerY" constant="-15" id="FCN-aI-fqb"/>
+                            <constraint firstItem="8xS-na-k2e" firstAttribute="leading" secondItem="DVL-4G-oaW" secondAttribute="leading" constant="30" id="Id6-cd-OZe"/>
+                            <constraint firstItem="1Kt-pw-yPT" firstAttribute="leading" secondItem="DVL-4G-oaW" secondAttribute="leading" constant="30" id="Rvd-zI-4Gf"/>
+                            <constraint firstAttribute="trailing" secondItem="DSF-Yb-Bo1" secondAttribute="trailing" id="frU-6y-hh9"/>
+                            <constraint firstItem="1Kt-pw-yPT" firstAttribute="centerY" secondItem="DVL-4G-oaW" secondAttribute="centerY" constant="30" id="oYo-0n-NLf"/>
+                            <constraint firstItem="DSF-Yb-Bo1" firstAttribute="top" secondItem="DVL-4G-oaW" secondAttribute="top" id="qCR-wU-VYm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="DVL-4G-oaW" secondAttribute="bottom" constant="20" id="Ung-zE-gRg"/>
+                    <constraint firstItem="DVL-4G-oaW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Z1b-D9-hsw"/>
+                    <constraint firstItem="DVL-4G-oaW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="dtO-gK-RL5"/>
+                    <constraint firstAttribute="trailing" secondItem="DVL-4G-oaW" secondAttribute="trailing" constant="20" id="q0r-Lr-eRc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cardBackground" destination="DVL-4G-oaW" id="PMi-Bm-7zX"/>
+                <outlet property="modeLabel" destination="8xS-na-k2e" id="K6K-Zf-XYS"/>
+                <outlet property="stepsLabel" destination="1Kt-pw-yPT" id="zPS-gw-oJr"/>
+                <outlet property="thumbnailImage" destination="DSF-Yb-Bo1" id="X3f-l3-LV6"/>
+            </connections>
+            <point key="canvasLocation" x="-86.956521739130437" y="121.875"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="1Kt-pw-yPT">
+            <size key="intrinsicContentSize" width="61.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="darkGray">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

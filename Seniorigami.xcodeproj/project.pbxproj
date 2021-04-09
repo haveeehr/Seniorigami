@@ -30,6 +30,16 @@
 		78758CAF261EB96A005BFC36 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAE261EB96A005BFC36 /* Log.swift */; };
 		78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CB1261EC4CD005BFC36 /* Instruction.swift */; };
 		78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CBC261EEF5C005BFC36 /* Mode.swift */; };
+		9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BDF7261F607400AC8FBA /* ModeCell.swift */; };
+		9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BDF8261F607400AC8FBA /* ModeCell.xib */; };
+		9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE02261F688800AC8FBA /* RecentCell.swift */; };
+		9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BE03261F688800AC8FBA /* RecentCell.xib */; };
+		9060BE09261F68BA00AC8FBA /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE07261F68BA00AC8FBA /* HeaderCell.swift */; };
+		9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BE08261F68BA00AC8FBA /* HeaderCell.xib */; };
+		9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE0C261FBA2700AC8FBA /* PaddingLabel.swift */; };
+		9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210C261FCB4D00514C57 /* OutlineLabel.swift */; };
+		90922110261FCF2000514C57 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210F261FCF2000514C57 /* DifficultyController.swift */; };
+		90922116261FEAC000514C57 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90922115261FEAC000514C57 /* GenericCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +68,16 @@
 		78758CAE261EB96A005BFC36 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		78758CB1261EC4CD005BFC36 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		78758CBC261EEF5C005BFC36 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		9060BDF7261F607400AC8FBA /* ModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCell.swift; sourceTree = "<group>"; };
+		9060BDF8261F607400AC8FBA /* ModeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeCell.xib; sourceTree = "<group>"; };
+		9060BE02261F688800AC8FBA /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
+		9060BE03261F688800AC8FBA /* RecentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCell.xib; sourceTree = "<group>"; };
+		9060BE07261F68BA00AC8FBA /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		9060BE08261F68BA00AC8FBA /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		9060BE0C261FBA2700AC8FBA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		9092210C261FCB4D00514C57 /* OutlineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineLabel.swift; sourceTree = "<group>"; };
+		9092210F261FCF2000514C57 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
+		90922115261FEAC000514C57 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				3B830CD5261C31EE009FA130 /* PlayNow.storyboard */,
+				9060BDE9261F5BCB00AC8FBA /* Card Cells */,
 				3B830CEC261C3534009FA130 /* PlayNowViewController.swift */,
 			);
 			path = "Play Now";
@@ -132,6 +153,7 @@
 		3B830CF2261C35E8009FA130 /* Default */ = {
 			isa = PBXGroup;
 			children = (
+				9060BE0F261FBA5D00AC8FBA /* Library */,
 				3B830CBF261C2EEE009FA130 /* AppDelegate.swift */,
 				3B830CC3261C2EEE009FA130 /* ViewController.swift */,
 				3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */,
@@ -147,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */,
+				9092210F261FCF2000514C57 /* DifficultyController.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -180,6 +203,29 @@
 				78758CBC261EEF5C005BFC36 /* Mode.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9060BDE9261F5BCB00AC8FBA /* Card Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9060BDF7261F607400AC8FBA /* ModeCell.swift */,
+				9060BDF8261F607400AC8FBA /* ModeCell.xib */,
+				9060BE02261F688800AC8FBA /* RecentCell.swift */,
+				9060BE03261F688800AC8FBA /* RecentCell.xib */,
+				9060BE07261F68BA00AC8FBA /* HeaderCell.swift */,
+				9060BE08261F68BA00AC8FBA /* HeaderCell.xib */,
+			);
+			path = "Card Cells";
+			sourceTree = "<group>";
+		};
+		9060BE0F261FBA5D00AC8FBA /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9060BE0C261FBA2700AC8FBA /* PaddingLabel.swift */,
+				9092210C261FCB4D00514C57 /* OutlineLabel.swift */,
+				90922115261FEAC000514C57 /* GenericCard.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +289,13 @@
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
+				9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
 				3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */,
 				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
+				9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */,
+				9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */,
 				3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,19 +307,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90922116261FEAC000514C57 /* GenericCard.swift in Sources */,
+				90922110261FCF2000514C57 /* DifficultyController.swift in Sources */,
+				9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */,
 				78758CA6261EB92F005BFC36 /* Origami.swift in Sources */,
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
 				78758CAF261EB96A005BFC36 /* Log.swift in Sources */,
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
+				9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */,
+				9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
 				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
+				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
 				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
+				9060BE09261F68BA00AC8FBA /* HeaderCell.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
