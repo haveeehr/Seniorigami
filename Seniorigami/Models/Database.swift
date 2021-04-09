@@ -84,5 +84,3 @@ class Database{
         return modes
     }
 }
-
-

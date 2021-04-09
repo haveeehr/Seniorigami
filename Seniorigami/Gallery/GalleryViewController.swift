@@ -15,7 +15,14 @@ class GalleryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func suitDidChange(_ sender: UISegmentedControl) {
+    }
+    
 
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
