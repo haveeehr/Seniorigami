@@ -19,6 +19,17 @@ class ModeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        thumbnailImage.layer.cornerRadius = 10.0
+        thumbnailImage.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        
+        stepsLabel.layer.masksToBounds = true
+        stepsLabel.layer.cornerRadius = 15.0
+        
+        let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
+        lpgr.minimumPressDuration = 0.15
+        lpgr.delaysTouchesBegan = false
+        self.addGestureRecognizer(lpgr)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,3 +39,5 @@ class ModeCell: UITableViewCell {
     }
     
 }
+
+

@@ -10,6 +10,8 @@ import UIKit
 
 class GenericCard: UIView {
     
+    let containerView = UIView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -19,12 +21,15 @@ class GenericCard: UIView {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     private func setup() {
-        self.layer.cornerRadius = 10
-        self.layer.masksToBounds = true
+        layer.cornerRadius = 10
+        layer.masksToBounds = false
+        
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowRadius = 10.0
+        layer.shadowOpacity = 0.15
+        layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
         
     }
-
 }
-

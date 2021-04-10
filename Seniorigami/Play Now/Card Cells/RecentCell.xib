@@ -45,6 +45,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9G-74-3E2">
+                                <rect key="frame" x="0.0" y="210" width="350" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Dr6-8k-Kod"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 of 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoE-e3-IMg" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
                                 <rect key="frame" x="244.5" y="30" width="75.5" height="28"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -85,6 +92,9 @@
                             <constraint firstItem="v5x-gT-sgp" firstAttribute="centerY" secondItem="oLH-bs-okB" secondAttribute="centerY" id="H8u-vT-4mu"/>
                             <constraint firstItem="fwR-IR-jK5" firstAttribute="leading" secondItem="oLH-bs-okB" secondAttribute="leading" constant="30" id="HE1-mp-rqj"/>
                             <constraint firstItem="fwR-IR-jK5" firstAttribute="top" secondItem="Fj1-MW-NRd" secondAttribute="bottom" id="MW9-Ii-GOC"/>
+                            <constraint firstAttribute="bottom" secondItem="s9G-74-3E2" secondAttribute="bottom" id="PdL-gw-VgD"/>
+                            <constraint firstAttribute="trailing" secondItem="s9G-74-3E2" secondAttribute="trailing" id="StX-vu-jAi"/>
+                            <constraint firstItem="s9G-74-3E2" firstAttribute="leading" secondItem="oLH-bs-okB" secondAttribute="leading" id="cZM-Aa-OEm"/>
                             <constraint firstAttribute="trailing" secondItem="qoE-e3-IMg" secondAttribute="trailing" constant="30" id="r6F-Qs-zAm"/>
                             <constraint firstItem="v5x-gT-sgp" firstAttribute="centerX" secondItem="oLH-bs-okB" secondAttribute="centerX" id="sX2-pb-5mX"/>
                             <constraint firstItem="P9b-By-wdu" firstAttribute="leading" secondItem="oLH-bs-okB" secondAttribute="leading" constant="30" id="tqg-gJ-E97"/>
@@ -103,6 +113,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="cardBackground" destination="oLH-bs-okB" id="cZy-EZ-Kr6"/>
+                <outlet property="gradientBackground" destination="s9G-74-3E2" id="hyp-97-EQ3"/>
                 <outlet property="origamiThumbnail" destination="v5x-gT-sgp" id="4pW-gR-8Hm"/>
                 <outlet property="origamiTitle" destination="Fj1-MW-NRd" id="JjQ-cl-P31"/>
                 <outlet property="topLeftLabel" destination="P9b-By-wdu" id="xMo-FL-ELR"/>
@@ -125,7 +136,7 @@
     </designables>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.99607843137254903" green="0.45490196078431372" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17599999904632568" blue="0.33299997448921204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGray">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
