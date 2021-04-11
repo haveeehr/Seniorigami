@@ -15,7 +15,28 @@ class GalleryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     @IBAction func suitDidChange(_ sender: UISegmentedControl) {
+        /*
+        
+        
+        switch sender.selectedSegmentIndex {
+        case <#pattern#>:
+            <#code#>
+        case <#pattern#>:
+            <#code#>
+        case <#pattern#>:
+            <#code#>
+        default:
+            <#code#>
+        }
+ 
+ */
+        
+        
+        
+        // nambahin collection view ke navController
+        
     }
     
 
