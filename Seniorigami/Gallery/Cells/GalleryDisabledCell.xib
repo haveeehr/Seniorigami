@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDG-zE-Yjq">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDG-zE-Yjq" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="165" height="220"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-p6-j6K">
@@ -62,6 +62,11 @@
                 <constraint firstAttribute="bottom" secondItem="XDG-zE-Yjq" secondAttribute="bottom" id="uLO-mO-YKZ"/>
                 <constraint firstItem="XDG-zE-Yjq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w4Q-YN-feQ"/>
             </constraints>
+            <connections>
+                <outlet property="disabledImageView" destination="YVa-1z-ZbN" id="rEB-NI-fsw"/>
+                <outlet property="disabledLabel" destination="KMz-p6-j6K" id="8ij-cp-lAR"/>
+                <outlet property="lockIcon" destination="QaZ-Wy-cEl" id="AsW-hu-tMd"/>
+            </connections>
             <point key="canvasLocation" x="131.15942028985509" y="79.6875"/>
         </collectionViewCell>
     </objects>

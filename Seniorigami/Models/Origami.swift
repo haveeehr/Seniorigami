@@ -14,6 +14,7 @@ struct Origami{
     var mode: Mode?
     var quote: String?
     var image: String?
-    var instructions: [Instruction]
+    var instructions: [Instruction]?
+    var finished: Bool?
     
 }
