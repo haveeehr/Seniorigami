@@ -10,9 +10,7 @@ import UIKit
 class GalleryViewController: UIViewController {
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     
-    var origamis = Database.shared.getOrigamiByMode(mode: "Easy")
-    
-    
+    var origamis = Database.shared.getOrigamiByMode(mode: "Easy") // dah sesuai mode ;
     
     let galleryCellId = "GalleryCollectionViewCell" //untuk identifier
     let disabledCellId = "GalleryDisabledCell"
@@ -49,33 +47,35 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         
         if origamis[indexPath.row].finished == true {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryCellId, for: indexPath) as! GalleryCollectionViewCell
-            let origami = origamis[indexPath.row]
+            let origami = origamis[indexPath.row] //untuk 1 origami
             cell.galleryImageView.image = UIImage (named: origami.image!)
             cell.titleLabel.text = origami.name!
-          
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: disabledCellId, for: indexPath) as! GalleryDisabledCell
             let origami = origamis[indexPath.row]
-            cell.disabledImageView.image = UIImage (named: origami.image!)
+            cell.disabledImageView.image = convertToGrayScale(image: UIImage (named: origami.image!)!)
             cell.disabledLabel.text = origami.name!
+            cell.contentView.layer.opacity = 0.5
             return cell
         }
         
     }
 
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { //menghitung berapa banyak item
         return origamis.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let origami = origamis[indexPath.row]
         if origami.finished == true {
-            print("finished")
-        } else {
-            print("\(indexPath.row) - \(origami.name!)")
+            print("finished") // taruh modal / pop up
         }
+        
+//        else {
+//            print("\(indexPath.row) - \(origami.name!)")
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
@@ -83,4 +83,14 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         let inset:CGFloat = 20
         return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
+}
+
+
+func convertToGrayScale(image: UIImage) -> UIImage {
+  
+    let ciImage = CIImage(image: image)
+    let grayscale = ciImage!.applyingFilter("CIColorControls",
+    parameters: [ kCIInputSaturationKey: 0.0 ])
+    return UIImage(ciImage: grayscale)
+    
 }
