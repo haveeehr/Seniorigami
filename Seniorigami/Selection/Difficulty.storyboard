@@ -11,7 +11,7 @@
         <!--Difficulty-->
         <scene sceneID="P9D-aB-0YJ">
             <objects>
-                <viewController id="7jU-qk-ukk" sceneMemberID="viewController">
+                <viewController id="7jU-qk-ukk" customClass="DifficultyController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H3C-xn-T6d">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
