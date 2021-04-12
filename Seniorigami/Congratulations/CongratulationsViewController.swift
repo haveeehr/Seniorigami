@@ -41,12 +41,12 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
 
         let gradient = CAGradientLayer()
       
-        let gradientColor = selectedOrigami.mode?.color
+        let endGradientColor = selectedOrigami.mode?.color
         //        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(red: 0, green: 0.878, blue: 1, alpha: 0.35).cgColor]
         gradient.frame = congratulationCardView.bounds
-        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(named: gradientColor!)!.cgColor]
+        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(named: endGradientColor!)!.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.9)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
         congratulationCardView.layer.insertSublayer(gradient, at: 0)
         
         congratulationCardView.layer.masksToBounds = true
