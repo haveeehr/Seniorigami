@@ -58,7 +58,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         
         nameTextField.clipsToBounds = true
 
-        mainImageView.image = UIImage(named: selectedOrigami.image!)
+        mainImageView.image = UIImage(named: selectedOrigami.image! + "-achievement")
     }
     
     @IBAction func openCamera(_ sender: Any) {
