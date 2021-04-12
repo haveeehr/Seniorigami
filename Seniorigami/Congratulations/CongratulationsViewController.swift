@@ -30,6 +30,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         
     }
     func setupView(){
+        selectedOrigami = Database.shared.getOrigami(byName: name)
         
         crownImage.image = #imageLiteral(resourceName: "crown")
         
@@ -39,16 +40,18 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         congratulationCardView.layer.borderWidth = 1
 
         let gradient = CAGradientLayer()
-        
+      
+        let gradientColor = selectedOrigami.mode?.color
+        //        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(red: 0, green: 0.878, blue: 1, alpha: 0.35).cgColor]
         gradient.frame = congratulationCardView.bounds
-        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(red: 0, green: 0.878, blue: 1, alpha: 0.35).cgColor]
+        gradient.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(named: gradientColor!)!.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.9)
         congratulationCardView.layer.insertSublayer(gradient, at: 0)
         
         congratulationCardView.layer.masksToBounds = true
         
-        selectedOrigami = Database.shared.getOrigami(byName: name)
+       
         selectedOrigamiQuotesLabel.text = selectedOrigami.quote
         
         takeAPhotoButton.layer.cornerRadius = 21
