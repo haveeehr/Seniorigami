@@ -60,8 +60,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TR-DA-iTb">
-                                        <rect key="frame" x="85" y="575" width="170" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TR-DA-iTb">
+                                        <rect key="frame" x="90" y="564" width="170" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="4u7-76-hBR"/>
                                             <constraint firstAttribute="height" constant="40" id="iAf-y8-neg"/>
@@ -69,6 +69,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SjP-eM-Xta">
+                                        <rect key="frame" x="0.0" y="140.33333333333334" width="350" height="363.66666666666663"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="hln-lD-9ZA"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -77,12 +83,15 @@
                                     <constraint firstItem="xhr-76-3Pr" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="8gx-v0-WLx"/>
                                     <constraint firstItem="pYQ-nR-7oI" firstAttribute="top" secondItem="6TR-DA-iTb" secondAttribute="bottom" constant="30" id="ACH-4e-5Gr"/>
                                     <constraint firstItem="Cfq-sy-EyX" firstAttribute="top" secondItem="8nk-ay-8sz" secondAttribute="top" constant="30" id="AuY-7K-YcN"/>
+                                    <constraint firstItem="SjP-eM-Xta" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="AwQ-z2-O8A"/>
                                     <constraint firstItem="6TR-DA-iTb" firstAttribute="top" secondItem="JoJ-0O-keY" secondAttribute="bottom" constant="10" id="Jyb-3U-jRP"/>
+                                    <constraint firstItem="Fdg-Gn-UFi" firstAttribute="top" secondItem="SjP-eM-Xta" secondAttribute="bottom" constant="10" id="LkI-PT-rAp"/>
                                     <constraint firstItem="JoJ-0O-keY" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="Mbn-fc-rwB"/>
                                     <constraint firstItem="pYQ-nR-7oI" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="PFv-N0-h4k"/>
                                     <constraint firstItem="Fdg-Gn-UFi" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="Ryh-Bd-wxz"/>
                                     <constraint firstItem="JoJ-0O-keY" firstAttribute="top" secondItem="Fdg-Gn-UFi" secondAttribute="bottom" constant="5" id="W70-Ty-1Gr"/>
                                     <constraint firstItem="Cfq-sy-EyX" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="Zlo-js-ZtT"/>
+                                    <constraint firstItem="SjP-eM-Xta" firstAttribute="top" secondItem="xhr-76-3Pr" secondAttribute="bottom" constant="10" id="hr7-hk-1bY"/>
                                     <constraint firstAttribute="trailing" secondItem="xhr-76-3Pr" secondAttribute="trailing" constant="30" id="hr8-6D-7P0"/>
                                     <constraint firstAttribute="bottom" secondItem="pYQ-nR-7oI" secondAttribute="bottom" constant="50" id="lkl-xE-FQi"/>
                                     <constraint firstItem="6TR-DA-iTb" firstAttribute="centerX" secondItem="8nk-ay-8sz" secondAttribute="centerX" id="xIR-dx-ld0"/>
@@ -109,6 +118,7 @@
                         <outlet property="congratulationCardView" destination="8nk-ay-8sz" id="3y9-nE-Bre"/>
                         <outlet property="crownImage" destination="Cfq-sy-EyX" id="YQs-YM-kmF"/>
                         <outlet property="dateLabel" destination="JoJ-0O-keY" id="Io3-zJ-aI9"/>
+                        <outlet property="mainImageView" destination="SjP-eM-Xta" id="IZa-SG-YNk"/>
                         <outlet property="nameTextField" destination="6TR-DA-iTb" id="0oV-GJ-tXK"/>
                         <outlet property="selectedOrigamiQuotesLabel" destination="xhr-76-3Pr" id="7Sv-UB-Nqi"/>
                         <outlet property="takeAPhotoButton" destination="pYQ-nR-7oI" id="p0i-4g-4T0"/>

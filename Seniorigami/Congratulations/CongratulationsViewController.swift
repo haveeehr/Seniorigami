@@ -19,6 +19,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var takeAPhotoButton: UIButton!
+    @IBOutlet weak var mainImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,9 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         dateFormatter.dateFormat = "d MMMM yyyy"
         dateLabel.text = dateFormatter.string(from: date)
         
-        nameTextField.layer.cornerRadius = 20
         nameTextField.clipsToBounds = true
-//        nameTextField.borderStyle
+
+        mainImageView.image = UIImage(named: selectedOrigami.image!)
     }
     
     @IBAction func openCamera(_ sender: Any) {
