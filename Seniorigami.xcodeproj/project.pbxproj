@@ -41,6 +41,7 @@
 		9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210C261FCB4D00514C57 /* OutlineLabel.swift */; };
 		90922110261FCF2000514C57 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210F261FCF2000514C57 /* DifficultyController.swift */; };
 		90922116261FEAC000514C57 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90922115261FEAC000514C57 /* GenericCard.swift */; };
+		90D336392621219D00222480 /* CardCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D336382621219D00222480 /* CardCellAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		9092210C261FCB4D00514C57 /* OutlineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineLabel.swift; sourceTree = "<group>"; };
 		9092210F261FCF2000514C57 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		90922115261FEAC000514C57 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
+		90D336382621219D00222480 /* CardCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				3B830CD5261C31EE009FA130 /* PlayNow.storyboard */,
-				9060BDE9261F5BCB00AC8FBA /* Card Cells */,
 				3B830CEC261C3534009FA130 /* PlayNowViewController.swift */,
+				9060BDE9261F5BCB00AC8FBA /* Card Cells */,
 			);
 			path = "Play Now";
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 				9060BE03261F688800AC8FBA /* RecentCell.xib */,
 				9060BE07261F68BA00AC8FBA /* HeaderCell.swift */,
 				9060BE08261F68BA00AC8FBA /* HeaderCell.xib */,
+				90D336382621219D00222480 /* CardCellAnimation.swift */,
 			);
 			path = "Card Cells";
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B95E9CC261E0A6700A475F8 /* CongratulationsViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
+				90D336392621219D00222480 /* CardCellAnimation.swift in Sources */,
 				9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */,
 				9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
