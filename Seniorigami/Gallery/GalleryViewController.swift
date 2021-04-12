@@ -10,17 +10,26 @@ import UIKit
 class GalleryViewController: UIViewController {
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     
-    var origamis = [Origami]()
+    var origamis = Database.shared.getOrigamiList()
     
-    let galleryCellId = "GalleryCollectionCell"
     
+    
+    let galleryCellId = "GalleryCollectionViewCell" //untuk identifier
+    let disabledCellId = "GalleryDisabledCell"
+ 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nibCell = UINib(nibName: galleryCellId, bundle: nil)
+        let nibGalleryCell = UINib(nibName: galleryCellId, bundle: nil) // mendaftarkan XIB
+        let nibDisabledCell = UINib(nibName: disabledCellId, bundle: nil)
         
+
+        //galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
         
-        galleryCollectionView.register(nibCell, forCellWithReuseIdentifier: galleryCellId)
+        galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
+        
+        //galleryCollectionView.register(nibDisabledCell, forCellWithReuseIdentifier: disabledCellId)
 
         // Do any additional setup after loading the view.
        // origamis =
@@ -32,88 +41,30 @@ class GalleryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
- 
-    
     
   //  @IBOutlet var collectionView: UICollectionView!
  
-    
-    
-
-   
-
-  
-    
-    
-    
-    @IBAction func suitDidChanged(_ sender: UISegmentedControl) {
-/*
-            if sender.selectedSegmentIndex == 0{
-                    origamis = Database.shared.getOrigamiByMode(mode: "Easy")
-                }else if sender.selectedSegmentIndex == 1{
-                    origamis = Database.shared.getOrigamiByMode(mode: "Medium")
-                }else{
-                    origamis = Database.shared.getOrigamiByMode(mode: "Hard")
-                }
-            collectionView.reloadData()
-        }
-    
-*/
-
-
-
-
-
-
-    @IBAction func suitDidChange(_ sender: UISegmentedControl) {
-        /*
-        
-        
-        switch sender.selectedSegmentIndex {
-        case <#pattern#>:
-            <#code#>
-        case <#pattern#>:
-            <#code#>
-        case <#pattern#>:
-            <#code#>
-        default:
-            <#code#>
-        }
- 
- */
-        
-        
-        
-        // nambahin collection view ke navController
-        
-    }
-    
-
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
-extension GalleryViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return galleries.count
-    }
-    
+extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "galleryCollectionViewCell", for: indexPath) as! galleryCollectionViewCell
-        cell.setup(with: galleries[indexPath.row])
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryCellId, for: indexPath) as! GalleryCollectionViewCell
+        let origami = origamis[indexPath.row]
+        cell.galleryImageView.image = UIImage (named: origami.image!)
+        cell.titleLabel.text = origami.name!
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return origamis.count
+    }
+    
+  
+        
+        
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
 
@@ -121,33 +72,3 @@ extension GalleryViewController: UICollectionViewDataSource {
         return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
     }
 }
-
-
-extension GalleryViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 165, height: 220)
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/*
- switch sender.selectedSegmentIndex {
- case 0:
-     break
- case 1:
-     break
- case 2:
-     break
- default:
-     break
- }
- */
- 

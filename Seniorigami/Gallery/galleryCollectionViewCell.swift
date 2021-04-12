@@ -7,15 +7,10 @@
 
 import UIKit
 
-class galleryCollectionViewCell: UICollectionViewCell {
+class GalleryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var galleryImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
-    func setup(with gallery: Gallery2) {
-        galleryImageView.image = gallery.image
-        titleLabel.text = gallery.title
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
