@@ -23,6 +23,9 @@ class PlayNowViewController: UIViewController {
         let nibRecent = UINib(nibName: RecentCell.identifier, bundle: nil)
         tableView.register(nibRecent, forCellReuseIdentifier: RecentCell.identifier)
         
+        let nibHeader = UINib(nibName: HeaderCell.identifier, bundle: nil)
+        tableView.register(nibHeader, forCellReuseIdentifier: HeaderCell.identifier)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,7 +37,7 @@ class PlayNowViewController: UIViewController {
             if selectedRow == 0 {
                 destination.selected = "Featured"
             } else {
-                destination.selected = database[selectedRow - 1].difficulty ?? "Difficulty"
+                destination.selected = database[selectedRow - 2].difficulty ?? "Difficulty"
             }
         }
     }
@@ -44,16 +47,19 @@ class PlayNowViewController: UIViewController {
 extension PlayNowViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "segueDifficulty", sender: self)
-        
+        if indexPath.row != 1 {
+            performSegue(withIdentifier: "segueDifficulty", sender: self)
+        }
     }
-    
 }
 
 extension PlayNowViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
+        // 0 recent cell
+        // 1 header cell (title & subtitle)
+        // 3 - 4 mode cell
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,34 +69,25 @@ extension PlayNowViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: RecentCell.identifier) as! RecentCell
             let data = Database.shared.getOrigamiList()[1]
             
-            cell.topLeftLabel.text = "Recent"
-            cell.topLeftLabel.backgroundColor = .white
-            cell.topLeftLabel.layer.masksToBounds = true
-            cell.topLeftLabel.layer.cornerRadius = 15.0
-            cell.topLeftLabel.layer.borderWidth = 1.0
-            cell.topLeftLabel.layer.borderColor = UIColor(named: "darkGray")?.cgColor
-            
             cell.topRightLabel.text = "8 of 10"
-            cell.topRightLabel.layer.masksToBounds = true
-            cell.topRightLabel.layer.cornerRadius = 15.0
+            cell.topLeftLabel.text = "Recent"
             
             cell.origamiThumbnail.image = UIImage(named: data.image!)
-            
             cell.origamiTitle.text = data.name
             return cell
 
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HeaderCell.identifier) as! HeaderCell
+            return cell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ModeCell.identifier) as! ModeCell
-        let data = Database.shared.getModeList()[indexPath.row - 1]
+        let data = Database.shared.getModeList()[indexPath.row - 2]
         
         cell.modeLabel.text = data.difficulty
         cell.stepsLabel.attributedText = imageLabel(data.stepDetail!, data.icon!)
         cell.thumbnailImage.image = UIImage(named: data.thumbnail!)
         cell.cardBackground.backgroundColor = UIColor(named: data.color!)
-        
-        cell.stepsLabel.layer.masksToBounds = true
-        cell.stepsLabel.layer.cornerRadius = 15.0
         
         return cell
     }
@@ -100,12 +97,17 @@ extension PlayNowViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: RecentCell.identifier)
             
-            //make sure that recent card is always square
+            //make sure that recent/featured card is always square
             return (cell?.bounds.width)!
+            
+        } else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: HeaderCell.identifier)
+            return (cell?.bounds.height)!
+            
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ModeCell.identifier)
-        
         return (cell?.bounds.height)!
     }
 }

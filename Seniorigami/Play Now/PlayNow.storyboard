@@ -70,14 +70,6 @@
             </objects>
             <point key="canvasLocation" x="2527.536231884058" y="27.455357142857142"/>
         </scene>
-        <!--UIViewController-h6z-qu-eDh-->
-        <scene sceneID="0ce-Lj-pOK">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UIViewController-h6z-qu-eDh" storyboardName="Congratulations" referencedIdentifier="UIViewController-h6z-qu-eDh" id="SWs-sd-eo5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xko-lb-836" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6014" y="27"/>
-        </scene>
     </scenes>
     <resources>
         <image name="play.fill" catalog="system" width="116" height="128"/>
