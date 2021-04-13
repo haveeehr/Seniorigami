@@ -58,7 +58,7 @@ extension PlayNowViewController: UITableViewDelegate {
         
         if indexPath.row == 0 {
             performSegue(withIdentifier: "segueFeatured", sender: self)
-        } else {
+        } else if indexPath.row > 1 {
             performSegue(withIdentifier: "segueDifficulty", sender: self)
         }
     }
