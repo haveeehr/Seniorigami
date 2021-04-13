@@ -10,4 +10,6 @@ import Foundation
 struct Gallery {
     var origami: Origami?
     var image: String?
+    var date: Date?
+    var name: String?
 }

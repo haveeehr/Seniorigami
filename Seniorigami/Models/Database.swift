@@ -45,19 +45,19 @@ class Database{
         seedMode()
         seedInstructions()
         
-        origamis.append(Origami( name: "Plane", steps: 10, paper: "1 Origami Paper", mode: modes[0], quote: "Your wings already exist, all you have to do is fly.", image: "Plane", instructions: instructions[0]))
+        origamis.append(Origami( name: "Plane", steps: 10, paper: "1 Origami Paper", mode: modes[0], quote: "Your wings already exist, all you have to do is fly.", image: "Plane", instructions: instructions[0], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Fox", steps: 15, paper: "1 Origami Paper" ,mode: modes[0], quote: "What does the fox say?", image: "Fox", instructions: instructions[1]))
+        origamis.append(Origami( name: "Fox", steps: 15, paper: "1 Origami Paper" ,mode: modes[0], quote: "What does the fox say?", image: "Fox", instructions: instructions[1], finished: true, favourite: false))
    
-        origamis.append(Origami( name: "Deer", steps: 20, paper: "1 Origami Paper", mode: modes[1],quote: "I'm quite fawn'd on you, my deer.", image: "Deer", instructions: instructions[1]))
+        origamis.append(Origami( name: "Deer", steps: 20, paper: "1 Origami Paper", mode: modes[1],quote: "I'm quite fawn'd on you, my deer.", image: "Deer", instructions: instructions[1], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[1]))
+        origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[1], finished: true, favourite: false))
         
-        origamis.append(Origami( name: "Dog", steps: 23, paper: "1 Origami Paper", mode: modes[1], quote: "Dogs are not our whole life, but they make our lives whole.", image: "Dog", instructions: instructions[1]))
+        origamis.append(Origami( name: "Dog", steps: 23, paper: "1 Origami Paper", mode: modes[1], quote: "Dogs are not our whole life, but they make our lives whole.", image: "Dog", instructions: instructions[1], finished: false, favourite: false))
     
-        origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[1]))
+        origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[1], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[1]))
+        origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[1], finished: false, favourite: false))
     }
     
     func deleteOrigami(index: Int){
