@@ -119,6 +119,7 @@
                         <outlet property="congratulationCardView" destination="8nk-ay-8sz" id="3y9-nE-Bre"/>
                         <outlet property="crownImage" destination="Cfq-sy-EyX" id="YQs-YM-kmF"/>
                         <outlet property="dateLabel" destination="JoJ-0O-keY" id="Io3-zJ-aI9"/>
+                        <outlet property="doneButton" destination="ywN-PY-8O2" id="4Yd-3r-CLT"/>
                         <outlet property="mainImageView" destination="SjP-eM-Xta" id="IZa-SG-YNk"/>
                         <outlet property="nameTextField" destination="6TR-DA-iTb" id="0oV-GJ-tXK"/>
                         <outlet property="selectedOrigamiQuotesLabel" destination="xhr-76-3Pr" id="7Sv-UB-Nqi"/>
@@ -127,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUC-DO-yrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7832.3076923076924" y="26.303317535545023"/>
+            <point key="canvasLocation" x="8761.538461538461" y="26.303317535545023"/>
         </scene>
     </scenes>
     <resources>
