@@ -9,6 +9,7 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     @IBOutlet weak var galleryCollectionView: UICollectionView!
+    @IBOutlet weak var titleSegmented: UISegmentedControl!
     
     var origamis = Database.shared.getOrigamiByMode(mode: "Easy") // dah sesuai mode ;
     
@@ -32,6 +33,10 @@ class GalleryViewController: UIViewController {
         let nibGalleryCell = UINib(nibName: galleryCellId, bundle: nil) // mendaftarkan XIB
         let nibDisabledCell = UINib(nibName: disabledCellId, bundle: nil)
         
+        titleSegmented.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.blue,
+            NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 18.0)
+        ], for: UIControl.State.selected)
         
         galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
         galleryCollectionView.register(nibDisabledCell, forCellWithReuseIdentifier: disabledCellId)
@@ -40,6 +45,14 @@ class GalleryViewController: UIViewController {
         // tambah viewdidgesture
     }
  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var gallery = Gallery(origami: origamis[0], image: "Fox", date: Date(), name: "Yola")
+        
+        
+        let selectedRow = galleryCollectionView.indexPathsForSelectedItems?[0].row
+        let destination = segue.destination as? PopupViewController
+        destination?.selectedGallery = gallery
+    }
 }
 
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -70,7 +83,9 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let origami = origamis[indexPath.row]
         if origami.finished == true {
-            print("finished") // taruh modal / pop up
+            // print("finished") // taruh modal / pop up
+            performSegue(withIdentifier: "PopupSegue", sender: self)
+            
         }
         
 //        else {

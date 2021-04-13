@@ -34,6 +34,7 @@
 		88CB6D4026242FD10014B6A0 /* GalleryDisabledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88CB6D3E26242FD10014B6A0 /* GalleryDisabledCell.xib */; };
 		88F1317F26247E6E00B68566 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1317D26247E6E00B68566 /* GalleryCollectionViewCell.swift */; };
 		88F1318026247E6E00B68566 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F1317E26247E6E00B68566 /* GalleryCollectionViewCell.xib */; };
+		88F4493F26253D5600E9A20C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4493E26253D5600E9A20C /* PopupViewController.swift */; };
 		9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BDF7261F607400AC8FBA /* ModeCell.swift */; };
 		9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BDF8261F607400AC8FBA /* ModeCell.xib */; };
 		9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE02261F688800AC8FBA /* RecentCell.swift */; };
@@ -77,6 +78,7 @@
 		88CB6D3E26242FD10014B6A0 /* GalleryDisabledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDisabledCell.xib; sourceTree = "<group>"; };
 		88F1317D26247E6E00B68566 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		88F1317E26247E6E00B68566 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		88F4493E26253D5600E9A20C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		9060BDF7261F607400AC8FBA /* ModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCell.swift; sourceTree = "<group>"; };
 		9060BDF8261F607400AC8FBA /* ModeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeCell.xib; sourceTree = "<group>"; };
 		9060BE02261F688800AC8FBA /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3B830CDD261C322E009FA130 /* Gallery.storyboard */,
 				88F1317D26247E6E00B68566 /* GalleryCollectionViewCell.swift */,
 				88F1317E26247E6E00B68566 /* GalleryCollectionViewCell.xib */,
+				88F4493E26253D5600E9A20C /* PopupViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88F4493F26253D5600E9A20C /* PopupViewController.swift in Sources */,
 				88CB6D3F26242FD10014B6A0 /* GalleryDisabledCell.swift in Sources */,
 				90922116261FEAC000514C57 /* GenericCard.swift in Sources */,
 				90922110261FCF2000514C57 /* DifficultyController.swift in Sources */,
@@ -511,13 +515,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J3RR7Q3QN2;
+				DEVELOPMENT_TEAM = Y64TY96HA2;
 				INFOPLIST_FILE = Seniorigami/Default/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JavierFransiscus.Seniorigami;
+				PRODUCT_BUNDLE_IDENTIFIER = dimitriyola.Seniorigami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -530,13 +534,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J3RR7Q3QN2;
+				DEVELOPMENT_TEAM = Y64TY96HA2;
 				INFOPLIST_FILE = Seniorigami/Default/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = JavierFransiscus.Seniorigami;
+				PRODUCT_BUNDLE_IDENTIFIER = dimitriyola.Seniorigami;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

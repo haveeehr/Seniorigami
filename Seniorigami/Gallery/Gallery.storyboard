@@ -69,26 +69,113 @@
                     <navigationItem key="navigationItem" title="Gallery" largeTitleDisplayMode="always" id="iNZ-CV-IXA"/>
                     <connections>
                         <outlet property="galleryCollectionView" destination="RmI-Rl-BWq" id="zLU-SH-iSc"/>
+                        <outlet property="titleSegmented" destination="Fnj-QO-D7J" id="Plr-YV-229"/>
+                        <segue destination="XEh-9g-KgW" kind="presentation" identifier="PopupSegue" id="3Gb-Zi-kp0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdD-KK-wQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3435.3846153846152" y="1419.6682464454975"/>
         </scene>
-        <!--View Controller-->
+        <!--Popup View Controller-->
         <scene sceneID="fWY-Wg-od0">
             <objects>
-                <viewController id="XEh-9g-KgW" sceneMemberID="viewController">
+                <viewController id="XEh-9g-KgW" customClass="PopupViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DpR-eh-9cg">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ng6-qO-sUd" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
+                                <rect key="frame" x="20" y="118" width="350" height="554"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origami" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrK-UY-bN6">
+                                        <rect key="frame" x="98" y="30" width="154" height="51"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80j-4w-CJ6">
+                                        <rect key="frame" x="30" y="111" width="290" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FR1-6d-Hlu">
+                                        <rect key="frame" x="30" y="174.33333333333331" width="290" height="255.66666666666669"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="80j-4w-CJ6" firstAttribute="leading" secondItem="Ng6-qO-sUd" secondAttribute="leading" constant="30" id="0QP-aK-ZMD"/>
+                                    <constraint firstItem="80j-4w-CJ6" firstAttribute="top" secondItem="nrK-UY-bN6" secondAttribute="bottom" constant="30" id="1mT-mt-7Fp"/>
+                                    <constraint firstItem="FR1-6d-Hlu" firstAttribute="leading" secondItem="Ng6-qO-sUd" secondAttribute="leading" constant="30" id="F62-SP-QWP"/>
+                                    <constraint firstItem="nrK-UY-bN6" firstAttribute="top" secondItem="Ng6-qO-sUd" secondAttribute="top" constant="30" id="S7k-FZ-W3X"/>
+                                    <constraint firstAttribute="trailing" secondItem="FR1-6d-Hlu" secondAttribute="trailing" constant="30" id="cjw-We-iYR"/>
+                                    <constraint firstItem="FR1-6d-Hlu" firstAttribute="top" secondItem="80j-4w-CJ6" secondAttribute="bottom" constant="43" id="fma-rj-KtH"/>
+                                    <constraint firstItem="nrK-UY-bN6" firstAttribute="centerX" secondItem="Ng6-qO-sUd" secondAttribute="centerX" id="gRf-7G-O78"/>
+                                    <constraint firstAttribute="trailing" secondItem="80j-4w-CJ6" secondAttribute="trailing" constant="30" id="myN-6i-GVq"/>
+                                    <constraint firstAttribute="bottom" secondItem="FR1-6d-Hlu" secondAttribute="bottom" constant="124" id="pkP-cq-smP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mEM-hY-kTq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mEM-hY-kTq" firstAttribute="bottom" secondItem="Ng6-qO-sUd" secondAttribute="bottom" constant="84" id="Dgk-Fb-HER"/>
+                            <constraint firstItem="Ng6-qO-sUd" firstAttribute="leading" secondItem="mEM-hY-kTq" secondAttribute="leading" constant="20" id="JF5-Yc-ckc"/>
+                            <constraint firstItem="Ng6-qO-sUd" firstAttribute="centerY" secondItem="DpR-eh-9cg" secondAttribute="centerY" id="Lnd-Ye-Ijr"/>
+                            <constraint firstItem="Ng6-qO-sUd" firstAttribute="centerX" secondItem="DpR-eh-9cg" secondAttribute="centerX" id="MFg-Oe-gzb"/>
+                            <constraint firstItem="mEM-hY-kTq" firstAttribute="trailing" secondItem="Ng6-qO-sUd" secondAttribute="trailing" constant="20" id="jxx-mR-Ozq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0mV-Uz-jfk"/>
+                    <connections>
+                        <outlet property="origamiName" destination="nrK-UY-bN6" id="9n1-Lm-tm9"/>
+                        <outlet property="origamiQuotes" destination="80j-4w-CJ6" id="3yE-3T-o1K"/>
+                        <outlet property="userPhoto" destination="FR1-6d-Hlu" id="Th8-2O-pE8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7E-G9-9rH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4226" y="1420"/>
+            <point key="canvasLocation" x="4376.9230769230771" y="1419.6682464454975"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZsQ-p4-ETI">
+            <objects>
+                <viewController id="WWp-YO-DoI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1uC-ox-lwv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-9k-PdE">
+                                <rect key="frame" x="16" y="149" width="358" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4NF-k9-TVy">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xx6-lA-No9">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s2B-Xx-Ymi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4vo-Co-sy6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ev-wn-i0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5144.6153846153848" y="1435.3080568720379"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="N26-Bl-Jwg">

@@ -92,4 +92,16 @@ class Database{
         }
         return origamiByMode
     }
+    
+    
+    func getGalleryByName(named: String) -> [Gallery] {
+        var galleryByName = [Gallery]()
+        for i in 0...galleryList.count-1 {
+            if galleryList[i].origami?.name == named {
+                galleryByName.append(galleryList[i])
+            }
+        }
+        return galleryByName
+    }
+    
 }
