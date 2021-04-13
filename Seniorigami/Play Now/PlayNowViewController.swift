@@ -9,6 +9,11 @@ import UIKit
 
 class PlayNowViewController: UIViewController {
 
+    //generate random origami for featured/recommendation
+    var randomNumber = Int.random(in: 0...Database.shared.getOrigamiList().count - 1)
+    let dataLog = Database.shared.getLog()
+    let dataOrigami = Database.shared.getOrigamiList()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,21 +38,27 @@ class PlayNowViewController: UIViewController {
         let database = Database.shared.getModeList()
         let selectedRow = (tableView.indexPathForSelectedRow?.row)!
         
-        if let destination = segue.destination as? DifficultyController {
-            if selectedRow == 0 {
-                destination.selected = "Featured"
+        if selectedRow == 0 {
+            let destination = segue.destination as? StepsViewController
+            if  dataLog.lastPlayed != nil {
+                destination?.selected = dataLog.lastPlayed
             } else {
-                destination.selected = database[selectedRow - 2].difficulty ?? "Difficulty"
+                destination?.selected = dataOrigami[randomNumber]
             }
+            
+        } else {
+            let destination = segue.destination as? DifficultyController
+                    destination?.selected = database[selectedRow - 2]
         }
     }
-    
 }
 
 extension PlayNowViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row != 1 {
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "segueFeatured", sender: self)
+        } else {
             performSegue(withIdentifier: "segueDifficulty", sender: self)
         }
     }
@@ -67,13 +78,26 @@ extension PlayNowViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: RecentCell.identifier) as! RecentCell
-            let data = Database.shared.getOrigamiList()[1]
+            let dataFeatured = dataOrigami[randomNumber]
             
-            cell.topRightLabel.text = "8 of 10"
-            cell.topLeftLabel.text = "Recent"
+            if  dataLog.lastPlayed != nil {
+                cell.topLeftLabel.text = "Recent"
+                cell.topRightLabel.text = "\((dataLog.progress)!) of \((dataLog.lastPlayed?.steps)!)"
+                cell.topRightLabel.backgroundColor = UIColor(named: "difficulty\((dataLog.lastPlayed?.mode?.difficulty)!)")
+                cell.origamiTitle.text = dataLog.lastPlayed?.name
+                cell.origamiThumbnail.image = UIImage(named: (dataLog.lastPlayed?.image)!)
+                cell.totalSteps.text = "\((dataLog.lastPlayed?.steps)!) steps"
+                
+                return cell
+            }
             
-            cell.origamiThumbnail.image = UIImage(named: data.image!)
-            cell.origamiTitle.text = data.name
+            cell.topRightLabel.text = dataFeatured.mode?.difficulty
+            cell.topRightLabel.backgroundColor = UIColor(named: "difficulty\((dataFeatured.mode?.difficulty)!)")
+            cell.topLeftLabel.text = "Try This!"
+            cell.totalSteps.text = "\((dataFeatured.steps)!) steps"
+            
+            cell.origamiThumbnail.image = UIImage(named: dataFeatured.image!)
+            cell.origamiTitle.text = dataFeatured.name
             return cell
 
         } else if indexPath.row == 1 {
