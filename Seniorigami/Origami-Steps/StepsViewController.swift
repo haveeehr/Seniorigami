@@ -8,11 +8,13 @@
 import UIKit
 
 class StepsViewController: UIViewController {
+    
+    var selected: String = ""
 
     @IBOutlet weak var stepsNavigationBar: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = selected
 
     }
     /*
