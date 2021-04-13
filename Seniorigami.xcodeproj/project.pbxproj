@@ -41,6 +41,8 @@
 		90922110261FCF2000514C57 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210F261FCF2000514C57 /* DifficultyController.swift */; };
 		90922116261FEAC000514C57 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90922115261FEAC000514C57 /* GenericCard.swift */; };
 		90D336392621219D00222480 /* CardCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D336382621219D00222480 /* CardCellAnimation.swift */; };
+		9C00308926258FBC007D8182 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308726258FBC007D8182 /* StepCell.swift */; };
+		9C00308A26258FBC007D8182 /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C00308826258FBC007D8182 /* StepCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		9092210F261FCF2000514C57 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		90922115261FEAC000514C57 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
 		90D336382621219D00222480 /* CardCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellAnimation.swift; sourceTree = "<group>"; };
+		9C00308726258FBC007D8182 /* StepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
+		9C00308826258FBC007D8182 /* StepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,8 +239,8 @@
 		9C003082262509C5007D8182 /* Detail Steps Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9C00308326250A6E007D8182 /* StepCell.swift */,
-				9C00308426250A6E007D8182 /* StepCell.xib */,
+				9C00308726258FBC007D8182 /* StepCell.swift */,
+				9C00308826258FBC007D8182 /* StepCell.xib */,
 			);
 			path = "Detail Steps Cells";
 			sourceTree = "<group>";
@@ -300,7 +304,6 @@
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
-				9C00308626250A6E007D8182 /* StepCell.xib in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */,
@@ -311,6 +314,7 @@
 				9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */,
 				9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */,
 				3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */,
+				9C00308A26258FBC007D8182 /* StepCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +341,7 @@
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
-				9C00308526250A6E007D8182 /* StepCell.swift in Sources */,
+				9C00308926258FBC007D8182 /* StepCell.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
 				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,

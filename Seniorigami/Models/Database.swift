@@ -83,6 +83,16 @@ class Database{
     func getModeList()->[Mode]{
         return modes
     }
+    
+    func setOrigamiFinished(origami: Origami){
+        for i in 0...origamis.count-1{
+            if origamis[i].name == origami.name  {
+                origamis[i].finished = true
+            return 
+            }
+        }
+   }
+    
 }
 
 

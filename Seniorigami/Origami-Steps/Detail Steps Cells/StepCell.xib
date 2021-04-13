@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,49 +11,76 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StepCell" id="gTV-IL-0wX" customClass="StepCell" customModule="Seniorigami" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StepCell" id="gTV-IL-0wX" customClass="StepCell" customModule="Seniorigami" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="350" height="570"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="350" height="570"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-m6-hYa">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-m6-hYa" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="570"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-H3-PvS">
-                                <rect key="frame" x="156" y="491" width="38" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-EM-lAw">
-                                <rect key="frame" x="59" y="368" width="233" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-EM-lAw">
+                                <rect key="frame" x="30" y="389.66666666666669" width="290" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="C0W-d2-Ca6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spF-i8-VFk">
-                                <rect key="frame" x="62" y="62" width="226" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spF-i8-VFk">
+                                <rect key="frame" x="30" y="30" width="290" height="287.66666666666669"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-jD-OHU">
-                                <rect key="frame" x="91" y="330" width="168" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-jD-OHU" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
+                                <rect key="frame" x="141.33333333333334" y="347.66666666666669" width="67.333333333333343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="kUI-jC-MNB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingTop">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingBottom">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-H3-PvS">
+                                <rect key="frame" x="163" y="501.66666666666669" width="24" height="16.666666666666629"/>
+                                <color key="tintColor" name="darkGray"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="T1m-EM-lAw" firstAttribute="top" secondItem="0BT-jD-OHU" secondAttribute="bottom" constant="10" id="4Fi-iP-jpk"/>
+                            <constraint firstAttribute="trailing" secondItem="T1m-EM-lAw" secondAttribute="trailing" constant="30" id="6IJ-pd-jh3"/>
+                            <constraint firstItem="0BT-jD-OHU" firstAttribute="centerX" secondItem="LDO-m6-hYa" secondAttribute="centerX" id="DLS-DX-rVS"/>
+                            <constraint firstItem="T1m-EM-lAw" firstAttribute="leading" secondItem="LDO-m6-hYa" secondAttribute="leading" constant="30" id="GuR-K8-P4R"/>
+                            <constraint firstItem="8KC-H3-PvS" firstAttribute="centerX" secondItem="LDO-m6-hYa" secondAttribute="centerX" id="Hnh-aJ-WlZ"/>
                             <constraint firstAttribute="width" constant="350" id="Hof-rE-cu7"/>
                             <constraint firstAttribute="height" constant="570" id="OlH-5T-CIi"/>
+                            <constraint firstItem="spF-i8-VFk" firstAttribute="leading" secondItem="LDO-m6-hYa" secondAttribute="leading" constant="30" id="PjB-bG-YOH"/>
+                            <constraint firstAttribute="trailing" secondItem="spF-i8-VFk" secondAttribute="trailing" constant="30" id="Rzl-6y-Ojc"/>
+                            <constraint firstItem="8KC-H3-PvS" firstAttribute="top" secondItem="T1m-EM-lAw" secondAttribute="bottom" constant="30" id="Vzr-Uu-3cd"/>
+                            <constraint firstAttribute="bottom" secondItem="8KC-H3-PvS" secondAttribute="bottom" constant="50" id="odB-Bd-PxG"/>
+                            <constraint firstItem="spF-i8-VFk" firstAttribute="top" secondItem="LDO-m6-hYa" secondAttribute="top" constant="30" id="vdq-FW-kTi"/>
+                            <constraint firstItem="0BT-jD-OHU" firstAttribute="top" secondItem="spF-i8-VFk" secondAttribute="bottom" constant="30" id="yKH-Vp-Kar"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" systemColor="linkColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="LDO-m6-hYa" secondAttribute="bottom" id="2tU-BS-aUs"/>
                 <constraint firstItem="LDO-m6-hYa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8WX-nV-4vf"/>
@@ -62,17 +90,23 @@
             <size key="customSize" width="250" height="419"/>
             <connections>
                 <outlet property="Microphone" destination="8KC-H3-PvS" id="70C-d2-hT8"/>
-                <outlet property="origamiStepCount" destination="0BT-jD-OHU" id="kJE-RS-FgH"/>
+                <outlet property="origamiStepCount" destination="0BT-jD-OHU" id="yQ4-Hq-Xb5"/>
                 <outlet property="origamiStepDesc" destination="T1m-EM-lAw" id="KV6-z5-17f"/>
                 <outlet property="origamiStepImg" destination="spF-i8-VFk" id="o9E-Fe-6cT"/>
             </connections>
             <point key="canvasLocation" x="168" y="29.55665024630542"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="0BT-jD-OHU">
+            <size key="intrinsicContentSize" width="67.333333333333343" height="26.333333333333332"/>
+        </designable>
+    </designables>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
+        <namedColor name="darkGray">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
