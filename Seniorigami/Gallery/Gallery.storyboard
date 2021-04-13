@@ -70,23 +70,23 @@
                     <connections>
                         <outlet property="galleryCollectionView" destination="RmI-Rl-BWq" id="zLU-SH-iSc"/>
                         <outlet property="titleSegmented" destination="Fnj-QO-D7J" id="Plr-YV-229"/>
-                        <segue destination="XEh-9g-KgW" kind="presentation" identifier="PopupSegue" id="3Gb-Zi-kp0"/>
+                        <segue destination="WWp-YO-DoI" kind="presentation" identifier="PopupSegue" id="umJ-hb-mMl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdD-KK-wQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3435.3846153846152" y="1419.6682464454975"/>
         </scene>
-        <!--Popup View Controller-->
+        <!--View Controller-->
         <scene sceneID="fWY-Wg-od0">
             <objects>
-                <viewController id="XEh-9g-KgW" customClass="PopupViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XEh-9g-KgW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DpR-eh-9cg">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ng6-qO-sUd" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="20" y="118" width="350" height="554"/>
+                                <rect key="frame" x="20" y="118" width="350" height="608"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origami" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrK-UY-bN6">
                                         <rect key="frame" x="98" y="30" width="154" height="51"/>
@@ -101,7 +101,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FR1-6d-Hlu">
-                                        <rect key="frame" x="30" y="174.33333333333331" width="290" height="255.66666666666669"/>
+                                        <rect key="frame" x="30" y="174.33333333333329" width="290" height="309.66666666666674"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,27 +139,27 @@
             </objects>
             <point key="canvasLocation" x="4376.9230769230771" y="1419.6682464454975"/>
         </scene>
-        <!--View Controller-->
+        <!--Popup View Controller-->
         <scene sceneID="ZsQ-p4-ETI">
             <objects>
-                <viewController id="WWp-YO-DoI" sceneMemberID="viewController">
+                <viewController id="WWp-YO-DoI" customClass="PopupViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uC-ox-lwv">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-9k-PdE">
-                                <rect key="frame" x="16" y="149" width="358" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-9k-PdE">
+                                <rect key="frame" x="16" y="88" width="358" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4NF-k9-TVy">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="4NF-k9-TVy">
                                     <size key="itemSize" width="128" height="128"/>
+                                    <size key="estimatedItemSize" width="350" height="607"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xx6-lA-No9">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="18" y="8" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s2B-Xx-Ymi">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -167,11 +167,25 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="WWp-YO-DoI" id="Boo-QN-QMY"/>
+                                    <outlet property="delegate" destination="WWp-YO-DoI" id="9ls-0S-BNF"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4vo-Co-sy6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Et-9k-PdE" firstAttribute="leading" secondItem="4vo-Co-sy6" secondAttribute="leading" id="BeM-mQ-RxI"/>
+                            <constraint firstItem="4vo-Co-sy6" firstAttribute="trailing" secondItem="4Et-9k-PdE" secondAttribute="trailing" id="Kyf-yK-PM3"/>
+                            <constraint firstItem="4vo-Co-sy6" firstAttribute="bottom" secondItem="4Et-9k-PdE" secondAttribute="bottom" id="hIJ-GX-JuF"/>
+                            <constraint firstItem="4Et-9k-PdE" firstAttribute="top" secondItem="4vo-Co-sy6" secondAttribute="top" id="jTG-Zq-Iag"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1aN-3f-TnE"/>
+                    <connections>
+                        <outlet property="popUpCV" destination="4Et-9k-PdE" id="JCD-fb-f7I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ev-wn-i0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

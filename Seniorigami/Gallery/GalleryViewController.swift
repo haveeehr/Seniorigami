@@ -34,8 +34,8 @@ class GalleryViewController: UIViewController {
         let nibDisabledCell = UINib(nibName: disabledCellId, bundle: nil)
         
         titleSegmented.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor.blue,
-            NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 18.0)
+            NSAttributedString.Key.foregroundColor: UIColor(named: "AccentColor" ),
+            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18.0)
         ], for: UIControl.State.selected)
         
         galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
