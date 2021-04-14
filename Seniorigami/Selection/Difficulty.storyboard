@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7jU-qk-ukk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7jU-qk-ukk">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,23 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-Dg-mRZ">
-                                <rect key="frame" x="172" y="415" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-cf-AST">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" name="backgroundGray"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="40" minimumInteritemSpacing="40" sectionInsetReference="layoutMargins" id="gEE-Qf-3s9">
+                                    <size key="itemSize" width="350" height="630"/>
+                                    <size key="estimatedItemSize" width="350" height="630"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrigamiCollectionViewCell" id="08Y-KT-ki7" customClass="OrigamiCollectionViewCell" customModule="Seniorigami" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="26.666666666666668" width="371" height="713"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ufr-nd-hN8">
+                                            <rect key="frame" x="0.0" y="0.0" width="371" height="713"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="371" height="713"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="ufr-nd-hN8" id="r5c-Cd-slb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <segue destination="UEY-B3-19g" kind="show" id="QXs-ZH-f6p"/>
+                                    <outlet property="dataSource" destination="7jU-qk-ukk" id="0Az-FW-Aa7"/>
+                                    <outlet property="delegate" destination="7jU-qk-ukk" id="SVx-Dy-EjV"/>
                                 </connections>
-                            </button>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7oe-Ks-t3I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7oe-Ks-t3I" firstAttribute="bottom" secondItem="fD2-cf-AST" secondAttribute="bottom" id="5Vi-58-akD"/>
+                            <constraint firstItem="fD2-cf-AST" firstAttribute="trailing" secondItem="7oe-Ks-t3I" secondAttribute="trailing" id="XiV-sl-0da"/>
+                            <constraint firstItem="fD2-cf-AST" firstAttribute="top" secondItem="7oe-Ks-t3I" secondAttribute="top" id="Znr-gI-Gwr"/>
+                            <constraint firstItem="fD2-cf-AST" firstAttribute="leading" secondItem="7oe-Ks-t3I" secondAttribute="leading" id="qQJ-wi-0Sh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Difficulty" largeTitleDisplayMode="never" id="FKJ-96-cx4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fD2-cf-AST" id="wPY-Yh-vxX"/>
+                        <segue destination="UEY-B3-19g" kind="show" identifier="selectedOrigamiSegue" id="t3c-cV-pJk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8DC-vD-009" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5209.2307692307686" y="26.303317535545023"/>
+            <point key="canvasLocation" x="5207.6923076923076" y="26.303317535545023"/>
         </scene>
         <!--StepByStep-->
         <scene sceneID="fb9-eG-mxD">
@@ -46,6 +79,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="backgroundGray">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
