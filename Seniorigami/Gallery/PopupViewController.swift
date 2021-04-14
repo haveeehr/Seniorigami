@@ -22,8 +22,10 @@ class PopupViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        //        print(self.view.frame)
-        //        self.view.frame = CGRect(x: 0, y: -20, width: 390, height: 844)
+        pageIndicator.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.75)
+
+        
+
         
         let nibPopupCell = UINib(nibName: popUpId, bundle: nil)
         let nibPopupNext = UINib(nibName: popUpNextId, bundle: nil)
