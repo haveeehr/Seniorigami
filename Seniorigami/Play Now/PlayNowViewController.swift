@@ -136,9 +136,8 @@ extension PlayNowViewController: UITableViewDataSource {
     }
 }
 
-
 //function to add image/icon in front of UIlabel
-func imageLabel(_ labelText: String, _ imageName: String) -> NSAttributedString {
+func imageLabel(_ labelText: String, _ imageName: String, _ height: Int? = 16) -> NSAttributedString {
     
     let fullString = NSMutableAttributedString(string: "")
 
@@ -146,6 +145,7 @@ func imageLabel(_ labelText: String, _ imageName: String) -> NSAttributedString 
         
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(systemName: imageName)
+        imageAttachment.setImageHeight(height: CGFloat(height!))
         
         let imageString = NSAttributedString(attachment: imageAttachment)
         
@@ -157,4 +157,13 @@ func imageLabel(_ labelText: String, _ imageName: String) -> NSAttributedString 
     fullString.append(NSAttributedString(string: labelText))
     
     return fullString
+}
+
+extension NSTextAttachment {
+    func setImageHeight(height: CGFloat) {
+        guard let image = image else { return }
+        let ratio = image.size.width / image.size.height
+        
+        bounds = CGRect(x: bounds.origin.x, y: bounds.origin.y - 2, width: ratio * height, height: height)
+    }
 }
