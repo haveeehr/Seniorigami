@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uu6-IL-Hj7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uu6-IL-Hj7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,24 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="FPW-Vv-qQ8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mPp-3q-EnH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" name="backgroundGray"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="mfU-R9-Fdn" customClass="CollectionViewFlowLayout" customModule="Seniorigami" customModuleProvider="target">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n4L-ph-yKJ">
+                                        <rect key="frame" x="8" y="8" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gh4-C0-X32">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="uu6-IL-Hj7" id="cnn-3n-yje"/>
+                                    <outlet property="delegate" destination="uu6-IL-Hj7" id="7xE-f9-VCf"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7c8-Ee-o34"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7c8-Ee-o34" firstAttribute="trailing" secondItem="mPp-3q-EnH" secondAttribute="trailing" id="HJ7-d5-Smv"/>
+                            <constraint firstItem="7c8-Ee-o34" firstAttribute="bottom" secondItem="mPp-3q-EnH" secondAttribute="bottom" id="nmK-GT-rZW"/>
+                            <constraint firstItem="mPp-3q-EnH" firstAttribute="top" secondItem="7c8-Ee-o34" secondAttribute="top" id="oRF-Io-bzM"/>
+                            <constraint firstItem="mPp-3q-EnH" firstAttribute="leading" secondItem="7c8-Ee-o34" secondAttribute="leading" id="uk4-9f-jxl"/>
+                            <constraint firstItem="mPp-3q-EnH" firstAttribute="top" secondItem="7c8-Ee-o34" secondAttribute="top" id="z5N-o7-Csl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Steps" largeTitleDisplayMode="never" id="1ym-C5-NX5">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="ghq-W8-8iW">
                             <connections>
-                                <segue destination="tkl-jE-NA2" kind="show" id="4Ib-a6-sT9"/>
+                                <segue destination="tkl-jE-NA2" kind="show" identifier="finishedOrigami" id="uBe-eU-GxR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="896"/>
                     <connections>
+                        <outlet property="finishButton" destination="ghq-W8-8iW" id="7Qo-Jr-9dW"/>
+                        <outlet property="stepsCollection" destination="mPp-3q-EnH" id="ABT-cf-Fbn"/>
                         <outlet property="stepsNavigationBar" destination="1ym-C5-NX5" id="Jle-IL-OvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSt-sT-f6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6052.1739130434789" y="26.785714285714285"/>
+            <point key="canvasLocation" x="6048" y="17"/>
         </scene>
         <!--Congratulations-->
         <scene sceneID="pPH-Xf-f5Z">
@@ -46,6 +83,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="backgroundGray">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
