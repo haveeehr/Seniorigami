@@ -25,6 +25,10 @@ class FavouriteViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView.reloadData()
+    }
+    
     @objc func editFavorite(){
         
         if self.isEditing{

@@ -23,6 +23,7 @@
 		3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */; };
 		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
 		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
+		3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD054242627627200BC91ED /* CongratulationsViewController.swift */; };
 		51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */; };
 		51E903222620081E0028F7A1 /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */; };
 		51E903232620081E0028F7A1 /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */; };
@@ -48,7 +49,6 @@
 		90D336392621219D00222480 /* CardCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D336382621219D00222480 /* CardCellAnimation.swift */; };
 		9C00308926258FBC007D8182 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308726258FBC007D8182 /* StepCell.swift */; };
 		9C00308A26258FBC007D8182 /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C00308826258FBC007D8182 /* StepCell.xib */; };
-		9C00308C2626EB62007D8182 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +70,7 @@
 		3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Difficulty.storyboard; sourceTree = "<group>"; };
 		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
 		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
+		3BD054242627627200BC91ED /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiSelect.swift; sourceTree = "<group>"; };
 		51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
 		51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		90D336382621219D00222480 /* CardCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellAnimation.swift; sourceTree = "<group>"; };
 		9C00308726258FBC007D8182 /* StepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
 		9C00308826258FBC007D8182 /* StepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
-		9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */,
-				9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */,
+				3BD054242627627200BC91ED /* CongratulationsViewController.swift */,
 			);
 			path = Congratulations;
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
 				90D336392621219D00222480 /* CardCellAnimation.swift in Sources */,
+				3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */,
 				9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */,
 				9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,

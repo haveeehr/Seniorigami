@@ -50,7 +50,7 @@ class StepsViewController: UIViewController {
         
         let destination = segue.destination as? CongratulationsViewController
         
-        destination?.selectedOrigami = selected
+        destination?.selectedOrigami = selected!
     }
     
 }
