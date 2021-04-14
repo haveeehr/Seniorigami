@@ -70,7 +70,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
     
     func setupView(){
         
-        //Keyboard stuff
+        // Keyboard stuff
         // call the 'keyboardWillShow' function when the view controller receive the notification that a keyboard is going to be shown
         NotificationCenter.default.addObserver(self, selector: #selector(CongratulationsViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
@@ -79,15 +79,17 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         
         self.dismissKeyboard()
         self.nameTextField.delegate = self
-    
         
+        
+        // Pick Origami
         selectedOrigami = Database.shared.getOrigami(byName: name)
         let gradient = CAGradientLayer()
         let endGradientColor = selectedOrigami.mode?.color
         
-        
+        //Set Crown Image
         crownImage.image = #imageLiteral(resourceName: "crown")
         
+        // Set Congratulation Card View
         congratulationCardView.layer.cornerRadius = 10
         congratulationCardView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         congratulationCardView.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
