@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Database{
     
@@ -57,7 +58,19 @@ class Database{
     
         origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[1], finished: false))
         
+        
         origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[1], finished: true))
+        
+        galleryList.append(Gallery(origami: origamis[1], image: nil , date: Date(), name: "Yola"))
+    }
+    func setGalleryImage( gallery: Gallery, image: UIImage) {
+        for i in 0...galleryList.count - 1 {
+            if galleryList[i].name == gallery.name {
+                galleryList[i].image = image
+                print("hello")
+                return
+            }
+        }
     }
     
     func deleteOrigami(index: Int){
@@ -70,6 +83,16 @@ class Database{
     
     func getGalleryList()->[Gallery]{
         return galleryList
+    }
+    
+    func getGallery(origami: Origami) -> Gallery {
+        
+        for i in 0...galleryList.count - 1 {
+            if galleryList[i].origami?.name == origami.name {
+                return galleryList[i]
+            }
+        }
+        return Gallery()
     }
     
     func getLog()->Log{

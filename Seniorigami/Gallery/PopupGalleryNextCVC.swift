@@ -17,6 +17,8 @@ class PopupGalleryNextCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        nameLabel.layer.cornerRadius = 14
+        nameLabel.layer.masksToBounds = true
         // Initialization code
     }
 

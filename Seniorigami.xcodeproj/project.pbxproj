@@ -35,6 +35,10 @@
 		88F1317F26247E6E00B68566 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1317D26247E6E00B68566 /* GalleryCollectionViewCell.swift */; };
 		88F1318026247E6E00B68566 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F1317E26247E6E00B68566 /* GalleryCollectionViewCell.xib */; };
 		88F4493F26253D5600E9A20C /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4493E26253D5600E9A20C /* PopupViewController.swift */; };
+		88F4496B2625FC9300E9A20C /* PopupGalleryNextCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F449672625FC9200E9A20C /* PopupGalleryNextCVC.swift */; };
+		88F4496C2625FC9300E9A20C /* PopupGalleryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F449682625FC9200E9A20C /* PopupGalleryCVC.swift */; };
+		88F4496D2625FC9300E9A20C /* PopupGalleryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F449692625FC9200E9A20C /* PopupGalleryCVC.xib */; };
+		88F4496E2625FC9300E9A20C /* PopupGalleryNextCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F4496A2625FC9200E9A20C /* PopupGalleryNextCVC.xib */; };
 		9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BDF7261F607400AC8FBA /* ModeCell.swift */; };
 		9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BDF8261F607400AC8FBA /* ModeCell.xib */; };
 		9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE02261F688800AC8FBA /* RecentCell.swift */; };
@@ -79,6 +83,10 @@
 		88F1317D26247E6E00B68566 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		88F1317E26247E6E00B68566 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		88F4493E26253D5600E9A20C /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		88F449672625FC9200E9A20C /* PopupGalleryNextCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGalleryNextCVC.swift; sourceTree = "<group>"; };
+		88F449682625FC9200E9A20C /* PopupGalleryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGalleryCVC.swift; sourceTree = "<group>"; };
+		88F449692625FC9200E9A20C /* PopupGalleryCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupGalleryCVC.xib; sourceTree = "<group>"; };
+		88F4496A2625FC9200E9A20C /* PopupGalleryNextCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupGalleryNextCVC.xib; sourceTree = "<group>"; };
 		9060BDF7261F607400AC8FBA /* ModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCell.swift; sourceTree = "<group>"; };
 		9060BDF8261F607400AC8FBA /* ModeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeCell.xib; sourceTree = "<group>"; };
 		9060BE02261F688800AC8FBA /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 		3B830CE4261C341E009FA130 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				88F449682625FC9200E9A20C /* PopupGalleryCVC.swift */,
+				88F449692625FC9200E9A20C /* PopupGalleryCVC.xib */,
+				88F449672625FC9200E9A20C /* PopupGalleryNextCVC.swift */,
+				88F4496A2625FC9200E9A20C /* PopupGalleryNextCVC.xib */,
 				88CB6D4226242FE10014B6A0 /* Cells */,
 				3B830CE0261C3294009FA130 /* GalleryViewController.swift */,
 				3B830CDD261C322E009FA130 /* Gallery.storyboard */,
@@ -312,11 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
+				88F4496D2625FC9300E9A20C /* PopupGalleryCVC.xib in Resources */,
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
 				88CB6D4026242FD10014B6A0 /* GalleryDisabledCell.xib in Resources */,
 				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */,
+				88F4496E2625FC9300E9A20C /* PopupGalleryNextCVC.xib in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
 				88F1318026247E6E00B68566 /* GalleryCollectionViewCell.xib in Resources */,
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
@@ -354,10 +368,12 @@
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
+				88F4496C2625FC9300E9A20C /* PopupGalleryCVC.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
 				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
 				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
+				88F4496B2625FC9300E9A20C /* PopupGalleryNextCVC.swift in Sources */,
 				9060BE09261F68BA00AC8FBA /* HeaderCell.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 			);

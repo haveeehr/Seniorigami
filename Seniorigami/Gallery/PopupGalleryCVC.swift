@@ -15,6 +15,7 @@ class PopupGalleryCVC: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        photoPopUp.backgroundColor = UIColor(red: 0.973, green: 0.973, blue: 0.984, alpha: 1)
         photoPopUp.layer.cornerRadius = 10
         photoPopUp.layer.masksToBounds = true
         // Initialization code

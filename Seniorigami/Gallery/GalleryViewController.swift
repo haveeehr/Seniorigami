@@ -41,17 +41,24 @@ class GalleryViewController: UIViewController {
         galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
         galleryCollectionView.register(nibDisabledCell, forCellWithReuseIdentifier: disabledCellId)
 
+        galleryCollectionView.reloadData()
         
         // tambah viewdidgesture
     }
+    
+   
+    
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var gallery = Gallery(origami: origamis[0], image: "Fox", date: Date(), name: "Yola")
+        var gallery = Database.shared.getGalleryList()[0]
         
         
         let selectedRow = galleryCollectionView.indexPathsForSelectedItems?[0].row
         let destination = segue.destination as? PopupViewController
         destination?.selectedGallery = gallery
+        
+     
+        
     }
 }
 
@@ -61,7 +68,15 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         if origamis[indexPath.row].finished == true {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryCellId, for: indexPath) as! GalleryCollectionViewCell
             let origami = origamis[indexPath.row] //untuk 1 origami
-            cell.galleryImageView.image = UIImage (named: origami.image!)
+            
+            let origamiGallery = Database.shared.getGallery(origami: origamis[indexPath.row])
+            
+            if origamiGallery.image != nil {
+                cell.galleryImageView.image = origamiGallery.image
+            } else {
+                cell.galleryImageView.image = UIImage(named: origami.image!)
+            }
+            
             cell.titleLabel.text = origami.name!
             return cell
         } else {

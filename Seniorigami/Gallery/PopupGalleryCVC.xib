@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopupGalleryCVC" id="gTV-IL-0wX" customClass="PopupGalleryCVC" customModule="Seniorigami" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopupGalleryCVC" id="gTV-IL-0wX" customClass="PopupGalleryCVC" customModule="Seniorigami" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="350" height="607"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -20,35 +21,37 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ok2-qd-9WY" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="607"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFx-he-PNB">
-                                <rect key="frame" x="30" y="40" width="290" height="51"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origami" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFx-he-PNB">
+                                <rect key="frame" x="30" y="40" width="290" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="darkGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLc-gI-uvF">
-                                <rect key="frame" x="30" y="131" width="290" height="21.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="120" width="290" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="darkGray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pu6-oR-JrU">
-                                <rect key="frame" x="30" y="242.66666666666666" width="290" height="289.33333333333337"/>
+                                <rect key="frame" x="30" y="192" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="TBj-lW-0jm"/>
+                                    <constraint firstAttribute="width" constant="290" id="c5o-M2-of1"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JFx-he-PNB" firstAttribute="leading" secondItem="ok2-qd-9WY" secondAttribute="leading" constant="30" id="1aU-li-ZZz"/>
                             <constraint firstItem="JFx-he-PNB" firstAttribute="top" secondItem="ok2-qd-9WY" secondAttribute="top" constant="40" id="45i-9Z-wst"/>
-                            <constraint firstItem="gLc-gI-uvF" firstAttribute="top" secondItem="JFx-he-PNB" secondAttribute="bottom" constant="40" id="4fe-NJ-mfD"/>
+                            <constraint firstItem="gLc-gI-uvF" firstAttribute="top" secondItem="JFx-he-PNB" secondAttribute="bottom" constant="22" id="4fe-NJ-mfD"/>
                             <constraint firstItem="gLc-gI-uvF" firstAttribute="leading" secondItem="ok2-qd-9WY" secondAttribute="leading" constant="30" id="9gs-gK-roG"/>
                             <constraint firstAttribute="height" constant="607" id="Hjv-7k-Jh9"/>
-                            <constraint firstAttribute="trailing" secondItem="Pu6-oR-JrU" secondAttribute="trailing" constant="30" id="eJe-hW-WcH"/>
+                            <constraint firstItem="Pu6-oR-JrU" firstAttribute="centerX" secondItem="ok2-qd-9WY" secondAttribute="centerX" id="LVk-nd-vF8"/>
                             <constraint firstAttribute="trailing" secondItem="gLc-gI-uvF" secondAttribute="trailing" constant="30" id="gVo-W0-67I"/>
-                            <constraint firstItem="Pu6-oR-JrU" firstAttribute="leading" secondItem="ok2-qd-9WY" secondAttribute="leading" constant="30" id="iyR-VE-tZl"/>
-                            <constraint firstItem="Pu6-oR-JrU" firstAttribute="top" secondItem="gLc-gI-uvF" secondAttribute="bottom" constant="90" id="kkV-Yi-NAH"/>
                             <constraint firstAttribute="trailing" secondItem="JFx-he-PNB" secondAttribute="trailing" constant="30" id="ko7-G7-UAn"/>
-                            <constraint firstAttribute="bottom" secondItem="Pu6-oR-JrU" secondAttribute="bottom" constant="75" id="rWo-jv-7oQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Pu6-oR-JrU" secondAttribute="bottom" constant="125" id="rWo-jv-7oQ"/>
                             <constraint firstAttribute="width" constant="350" id="xe3-QE-AAw"/>
                         </constraints>
                     </view>
@@ -71,6 +74,9 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <namedColor name="darkGray">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
