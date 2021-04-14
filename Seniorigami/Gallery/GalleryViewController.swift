@@ -46,18 +46,18 @@ class GalleryViewController: UIViewController {
         // tambah viewdidgesture
     }
     
-   
+
     
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var gallery = Database.shared.getGalleryList()[0]
+        let gallery = Database.shared.getGalleryList()[0]
         
         
         let selectedRow = galleryCollectionView.indexPathsForSelectedItems?[0].row
         let destination = segue.destination as? PopupViewController
         destination?.selectedGallery = gallery
         
-     
+        destination?.galleryViewController = self
         
     }
 }
@@ -72,9 +72,12 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
             let origamiGallery = Database.shared.getGallery(origami: origamis[indexPath.row])
             
             if origamiGallery.image != nil {
+               // cell.galleryImageView.image = Database.shared.getGallery(origami: origami).image
                 cell.galleryImageView.image = origamiGallery.image
             } else {
+               
                 cell.galleryImageView.image = UIImage(named: origami.image!)
+                
             }
             
             cell.titleLabel.text = origami.name!

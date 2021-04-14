@@ -10,11 +10,12 @@ import UIKit
 class PopupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var selectedGallery: Gallery?
-    
+    var galleryViewController: GalleryViewController?
     
     @IBOutlet weak var popUpCV: UICollectionView!
     let popUpId = "PopupGalleryCVC"
     let popUpNextId = "PopupGalleryNextCVC"
+    
     
     @IBOutlet weak var pageIndicator: UIPageControl!
     
@@ -33,10 +34,10 @@ class PopupViewController: UIViewController, UIImagePickerControllerDelegate, UI
         self.modalPresentationStyle = .fullScreen
         
         self.view.isUserInteractionEnabled = true
+
         dismissPopup()
         
-        popUpCV.reloadData()
-        
+
         /*
          origamiName.text = selectedGallery?.origami?.name
          origamiQuotes.text = selectedGallery?.origami?.quote
@@ -54,6 +55,7 @@ class PopupViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     
     @objc private func dismissPopupTouchOutside() {
+        galleryViewController?.galleryCollectionView.reloadData()
         self.dismiss(animated: true)
     }
 }
@@ -74,8 +76,6 @@ extension PopupViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     
     @objc func openCamera(_ sender: Any) {
-        print("hello")
-        
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.allowsEditing = true
@@ -92,6 +92,9 @@ extension PopupViewController: UICollectionViewDelegate, UICollectionViewDataSou
             
         }
         Database.shared.setGalleryImage(gallery: selectedGallery!, image: photoPopup)
+        let before = selectedGallery?.origami
+        
+        selectedGallery = Database.shared.getGallery(origami: before!)
         popUpCV.reloadData()
     }
     
