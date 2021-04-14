@@ -9,12 +9,12 @@ import UIKit
 
 class StepsViewController: UIViewController {
     
-    var selected: String = ""
+    var selected: Origami? = nil
 
     @IBOutlet weak var stepsNavigationBar: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = selected
+        self.title = selected?.name
 
     }
     /*

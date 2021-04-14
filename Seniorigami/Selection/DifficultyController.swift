@@ -10,45 +10,41 @@ import UIKit
 class DifficultyController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var selected: String = ""
-    var origamis = [OrigamiSelect]()
+    var selected: Mode? = nil
+//    var origamis = [OrigamiSelect]()
+    var origamiList = [Origami]()
     let origamiCollectionViewCellId = "OrigamiCollectionViewCell"
+    
+    var selectedDifficulty = Mode()
     
     var dataOrigami = Database.shared.getOrigamiList()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = selected
-        
+        self.title = selected?.difficulty
         collectionView.delegate = self
         
         let nibCell = UINib(nibName: origamiCollectionViewCellId, bundle: nil)
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-
         collectionView.register(nibCell, forCellWithReuseIdentifier: origamiCollectionViewCellId)
-                
-//        let dataTitle = ["Plane","Fox","Cat","Dog","Boat"]
-//        let dataStep = ["10 Steps","5 Steps","15 Steps","20 Steps","25 Steps",]
-//        let dataPaper = ["1 Origami","2 Origami","3 Origami","4 Origami","5 Origami",]
-//
-        for _ in 1...5 {
-            let origami = OrigamiSelect()
-            origami?.title = "Plane"
-            origami?.step = "10 Steps"
-            origami?.paper = "1 Origami"
-
-            origamis.append(origami!)
+        print(dataOrigami.count)
+        for i in 0...dataOrigami.count - 1 {
+            if dataOrigami[i].mode?.difficulty == selected?.difficulty{
+                origamiList.append(dataOrigami[i])
+                print(dataOrigami[i].mode, selected?.difficulty)
+            }
         }
-
-        
         collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination  = segue.destination as? StepsViewController
         let selecteditem = collectionView.indexPathsForSelectedItems?[0].row
-        destination?.selected = dataOrigami[selecteditem!].name!
+//        let origamiSelected = Origami()
+        
+        destination?.selected = dataOrigami[selecteditem!]
         print(dataOrigami[selecteditem!].name!)
+        
     }
 
 }
@@ -59,7 +55,7 @@ extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSo
         }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return origamis.count
+            return origamiList.count
         }
 
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -67,28 +63,17 @@ extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSo
             return UIEdgeInsets(top: inset, left: inset, bottom:inset, right:inset)
         }
 
-//        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//            return CGSize(width: UIScreen.main.bounds.width, height: 591)
-//        }
-
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: origamiCollectionViewCellId, for: indexPath) as! OrigamiCollectionViewCell
-//            let origami = origamis[indexPath.row]
-//            cell.origamiImg.image = UIImage(named: "Plane")
-//            cell.titleLabel.text = origami.title!
-//            cell.stepLabel.text = origami.step!
-//            cell.paperLabel.text = origami.paper!
             
-            let origami = Database.shared.getOrigamiList()[indexPath.row]
+            let origami = origamiList[indexPath.row]
             
             cell.titleLabel.text = origami.name!
-//            cell.paperLabel.text = origami.paper!
-//            cell.stepLabel.text = "\(origami.steps!) Steps"
             cell.origamiImg.image = UIImage(named: origami.image!)
             cell.stepLabel.attributedText =  imageLabel("\(origami.steps!) Steps", "square.stack.3d.down.forward.fill")
             cell.paperLabel.attributedText = imageLabel("\(origami.paper!)", "doc.fill")
-            cell.stepLabel.backgroundColor = UIColor(named: "card\(selected)")
-            cell.paperLabel.backgroundColor = UIColor(named: "card\(selected)")
+            cell.stepLabel.backgroundColor = UIColor(named: "card\((selected?.difficulty)!)")
+            cell.paperLabel.backgroundColor = UIColor(named: "card\((selected?.difficulty)!)")
             
             return cell
         }
@@ -97,7 +82,7 @@ extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSo
 //            let origami = origamis[indexPath.row]
 //            print("\(indexPath.row) - \(origami.title!)")
             let selecteditem = dataOrigami[indexPath.row]
-            print(selecteditem.name)
+//            print(selecteditem.name)
             performSegue(withIdentifier: "selectedOrigamiSegue", sender: self)
         }
 }

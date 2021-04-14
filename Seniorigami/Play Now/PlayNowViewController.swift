@@ -35,9 +35,9 @@ class PlayNowViewController: UIViewController {
         
         if let destination = segue.destination as? DifficultyController {
             if selectedRow == 0 {
-                destination.selected = "Featured"
+                destination.selected = Database.shared.getModeList()[selectedRow - 2]
             } else {
-                destination.selected = database[selectedRow - 2].difficulty ?? "Difficulty"
+                destination.selected = Database.shared.getModeList()[selectedRow - 2]
             }
         }
     }

@@ -36,8 +36,9 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
     func setButtonFavorite(view: UIButton, favStatus: Bool){
         switch favStatus {
         case true:
-            view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            view.backgroundColor = UIColor(red: 0.949, green: 0.788, blue: 0.298, alpha: 1)
             view.setTitle("Favorited", for: .normal)
+            view.layer.borderWidth = 0
 //            let image = UIImage(systemName: "star.fill")
             let smallConfig = UIImage.SymbolConfiguration(pointSize: 15, weight: .bold, scale: .small)
             let smol = UIImage(systemName: "star.fill", withConfiguration: smallConfig)
@@ -48,6 +49,7 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
             view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 //            view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             view.setImage(UIImage(systemName: "plus"), for: .normal)
+            view.layer.borderWidth = 1
             view.setTitle("Favorite", for: .normal)
             
             break
