@@ -19,5 +19,5 @@ class StepCell: UICollectionViewCell {
         origamiStepCount.sizeToFit()
         origamiStepCount.layer.cornerRadius = 10
     }
-
+    
 }

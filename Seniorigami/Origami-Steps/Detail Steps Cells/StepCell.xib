@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="350" height="570"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-EM-lAw">
-                                <rect key="frame" x="30" y="389.66666666666669" width="290" height="80"/>
+                                <rect key="frame" x="30" y="392" width="290" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="C0W-d2-Ca6"/>
                                 </constraints>
@@ -31,10 +31,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spF-i8-VFk">
-                                <rect key="frame" x="30" y="30" width="290" height="287.66666666666669"/>
+                                <rect key="frame" x="30" y="30" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="Urh-Xj-W44"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-jD-OHU" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="141.33333333333334" y="347.66666666666669" width="67.333333333333343" height="32"/>
+                                <rect key="frame" x="141.33333333333334" y="350" width="67.333333333333343" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="kUI-jC-MNB"/>
                                 </constraints>
@@ -57,7 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-H3-PvS">
-                                <rect key="frame" x="163" y="501.66666666666669" width="24" height="16.666666666666629"/>
+                                <rect key="frame" x="163" y="504" width="24" height="14.333333333333314"/>
                                 <color key="tintColor" name="darkGray"/>
                             </imageView>
                         </subviews>

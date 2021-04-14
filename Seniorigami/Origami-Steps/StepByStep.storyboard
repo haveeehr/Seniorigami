@@ -18,19 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mPp-3q-EnH">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mPp-3q-EnH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" name="backgroundGray"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="mfU-R9-Fdn">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="mfU-R9-Fdn" customClass="CollectionViewFlowLayout" customModule="Seniorigami" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="estimatedItemSize" width="250" height="420"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n4L-ph-yKJ">
-                                        <rect key="frame" x="28" y="8" width="128" height="128"/>
+                                        <rect key="frame" x="8" y="8" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gh4-C0-X32">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -57,7 +56,7 @@
                     <navigationItem key="navigationItem" title="Steps" largeTitleDisplayMode="never" id="1ym-C5-NX5">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="ghq-W8-8iW">
                             <connections>
-                                <action selector="finishBtnClicked:" destination="uu6-IL-Hj7" id="hjN-m5-2s2"/>
+                                <segue destination="tkl-jE-NA2" kind="show" identifier="finishedOrigami" id="uBe-eU-GxR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSt-sT-f6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6052.1739130434789" y="26.785714285714285"/>
+            <point key="canvasLocation" x="6048" y="17"/>
         </scene>
         <!--Congratulations-->
         <scene sceneID="pPH-Xf-f5Z">

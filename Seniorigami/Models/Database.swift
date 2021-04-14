@@ -38,7 +38,16 @@ class Database{
                              Instruction(images: ["plane 8","plane 8-1","plane 8-2"], desc: "Flip the paper to the back side, fold to create the wing."),
                              Instruction(images: ["plane 9","plane 9-1"], desc: "Secure the fold by pressing"),
                              Instruction(images: ["plane 10"], desc: "Paper airplane is ready to fly!")])
-        instructions.append([Instruction(images: ["None"], desc: "None")])
+        
+        instructions.append([Instruction(images: ["Fox"], desc: "Fold the paper in half. Fold the paper in half. Fold the paper in half. Fold the paper in half. Fold the paper in half."),
+                             Instruction(images: ["Fox"], desc: "step 2"),
+                             Instruction(images: ["Fox"], desc: "step 3")])
+        
+        instructions.append([Instruction(images: ["Deer"], desc: "step 1"),
+                             Instruction(images: ["Deer"], desc: "step 2"),
+                             Instruction(images: ["Deer"], desc: "Fold the paper in half. Fold the paper in half. Fold the paper in half. Fold the paper in half. Fold the paper in half."),
+                             Instruction(images: ["Deer"], desc: "step 4"),
+                             Instruction(images: ["Deer"], desc: "step 5")])
     }
     
     func seedOrigamiList(){
@@ -47,9 +56,9 @@ class Database{
         
         origamis.append(Origami( name: "Plane", steps: 10, paper: "1 Origami Paper", mode: modes[0], quote: "Your wings already exist, all you have to do is fly.", image: "Plane", instructions: instructions[0], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Fox", steps: 15, paper: "1 Origami Paper" ,mode: modes[0], quote: "What does the fox say?", image: "Fox", instructions: instructions[1], finished: true, favourite: false))
+        origamis.append(Origami( name: "Fox", steps: 3, paper: "1 Origami Paper" ,mode: modes[2], quote: "What does the fox say?", image: "Fox", instructions: instructions[1], finished: false, favourite: false))
    
-        origamis.append(Origami( name: "Deer", steps: 20, paper: "1 Origami Paper", mode: modes[1],quote: "I'm quite fawn'd on you, my deer.", image: "Deer", instructions: instructions[1], finished: false, favourite: false))
+        origamis.append(Origami( name: "Deer", steps: 5, paper: "1 Origami Paper", mode: modes[1],quote: "I'm quite fawn'd on you, my deer.", image: "Deer", instructions: instructions[2], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[1], finished: true, favourite: false))
         
@@ -84,15 +93,18 @@ class Database{
         return modes
     }
     
-    func setOrigamiFinished(origami: Origami){
+   func setOrigamiFinished(origami: Origami){
         for i in 0...origamis.count-1{
             if origamis[i].name == origami.name  {
                 origamis[i].finished = true
-            return 
+                return
             }
         }
-   }
-    
+  }
+    func setLog(origami: Origami, steps : Int){
+        log.lastPlayed = origami
+        log.progress = steps 
+    }
 }
 
 

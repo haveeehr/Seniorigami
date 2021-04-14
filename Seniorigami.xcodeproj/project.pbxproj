@@ -43,6 +43,7 @@
 		90D336392621219D00222480 /* CardCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D336382621219D00222480 /* CardCellAnimation.swift */; };
 		9C00308926258FBC007D8182 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308726258FBC007D8182 /* StepCell.swift */; };
 		9C00308A26258FBC007D8182 /* StepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C00308826258FBC007D8182 /* StepCell.xib */; };
+		9C00308C2626EB62007D8182 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		90D336382621219D00222480 /* CardCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellAnimation.swift; sourceTree = "<group>"; };
 		9C00308726258FBC007D8182 /* StepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
 		9C00308826258FBC007D8182 /* StepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepCell.xib; sourceTree = "<group>"; };
+		9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */,
+				9C00308B2626EB62007D8182 /* CongratulationsViewController.swift */,
 			);
 			path = Congratulations;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
 				9C00308926258FBC007D8182 /* StepCell.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
+				9C00308C2626EB62007D8182 /* CongratulationsViewController.swift in Sources */,
 				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
 				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
