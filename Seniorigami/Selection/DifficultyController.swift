@@ -80,6 +80,9 @@ extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSo
                 cell.crownImage.isHidden = false
             }
             
+            
+            cell.setButtonFavorite(view: cell.favoriteBtn, favStatus: origami.favourite!)
+            
             return cell
         }
 

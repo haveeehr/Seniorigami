@@ -30,7 +30,9 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
 //        favoriteBtn.setImage(UIImage(named: "plus"), for: .normal)
 //        favoriteBtn.setImage(UIImage(named: "star.fill"), for: .highlighted)
         crownImage.isHidden = true
+       
     }
+    
     
     @IBAction func isFavorited(_ sender: Any) {
         isFavorite.toggle()

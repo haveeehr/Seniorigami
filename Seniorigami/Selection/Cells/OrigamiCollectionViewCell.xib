@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7G-uj-7kU" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="153" y="127.5" width="44" height="20.5"/>
+                                <rect key="frame" x="133" y="127.5" width="84" height="30.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkGray"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-fP-CI3" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="153" y="158" width="44.5" height="20.5"/>
+                                <rect key="frame" x="133" y="168" width="84.5" height="30.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="darkGray"/>
                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KHN-Xu-QAc">
-                                <rect key="frame" x="50" y="228.5" width="250" height="250"/>
+                                <rect key="frame" x="50" y="248.5" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Gws-qp-f3X"/>
                                     <constraint firstAttribute="width" constant="250" id="isj-B8-yVD"/>
@@ -153,10 +153,10 @@
     </objects>
     <designables>
         <designable name="3Pd-fP-CI3">
-            <size key="intrinsicContentSize" width="44.5" height="20.5"/>
+            <size key="intrinsicContentSize" width="84.5" height="30.5"/>
         </designable>
         <designable name="J7G-uj-7kU">
-            <size key="intrinsicContentSize" width="44" height="20.5"/>
+            <size key="intrinsicContentSize" width="84" height="30.5"/>
         </designable>
     </designables>
     <resources>
