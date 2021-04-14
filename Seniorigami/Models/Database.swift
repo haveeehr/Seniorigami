@@ -141,6 +141,15 @@ class Database{
     func deleteFavourite(index: Int){
        favourites.remove(at: index)
     }
+    
+    func getOrigami(byName name: String) ->Origami{
+        for i in 0 ... origamis.count - 1 {
+            if origamis[i].name == name{
+                return origamis[i]
+            }
+        }
+        return origamis[0]
+    }
 }
 
 
