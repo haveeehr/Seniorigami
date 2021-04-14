@@ -11,13 +11,13 @@ class DifficultyController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var selected: Mode? = nil
-//    var origamis = [OrigamiSelect]()
     var origamiList = [Origami]()
     let origamiCollectionViewCellId = "OrigamiCollectionViewCell"
     
     var selectedDifficulty = Mode()
     
     var dataOrigami = Database.shared.getOrigamiList()
+    var favoriteOrigami = Database.shared.getFavouriteList()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class DifficultyController: UIViewController {
         for i in 0...dataOrigami.count - 1 {
             if dataOrigami[i].mode?.difficulty == selected?.difficulty{
                 origamiList.append(dataOrigami[i])
-                print(dataOrigami[i].mode, selected?.difficulty)
+//                print(dataOrigami[i].mode, selected?.difficulty)
             }
         }
         collectionView.reloadData()
@@ -42,11 +42,12 @@ class DifficultyController: UIViewController {
         let selecteditem = collectionView.indexPathsForSelectedItems?[0].row
 //        let origamiSelected = Origami()
         
-        destination?.selected = dataOrigami[selecteditem!]
-        print(dataOrigami[selecteditem!].name!)
-        
+        destination?.selected = origamiList[selecteditem!]
+        print(origamiList[selecteditem!].name!)
+        print(favoriteOrigami)
     }
-
+    
+    
 }
 
 extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -74,6 +75,10 @@ extension DifficultyController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.paperLabel.attributedText = imageLabel("\(origami.paper!)", "doc.fill")
             cell.stepLabel.backgroundColor = UIColor(named: "card\((selected?.difficulty)!)")
             cell.paperLabel.backgroundColor = UIColor(named: "card\((selected?.difficulty)!)")
+            
+            if origami.finished! {
+                cell.crownImage.isHidden = false
+            }
             
             return cell
         }

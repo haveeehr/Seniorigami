@@ -14,8 +14,12 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var paperLabel: UILabel!
     @IBOutlet weak var origamiImg: UIImageView!
     @IBOutlet weak var favoriteBtn: UIButton!
+    @IBOutlet weak var crownImage: UIImageView!
     
     var isFavorite: Bool = false
+//    var favoriteOrigami = Database.shared
+    var origamis = [Origami]()
+    var dataorigami = Database.shared.getOrigamiList()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +29,7 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
         favoriteBtn.layer.borderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
 //        favoriteBtn.setImage(UIImage(named: "plus"), for: .normal)
 //        favoriteBtn.setImage(UIImage(named: "star.fill"), for: .highlighted)
+        crownImage.isHidden = true
     }
     
     @IBAction func isFavorited(_ sender: Any) {
@@ -39,19 +44,19 @@ class OrigamiCollectionViewCell: UICollectionViewCell {
             view.backgroundColor = UIColor(red: 0.949, green: 0.788, blue: 0.298, alpha: 1)
             view.setTitle("Favorited", for: .normal)
             view.layer.borderWidth = 0
-//            let image = UIImage(systemName: "star.fill")
             let smallConfig = UIImage.SymbolConfiguration(pointSize: 15, weight: .bold, scale: .small)
             let smol = UIImage(systemName: "star.fill", withConfiguration: smallConfig)
             view.setImage(smol, for: .normal)
-//            view.imageEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+            
+            Database.shared.addFavorites(name: titleLabel.text!)
+            
             break
         case false:
             view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//            view.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             view.setImage(UIImage(systemName: "plus"), for: .normal)
             view.layer.borderWidth = 1
             view.setTitle("Favorite", for: .normal)
-            
+            Database.shared.addFavorites(name: titleLabel.text!)
             break
 //        default:
 //            view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
