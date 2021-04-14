@@ -34,11 +34,22 @@
                     <connections>
                         <outlet property="tableView" destination="xBP-59-Ng0" id="Mcw-mW-2Wi"/>
                         <segue destination="Hp1-BM-Oxk" kind="show" identifier="segueDifficulty" id="nEm-d3-jGJ"/>
+                        <segue destination="POf-2K-E3u" kind="show" identifier="segueFeatured" id="7Ej-Y5-vUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwn-ox-qPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3436.2318840579715" y="27.455357142857142"/>
+        </scene>
+        <!--StepByStep-->
+        <scene sceneID="rek-1U-oa9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StepByStep" id="POf-2K-E3u" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zll-O8-wM6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhl-ai-79z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4280" y="-62"/>
         </scene>
         <!--Difficulty-->
         <scene sceneID="4lj-Rt-6a6">
