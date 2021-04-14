@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopupGalleryCVC" id="bAi-us-u1r" customClass="PopupGalleryCVC" customModule="Seniorigami" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="607"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="607"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHa-pC-3zQ" customClass="GenericCard" customModule="Seniorigami" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="607"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origami" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3G-Fw-C1Y">
+                                <rect key="frame" x="30" y="40" width="290" height="58"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="darkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMK-Mt-UBb">
+                                <rect key="frame" x="30" y="120" width="290" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="darkGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wkg-Zc-c0Z">
+                                <rect key="frame" x="30" y="192" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="6iB-AS-AyL"/>
+                                    <constraint firstAttribute="height" constant="290" id="wBU-bm-5Ei"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="607" id="PEk-TQ-R9y"/>
+                            <constraint firstAttribute="trailing" secondItem="vMK-Mt-UBb" secondAttribute="trailing" constant="30" id="S62-a9-pT3"/>
+                            <constraint firstAttribute="width" constant="350" id="S6D-te-tPM"/>
+                            <constraint firstItem="vMK-Mt-UBb" firstAttribute="leading" secondItem="zHa-pC-3zQ" secondAttribute="leading" constant="30" id="WgN-nA-Aq1"/>
+                            <constraint firstAttribute="trailing" secondItem="s3G-Fw-C1Y" secondAttribute="trailing" constant="30" id="cH3-GJ-OYj"/>
+                            <constraint firstItem="Wkg-Zc-c0Z" firstAttribute="centerX" secondItem="zHa-pC-3zQ" secondAttribute="centerX" id="fvV-OD-ELG"/>
+                            <constraint firstItem="vMK-Mt-UBb" firstAttribute="top" secondItem="s3G-Fw-C1Y" secondAttribute="bottom" constant="22" id="k9I-eR-RvZ"/>
+                            <constraint firstItem="s3G-Fw-C1Y" firstAttribute="top" secondItem="zHa-pC-3zQ" secondAttribute="top" constant="40" id="mcB-Rh-MRV"/>
+                            <constraint firstAttribute="bottom" secondItem="Wkg-Zc-c0Z" secondAttribute="bottom" constant="125" id="uLD-Ea-dWR"/>
+                            <constraint firstItem="s3G-Fw-C1Y" firstAttribute="leading" secondItem="zHa-pC-3zQ" secondAttribute="leading" constant="30" id="wbt-HX-Mkr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="yl9-lb-MRN"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zHa-pC-3zQ" secondAttribute="bottom" id="AoM-cH-qQF"/>
+                <constraint firstAttribute="bottom" secondItem="zHa-pC-3zQ" secondAttribute="bottom" id="KGj-GX-Psj"/>
+                <constraint firstItem="zHa-pC-3zQ" firstAttribute="top" secondItem="bAi-us-u1r" secondAttribute="top" id="UNf-Rz-1Zy"/>
+                <constraint firstItem="zHa-pC-3zQ" firstAttribute="leading" secondItem="bAi-us-u1r" secondAttribute="leading" id="X8W-2D-41d"/>
+                <constraint firstAttribute="trailing" secondItem="zHa-pC-3zQ" secondAttribute="trailing" id="yfN-Ja-qdP"/>
+            </constraints>
+            <connections>
+                <outlet property="photoPopUp" destination="Wkg-Zc-c0Z" id="5cD-BK-95a"/>
+                <outlet property="popUpOrigami" destination="s3G-Fw-C1Y" id="9Ue-Cn-pqg"/>
+                <outlet property="quotesPopUpGallery" destination="vMK-Mt-UBb" id="rSZ-8K-5O4"/>
+            </connections>
+            <point key="canvasLocation" x="-78.461538461538453" y="155.33175355450237"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="darkGray">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

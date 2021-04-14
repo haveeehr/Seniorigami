@@ -4,7 +4,7 @@
 //
 //  Created by Clara Anggraini on 08/04/21.
 //
-
+import UIKit
 import Foundation
 
 class Database{
@@ -40,20 +40,20 @@ class Database{
                              Instruction(images: ["plane 10"], desc: "Paper airplane is ready to fly!")])
         
         instructions.append([Instruction(images: ["crane 1","crane 1-0","crane 1-1","crane 1-2","crane 1-3"], desc: "Fold the left edge over to the right edge."),
-                            Instruction(images: ["crane 2","crane 2-1","crane 2-2","crane 2-3","crane 2-4"], desc: "Unfold the paper and fold the top edge over to the bottom edge."),
-                            Instruction(images: ["crane 3","crane 3-1","crane 3-2","crane 3-3","crane 3-4"], desc: "Rotate the paper and fold the left point to the right point."),
-                            Instruction(images: ["crane 4","crane 4-1","crane 4-2","crane 4-3","crane 4-4"], desc: "Unfold the paper and fold the top point down to the bottom point."),
-                            Instruction(images: ["crane 5","crane 5-1","crane 5-2","crane 5-3","crane 5-4"], desc: "Bring the left and right corners towards yourself and press it down."),
-                            Instruction(images: ["crane 6","crane 6-1","crane 6-2","crane 6-3","crane 6-4"], desc: "Fold both of the edges of the front layer to the central crease and unfold it."),
-                            Instruction(images: ["crane 7","crane 7-1","crane 7-2","crane 7-3","crane 7-4", "crane 7-5"], desc: "Fold the top point down to the central crease and unfold it."),
-                            Instruction(images: ["crane 8","crane 8-1","crane 8-2","crane 8-3"], desc: "Open up the bottom point. Push the left and right edges towards the middle and flatten it."),
-                            Instruction(images: ["crane 9"], desc: "Flip the paper over, from left to right."),
-                            Instruction(images: ["crane 10","crane 10-1","crane 10-2","crane 10-3"], desc: "Fold bottom left and right diagonal edges to the middle."),
-                            Instruction(images: ["crane 11"], desc: "Flip the paper over."),
-                            Instruction(images: ["crane 12","crane 12-1"], desc: "Fold the bottom right point to the right and unfold it."),
-                            Instruction(images: ["crane 13","crane 13-1"], desc: "Inside reverse fold from the previous step's crease."),
-                            Instruction(images: ["crane 14"], desc: "Repeat the same step on the left side."),
-                            Instruction(images: ["crane 15"], desc: "Choose one end to be the crane's head and fold it. Crane is finished!")])
+                             Instruction(images: ["crane 2","crane 2-1","crane 2-2","crane 2-3","crane 2-4"], desc: "Unfold the paper and fold the top edge over to the bottom edge."),
+                             Instruction(images: ["crane 3","crane 3-1","crane 3-2","crane 3-3","crane 3-4"], desc: "Rotate the paper and fold the left point to the right point."),
+                             Instruction(images: ["crane 4","crane 4-1","crane 4-2","crane 4-3","crane 4-4"], desc: "Unfold the paper and fold the top point down to the bottom point."),
+                             Instruction(images: ["crane 5","crane 5-1","crane 5-2","crane 5-3","crane 5-4"], desc: "Bring the left and right corners towards yourself and press it down."),
+                             Instruction(images: ["crane 6","crane 6-1","crane 6-2","crane 6-3","crane 6-4"], desc: "Fold both of the edges of the front layer to the central crease and unfold it."),
+                             Instruction(images: ["crane 7","crane 7-1","crane 7-2","crane 7-3","crane 7-4", "crane 7-5"], desc: "Fold the top point down to the central crease and unfold it."),
+                             Instruction(images: ["crane 8","crane 8-1","crane 8-2","crane 8-3"], desc: "Open up the bottom point. Push the left and right edges towards the middle and flatten it."),
+                             Instruction(images: ["crane 9"], desc: "Flip the paper over, from left to right."),
+                             Instruction(images: ["crane 10","crane 10-1","crane 10-2","crane 10-3"], desc: "Fold bottom left and right diagonal edges to the middle."),
+                             Instruction(images: ["crane 11"], desc: "Flip the paper over."),
+                             Instruction(images: ["crane 12","crane 12-1"], desc: "Fold the bottom right point to the right and unfold it."),
+                             Instruction(images: ["crane 13","crane 13-1"], desc: "Inside reverse fold from the previous step's crease."),
+                             Instruction(images: ["crane 14"], desc: "Repeat the same step on the left side."),
+                             Instruction(images: ["crane 15"], desc: "Choose one end to be the crane's head and fold it. Crane is finished!")])
         
         instructions.append([Instruction(images: ["bird 1 (1)", "bird 1 (2)", "bird 1 (3)", "bird 1 (4)", "bird 1 (5)"], desc: "Fold the left point over to the right point."),
                              Instruction(images: ["bird 2 (1)", "bird 2 (2)", "bird 2 (3)", "bird 2 (4)"], desc: "Fold the lower left and right diagonal edges to the middle."),
@@ -91,10 +91,12 @@ class Database{
         origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[3], finished: true, favourite: false))
         
         origamis.append(Origami( name: "Dog", steps: 23, paper: "1 Origami Paper", mode: modes[1], quote: "Dogs are not our whole life, but they make our lives whole.", image: "Dog", instructions: instructions[3], finished: false, favourite: false))
-    
+        
         origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[3], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[3], finished: false, favourite: false))
+        
+        galleryList.append(Gallery(origami: origamis[1], image: nil , date: Date(), name: "Yola"))
     }
     
     func deleteOrigami(index: Int){
@@ -136,7 +138,7 @@ class Database{
     }
     
     func deleteFavourite(index: Int){
-       favourites.remove(at: index)
+        favourites.remove(at: index)
     }
     
     func getOrigami(byName name: String) ->Origami{
@@ -149,26 +151,67 @@ class Database{
     }
     
     func addFavorites(name: String){
-            for n in 0...origamis.count-1 {
-                if origamis[n].name == name{
-                    if origamis[n].favourite == false {
-                        favourites.append(Favourite(origami: origamis[n]))
-                        origamis[n].favourite = true
-                    } else if origamis[n].favourite == true {
-                        origamis[n].favourite = false
-                        for m in 0...favourites.count-1 {
-                            if favourites[m].origami?.name == name {
-                                favourites.remove(at: m)
-                                print("Delete Successful")
-                                return
-                            }
+        for n in 0...origamis.count-1 {
+            if origamis[n].name == name{
+                if origamis[n].favourite == false {
+                    favourites.append(Favourite(origami: origamis[n]))
+                    origamis[n].favourite = true
+                } else if origamis[n].favourite == true {
+                    origamis[n].favourite = false
+                    for m in 0...favourites.count-1 {
+                        if favourites[m].origami?.name == name {
+                            favourites.remove(at: m)
+                            print("Delete Successful")
+                            return
                         }
                     }
-                    print("Added to favorites")
-                    return
                 }
+                print("Added to favorites")
+                return
             }
         }
+    }
+    
+    func getOrigamiByMode(mode: String) -> [Origami] {
+        var origamiByMode = [Origami]()
+        for i in 0...origamis.count-1 {
+            if origamis[i].mode?.difficulty == mode {
+                origamiByMode.append(origamis[i])
+            }
+        }
+        return origamiByMode
+    }
+    
+    
+    func getGalleryByName(named: String) -> [Gallery] {
+        var galleryByName = [Gallery]()
+        for i in 0...galleryList.count-1 {
+            if galleryList[i].origami?.name == named {
+                galleryByName.append(galleryList[i])
+            }
+        }
+        return galleryByName
+    }
+    
+    func setGalleryImage( gallery: Gallery, image: UIImage) {
+        for i in 0...galleryList.count - 1 {
+            if galleryList[i].name == gallery.name {
+                galleryList[i].image = image
+                print("hello")
+                return
+            }
+        }
+    }
+    
+    func getGallery(origami: Origami) -> Gallery {
+        
+        for i in 0...galleryList.count - 1 {
+            if galleryList[i].origami?.name == origami.name {
+                return galleryList[i]
+            }
+        }
+        return Gallery()
+    }
 }
 
 
