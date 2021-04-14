@@ -95,6 +95,9 @@ class Database{
         origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[3], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[3], finished: false, favourite: false))
+        favourites.append(Favourite(origami: origamis[0]))
+        favourites.append(Favourite(origami: origamis[1]))
+        favourites.append(Favourite(origami: origamis[2]))
     }
     
     func deleteOrigami(index: Int){

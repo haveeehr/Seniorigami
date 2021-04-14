@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Gallery {
     var origami: Origami?
-    var image: String?
+    var image: UIImage?
     var date: Date?
     var name: String?
+    
 }

@@ -68,14 +68,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
     }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if Database.shared.getFavouriteList().isEmpty == true{
-            navigationItem.rightBarButtonItem = nil
-            return 0
-        }else{
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editFavorite))
-            return Database.shared.getFavouriteList().count
-        }
-        
+        return Database.shared.getFavouriteList().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
