@@ -30,6 +30,8 @@
 		78758CAF261EB96A005BFC36 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CAE261EB96A005BFC36 /* Log.swift */; };
 		78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CB1261EC4CD005BFC36 /* Instruction.swift */; };
 		78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CBC261EEF5C005BFC36 /* Mode.swift */; };
+		78E1F5EF262737BE00196A02 /* FavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E1F5ED262737BE00196A02 /* FavouriteCollectionViewCell.swift */; };
+		78E1F5F0262737BE00196A02 /* FavouriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E1F5EE262737BE00196A02 /* FavouriteCollectionViewCell.xib */; };
 		9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BDF7261F607400AC8FBA /* ModeCell.swift */; };
 		9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BDF8261F607400AC8FBA /* ModeCell.xib */; };
 		9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE02261F688800AC8FBA /* RecentCell.swift */; };
@@ -69,6 +71,8 @@
 		78758CAE261EB96A005BFC36 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		78758CB1261EC4CD005BFC36 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		78758CBC261EEF5C005BFC36 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		78E1F5ED262737BE00196A02 /* FavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		78E1F5EE262737BE00196A02 /* FavouriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteCollectionViewCell.xib; sourceTree = "<group>"; };
 		9060BDF7261F607400AC8FBA /* ModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCell.swift; sourceTree = "<group>"; };
 		9060BDF8261F607400AC8FBA /* ModeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeCell.xib; sourceTree = "<group>"; };
 		9060BE02261F688800AC8FBA /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		3B830CE5261C3491009FA130 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
+				78E1F5EC2627379A00196A02 /* Cells */,
 				3B830CD8261C320C009FA130 /* Favourite.storyboard */,
 				3B830CEF261C356A009FA130 /* FavouriteViewController.swift */,
 			);
@@ -205,6 +210,15 @@
 				78758CBC261EEF5C005BFC36 /* Mode.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		78E1F5EC2627379A00196A02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				78E1F5ED262737BE00196A02 /* FavouriteCollectionViewCell.swift */,
+				78E1F5EE262737BE00196A02 /* FavouriteCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9060BDE9261F5BCB00AC8FBA /* Card Cells */ = {
@@ -295,6 +309,7 @@
 				9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
+				78E1F5F0262737BE00196A02 /* FavouriteCollectionViewCell.xib in Resources */,
 				3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */,
 				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
 				9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */,
@@ -322,6 +337,7 @@
 				9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */,
 				9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
+				78E1F5EF262737BE00196A02 /* FavouriteCollectionViewCell.swift in Sources */,
 				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,

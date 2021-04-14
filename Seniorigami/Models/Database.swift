@@ -134,6 +134,10 @@ class Database{
         log.lastPlayed = origami
         log.progress = steps
     }
+    
+    func deleteFavourite(index: Int){
+       favourites.remove(at: index)
+    }
 }
 
 

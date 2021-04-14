@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iob-Fu-dns">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,12 +13,48 @@
             <objects>
                 <viewController id="ZEl-r6-Wpx" customClass="FavouriteViewController" customModule="Seniorigami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dAk-Cr-3x8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-lg-Wse">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="10" id="RhQ-0Y-les">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jKq-5a-QOg">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="216"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="168" height="216"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZEl-r6-Wpx" id="2OJ-ua-wla"/>
+                                    <outlet property="delegate" destination="ZEl-r6-Wpx" id="MOT-Qp-h1T"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hjj-7A-lcQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hjj-7A-lcQ" firstAttribute="trailing" secondItem="NZa-lg-Wse" secondAttribute="trailing" id="3ov-bk-S9q"/>
+                            <constraint firstItem="NZa-lg-Wse" firstAttribute="leading" secondItem="hjj-7A-lcQ" secondAttribute="leading" id="Ar2-hE-ERh"/>
+                            <constraint firstItem="NZa-lg-Wse" firstAttribute="top" secondItem="hjj-7A-lcQ" secondAttribute="top" id="aKU-F4-kbG"/>
+                            <constraint firstItem="hjj-7A-lcQ" firstAttribute="bottom" secondItem="NZa-lg-Wse" secondAttribute="bottom" id="rUp-KT-TFc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite" largeTitleDisplayMode="always" id="mmf-5d-aU8"/>
+                    <connections>
+                        <outlet property="collectionView" destination="NZa-lg-Wse" id="Z4I-cs-ziz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwX-jw-4rs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,7 +68,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ifc-Xc-P8V">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
