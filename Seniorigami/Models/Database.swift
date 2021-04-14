@@ -147,6 +147,28 @@ class Database{
         }
         return origamis[0]
     }
+    
+    func addFavorites(name: String){
+            for n in 0...origamis.count-1 {
+                if origamis[n].name == name{
+                    if origamis[n].favourite == false {
+                        favourites.append(Favourite(origami: origamis[n]))
+                        origamis[n].favourite = true
+                    } else if origamis[n].favourite == true {
+                        origamis[n].favourite = false
+                        for m in 0...favourites.count-1 {
+                            if favourites[m].origami?.name == name {
+                                favourites.remove(at: m)
+                                print("Delete Successful")
+                                return
+                            }
+                        }
+                    }
+                    print("Added to favorites")
+                    return
+                }
+            }
+        }
 }
 
 
