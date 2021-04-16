@@ -63,7 +63,10 @@ class OrigamiTestCollectionViewCell: UICollectionViewCell {
         
         isFavorite = currentOrigami.favourite!
         setButtonFavorite(view: favoriteButton, favStatus: isFavorite)
+        
+        
     }
+    
     
     @IBAction func isFavorited(_ sender: Any) {
         

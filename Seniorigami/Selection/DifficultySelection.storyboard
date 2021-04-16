@@ -58,11 +58,22 @@
                     <connections>
                         <outlet property="difficultySelectionCollectionView" destination="XfM-sw-YXy" id="Tgg-Be-GqA"/>
                         <outlet property="difficultySelectionNavigation" destination="8fF-P3-o9y" id="VsT-gw-sMV"/>
+                        <segue destination="w4G-19-z6V" kind="show" identifier="selectedOrigamiSegue" id="WRu-Ct-CT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPI-FJ-KoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6048" y="17"/>
+            <point key="canvasLocation" x="6123" y="17"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="8mV-G7-0lB">
+            <objects>
+                <viewControllerPlaceholder id="w4G-19-z6V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Nk4-J2-FVx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suV-4j-nLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6736" y="-29"/>
         </scene>
     </scenes>
     <resources>

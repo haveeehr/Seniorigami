@@ -13,7 +13,11 @@ class DifficultySelectionController: UIViewController {
     
     @IBOutlet weak var difficultySelectionNavigation: UINavigationItem!
     
+    var indexPathSelected = Int()
+    
     var selected = Mode()
+
+    var selecteditem = Origami()
     
     var origamiCategorized = [Origami]()
     
@@ -21,6 +25,7 @@ class DifficultySelectionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        difficultySelectionCollectionView.delegate = self
         
         difficultySelectionNavigation.title = selected.difficulty
         
@@ -34,6 +39,7 @@ class DifficultySelectionController: UIViewController {
         
         origamiCategorized = Database.shared.getOrigamiByMode(mode: selected)
     }
+    
 }
   
     
@@ -52,10 +58,18 @@ extension DifficultySelectionController:UICollectionViewDelegate, UICollectionVi
         let cell = difficultySelectionCollectionView.dequeueReusableCell(withReuseIdentifier: difficultySelectionCollectionViewCellId, for: indexPath) as! OrigamiTestCollectionViewCell
             
         cell.setupCard(currentOrigami:origamiCategorized[indexPath.row])
+        
+        
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         selecteditem = origamiCategorized[indexPath.row]
+        let destination = (storyboard?.instantiateViewController(identifier: "StepByStep"))! as StepsViewController
+        destination.selected = selecteditem
+        performSegue(withIdentifier: "selectedOrigamiSegue", sender: self)
+        
+    }
   
     
     

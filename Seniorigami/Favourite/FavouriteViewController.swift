@@ -13,6 +13,7 @@ class FavouriteViewController: UIViewController {
     var origamis = Database.shared.getFavouriteList()
     let favoriteCellId = "FavouriteCollectionViewCell"
     var favouriteCell = FavouriteCollectionViewCell()
+    var currentOrigami = Origami()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
         if let indexPath = collectionView?.indexPathForItem(at: loc) {
             favouriteCell.deleteBtn.isHidden = true
             Database.shared.deleteFavourite(index: indexPath.row)
+//            Database.shared.appendFavourites(byOrigamiObject: currentOrigami, favourite: false)
             collectionView.reloadData()
         }
        
@@ -108,6 +110,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
             cell.origamiStepsLbl.text = String((origami?.steps)!) + " steps"
             
             cell.origamiPaperLbl.text = origami?.paper!
+            currentOrigami = origami!
             
         }
         return cell
