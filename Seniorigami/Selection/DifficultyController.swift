@@ -31,7 +31,6 @@ class DifficultyController: UIViewController {
         for i in 0...dataOrigami.count - 1 {
             if dataOrigami[i].mode?.difficulty == selected?.difficulty{
                 origamiList.append(dataOrigami[i])
-//                print(dataOrigami[i].mode, selected?.difficulty)
             }
         }
         collectionView.reloadData()

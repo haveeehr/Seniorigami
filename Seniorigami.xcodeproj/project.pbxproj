@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B78B8CB2629AB9C00E2A478 /* PopupGalleryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8C12629AB9B00E2A478 /* PopupGalleryCVC.swift */; };
+		3B78B8CD2629AB9C00E2A478 /* PopupGalleryNextCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8C32629AB9B00E2A478 /* PopupGalleryNextCVC.swift */; };
+		3B78B8CE2629AB9C00E2A478 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8C42629AB9B00E2A478 /* GalleryCollectionViewCell.xib */; };
+		3B78B8CF2629AB9C00E2A478 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8C52629AB9B00E2A478 /* GalleryCollectionViewCell.swift */; };
+		3B78B8D02629AB9C00E2A478 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8C62629AB9B00E2A478 /* Gallery.storyboard */; };
+		3B78B8D12629AB9C00E2A478 /* PopupGalleryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8C72629AB9B00E2A478 /* PopupGalleryCVC.xib */; };
+		3B78B8D22629AB9C00E2A478 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8C82629AB9C00E2A478 /* GalleryViewController.swift */; };
+		3B78B8D32629AB9C00E2A478 /* PopupGalleryNextCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8C92629AB9C00E2A478 /* PopupGalleryNextCVC.xib */; };
+		3B78B8D42629AB9C00E2A478 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8CA2629AB9C00E2A478 /* PopupViewController.swift */; };
+		3B78B8DE2629ABF700E2A478 /* GalleryDisabledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8DC2629ABF700E2A478 /* GalleryDisabledCell.swift */; };
+		3B78B8DF2629ABF700E2A478 /* GalleryDisabledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8DD2629ABF700E2A478 /* GalleryDisabledCell.xib */; };
 		3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CBF261C2EEE009FA130 /* AppDelegate.swift */; };
 		3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */; };
 		3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CC3261C2EEE009FA130 /* ViewController.swift */; };
@@ -15,8 +26,6 @@
 		3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CCA261C2EEF009FA130 /* LaunchScreen.storyboard */; };
 		3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CD5261C31EE009FA130 /* PlayNow.storyboard */; };
 		3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CD8261C320C009FA130 /* Favourite.storyboard */; };
-		3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B830CDD261C322E009FA130 /* Gallery.storyboard */; };
-		3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CE0261C3294009FA130 /* GalleryViewController.swift */; };
 		3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEC261C3534009FA130 /* PlayNowViewController.swift */; };
 		3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEF261C356A009FA130 /* FavouriteViewController.swift */; };
 		3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CF8261C38EB009FA130 /* StepsViewController.swift */; };
@@ -24,15 +33,6 @@
 		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
 		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
 		3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD054242627627200BC91ED /* CongratulationsViewController.swift */; };
-		3BD0543626276B2E00BC91ED /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0543426276B2E00BC91ED /* GalleryCollectionViewCell.swift */; };
-		3BD0543726276B2E00BC91ED /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD0543526276B2E00BC91ED /* GalleryCollectionViewCell.xib */; };
-		3BD0543B26276B8300BC91ED /* PopupGalleryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0543926276B8300BC91ED /* PopupGalleryCVC.swift */; };
-		3BD0543C26276B8300BC91ED /* PopupGalleryCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD0543A26276B8300BC91ED /* PopupGalleryCVC.xib */; };
-		3BD0544026276BC500BC91ED /* PopupGalleryNextCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0543E26276BC500BC91ED /* PopupGalleryNextCVC.swift */; };
-		3BD0544126276BC500BC91ED /* PopupGalleryNextCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD0543F26276BC500BC91ED /* PopupGalleryNextCVC.xib */; };
-		3BD0544426276C0300BC91ED /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0544326276C0300BC91ED /* PopupViewController.swift */; };
-		3BD0545126276C8000BC91ED /* GalleryDisabledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0544F26276C8000BC91ED /* GalleryDisabledCell.swift */; };
-		3BD0545226276C8000BC91ED /* GalleryDisabledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD0545026276C8000BC91ED /* GalleryDisabledCell.xib */; };
 		51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */; };
 		51E903222620081E0028F7A1 /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */; };
 		51E903232620081E0028F7A1 /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */; };
@@ -61,6 +61,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B78B8C12629AB9B00E2A478 /* PopupGalleryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGalleryCVC.swift; sourceTree = "<group>"; };
+		3B78B8C32629AB9B00E2A478 /* PopupGalleryNextCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupGalleryNextCVC.swift; sourceTree = "<group>"; };
+		3B78B8C42629AB9B00E2A478 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B78B8C52629AB9B00E2A478 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B78B8C62629AB9B00E2A478 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		3B78B8C72629AB9B00E2A478 /* PopupGalleryCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupGalleryCVC.xib; sourceTree = "<group>"; };
+		3B78B8C82629AB9C00E2A478 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3B78B8C92629AB9C00E2A478 /* PopupGalleryNextCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupGalleryNextCVC.xib; sourceTree = "<group>"; };
+		3B78B8CA2629AB9C00E2A478 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		3B78B8DC2629ABF700E2A478 /* GalleryDisabledCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisabledCell.swift; sourceTree = "<group>"; };
+		3B78B8DD2629ABF700E2A478 /* GalleryDisabledCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryDisabledCell.xib; sourceTree = "<group>"; };
 		3B830CBC261C2EEE009FA130 /* Seniorigami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seniorigami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B830CBF261C2EEE009FA130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +82,6 @@
 		3B830CCD261C2EEF009FA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B830CD5261C31EE009FA130 /* PlayNow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayNow.storyboard; sourceTree = "<group>"; };
 		3B830CD9261C320C009FA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Seniorigami/Base.lproj/Favourite.storyboard; sourceTree = "<group>"; };
-		3B830CDD261C322E009FA130 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
-		3B830CE0261C3294009FA130 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		3B830CEC261C3534009FA130 /* PlayNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNowViewController.swift; sourceTree = "<group>"; };
 		3B830CEF261C356A009FA130 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		3B830CF8261C38EB009FA130 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
@@ -80,15 +89,6 @@
 		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
 		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
 		3BD054242627627200BC91ED /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
-		3BD0543426276B2E00BC91ED /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		3BD0543526276B2E00BC91ED /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
-		3BD0543926276B8300BC91ED /* PopupGalleryCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupGalleryCVC.swift; sourceTree = "<group>"; };
-		3BD0543A26276B8300BC91ED /* PopupGalleryCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupGalleryCVC.xib; sourceTree = "<group>"; };
-		3BD0543E26276BC500BC91ED /* PopupGalleryNextCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupGalleryNextCVC.swift; sourceTree = "<group>"; };
-		3BD0543F26276BC500BC91ED /* PopupGalleryNextCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupGalleryNextCVC.xib; sourceTree = "<group>"; };
-		3BD0544326276C0300BC91ED /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		3BD0544F26276C8000BC91ED /* GalleryDisabledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDisabledCell.swift; sourceTree = "<group>"; };
-		3BD0545026276C8000BC91ED /* GalleryDisabledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryDisabledCell.xib; sourceTree = "<group>"; };
 		51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiSelect.swift; sourceTree = "<group>"; };
 		51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
 		51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -161,16 +161,17 @@
 		3B830CE4261C341E009FA130 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				3BD0544626276C1A00BC91ED /* Cells */,
-				3B830CE0261C3294009FA130 /* GalleryViewController.swift */,
-				3B830CDD261C322E009FA130 /* Gallery.storyboard */,
-				3BD0543426276B2E00BC91ED /* GalleryCollectionViewCell.swift */,
-				3BD0543526276B2E00BC91ED /* GalleryCollectionViewCell.xib */,
-				3BD0543926276B8300BC91ED /* PopupGalleryCVC.swift */,
-				3BD0543A26276B8300BC91ED /* PopupGalleryCVC.xib */,
-				3BD0543E26276BC500BC91ED /* PopupGalleryNextCVC.swift */,
-				3BD0543F26276BC500BC91ED /* PopupGalleryNextCVC.xib */,
-				3BD0544326276C0300BC91ED /* PopupViewController.swift */,
+				3B78B8DC2629ABF700E2A478 /* GalleryDisabledCell.swift */,
+				3B78B8DD2629ABF700E2A478 /* GalleryDisabledCell.xib */,
+				3B78B8C62629AB9B00E2A478 /* Gallery.storyboard */,
+				3B78B8C52629AB9B00E2A478 /* GalleryCollectionViewCell.swift */,
+				3B78B8C42629AB9B00E2A478 /* GalleryCollectionViewCell.xib */,
+				3B78B8C82629AB9C00E2A478 /* GalleryViewController.swift */,
+				3B78B8C12629AB9B00E2A478 /* PopupGalleryCVC.swift */,
+				3B78B8C72629AB9B00E2A478 /* PopupGalleryCVC.xib */,
+				3B78B8C32629AB9B00E2A478 /* PopupGalleryNextCVC.swift */,
+				3B78B8C92629AB9C00E2A478 /* PopupGalleryNextCVC.xib */,
+				3B78B8CA2629AB9C00E2A478 /* PopupViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -237,15 +238,6 @@
 				3BD054242627627200BC91ED /* CongratulationsViewController.swift */,
 			);
 			path = Congratulations;
-			sourceTree = "<group>";
-		};
-		3BD0544626276C1A00BC91ED /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				3BD0544F26276C8000BC91ED /* GalleryDisabledCell.swift */,
-				3BD0545026276C8000BC91ED /* GalleryDisabledCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		51E9031D262007A90028F7A1 /* Cells */ = {
@@ -372,23 +364,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B830CCC261C2EEF009FA130 /* LaunchScreen.storyboard in Resources */,
-				3BD0544126276BC500BC91ED /* PopupGalleryNextCVC.xib in Resources */,
 				3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */,
-				3B830CDE261C322E009FA130 /* Gallery.storyboard in Resources */,
 				3B830CC9261C2EEF009FA130 /* Assets.xcassets in Resources */,
 				9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */,
-				3BD0543726276B2E00BC91ED /* GalleryCollectionViewCell.xib in Resources */,
+				3B78B8D32629AB9C00E2A478 /* PopupGalleryNextCVC.xib in Resources */,
 				3B830CC7261C2EEE009FA130 /* Main.storyboard in Resources */,
+				3B78B8CE2629AB9C00E2A478 /* GalleryCollectionViewCell.xib in Resources */,
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
-				3BD0545226276C8000BC91ED /* GalleryDisabledCell.xib in Resources */,
 				78E1F5F0262737BE00196A02 /* FavouriteCollectionViewCell.xib in Resources */,
+				3B78B8DF2629ABF700E2A478 /* GalleryDisabledCell.xib in Resources */,
 				3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */,
 				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
 				9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */,
-				3BD0543C26276B8300BC91ED /* PopupGalleryCVC.xib in Resources */,
 				9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */,
 				51E903232620081E0028F7A1 /* OrigamiCollectionViewCell.xib in Resources */,
 				3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */,
+				3B78B8D02629AB9C00E2A478 /* Gallery.storyboard in Resources */,
+				3B78B8D12629AB9C00E2A478 /* PopupGalleryCVC.xib in Resources */,
 				9C00308A26258FBC007D8182 /* StepCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,33 +397,33 @@
 				9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */,
 				78758CA6261EB92F005BFC36 /* Origami.swift in Sources */,
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
-				3BD0544026276BC500BC91ED /* PopupGalleryNextCVC.swift in Sources */,
-				3BD0543626276B2E00BC91ED /* GalleryCollectionViewCell.swift in Sources */,
 				78758CAF261EB96A005BFC36 /* Log.swift in Sources */,
-				3B830CE1261C3294009FA130 /* GalleryViewController.swift in Sources */,
+				3B78B8CF2629AB9C00E2A478 /* GalleryCollectionViewCell.swift in Sources */,
 				3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */,
 				90D336392621219D00222480 /* CardCellAnimation.swift in Sources */,
 				3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */,
 				9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */,
 				9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */,
 				3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */,
-				3BD0544426276C0300BC91ED /* PopupViewController.swift in Sources */,
 				78E1F5EF262737BE00196A02 /* FavouriteCollectionViewCell.swift in Sources */,
 				78758CBD261EEF5C005BFC36 /* Mode.swift in Sources */,
+				3B78B8D42629AB9C00E2A478 /* PopupViewController.swift in Sources */,
 				78758CAC261EB95E005BFC36 /* Gallery.swift in Sources */,
 				78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */,
-				3BD0543B26276B8300BC91ED /* PopupGalleryCVC.swift in Sources */,
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
 				9C00308926258FBC007D8182 /* StepCell.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
+				3B78B8CB2629AB9C00E2A478 /* PopupGalleryCVC.swift in Sources */,
 				51E903222620081E0028F7A1 /* OrigamiCollectionViewCell.swift in Sources */,
 				51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */,
 				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
-				3BD0545126276C8000BC91ED /* GalleryDisabledCell.swift in Sources */,
 				78758CA2261EB922005BFC36 /* Database.swift in Sources */,
 				9060BE09261F68BA00AC8FBA /* HeaderCell.swift in Sources */,
+				3B78B8DE2629ABF700E2A478 /* GalleryDisabledCell.swift in Sources */,
+				3B78B8D22629AB9C00E2A478 /* GalleryViewController.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
+				3B78B8CD2629AB9C00E2A478 /* PopupGalleryNextCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

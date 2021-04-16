@@ -32,7 +32,7 @@ class GalleryViewController: UIViewController {
         
         let nibGalleryCell = UINib(nibName: galleryCellId, bundle: nil) // mendaftarkan XIB
         let nibDisabledCell = UINib(nibName: disabledCellId, bundle: nil)
-
+        
         titleSegmented.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor(named: "AccentColor" ),
             NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18.0)
@@ -64,6 +64,7 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if origamis[indexPath.row].finished == true {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: galleryCellId, for: indexPath) as! GalleryCollectionViewCell
             let origami = origamis[indexPath.row] //untuk 1 origami
@@ -105,9 +106,9 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
             
         }
         
-        else {
-            print("\(indexPath.row) - \(origami.name!)")
-        }
+//        else {
+//            print("\(indexPath.row) - \(origami.name!)")
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
