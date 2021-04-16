@@ -17,5 +17,4 @@ struct Origami{
     var instructions: [Instruction]?
     var finished: Bool?
     var favourite: Bool?
-    
 }

@@ -137,7 +137,9 @@ class Database{
     }
     
     func deleteFavourite(index: Int){
+        let origami = favourites[index].origami
         favourites.remove(at: index)
+        setFavourite(isFavourite: false, origami: origami!)
     }
     
     func getOrigami(byName name: String) ->Origami{
@@ -166,6 +168,46 @@ class Database{
                 }
                 return
             }
+        }
+    }
+    
+    func appendFavourites(byOrigamiObject origami: Origami, favourite: Bool){
+        var exist = false
+        var deleteAtIndex = Int()
+        if favourites.count == 0 {
+            favourites.append(Favourite(origami: origami))
+            setFavourite(isFavourite: favourite, origami: origami)
+            return
+        }else{
+            
+            for i in 0...favourites.count - 1 {
+                if favourites[i].origami?.name != origami.name {
+                    exist = false
+                    
+                    
+                }else{
+                    exist = true
+                    deleteAtIndex = i
+                }
+            }
+            if exist == false {
+                
+                favourites.append(Favourite(origami: origami))
+                print("append successfull")
+                setFavourite(isFavourite: favourite, origami: origami)
+                return
+                
+            }else{
+                favourites.remove(at: deleteAtIndex)
+                setFavourite(isFavourite: favourite, origami: origami)
+                return
+                
+                
+            }
+            
+            
+            
+            
         }
     }
     
@@ -243,6 +285,15 @@ class Database{
         for i in 0...origamis.count - 1 {
             if origamis[i].name == gallery.origami?.name {
                 origamis[i].finished = true
+                return
+            }
+        }
+    }
+    
+    func setFavourite(isFavourite: Bool, origami: Origami) {
+        for i in 0...origamis.count - 1 {
+            if origamis[i].name == origami.name{
+                origamis[i].favourite = isFavourite
                 return
             }
         }

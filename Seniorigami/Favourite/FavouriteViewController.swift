@@ -12,6 +12,7 @@ class FavouriteViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var origamis = Database.shared.getFavouriteList()
     let favoriteCellId = "FavouriteCollectionViewCell"
+    var favouriteCell = FavouriteCollectionViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
     @objc func deleteFav(gestureRecognizer: UITapGestureRecognizer) {
         let loc = gestureRecognizer.location(in: collectionView)
         if let indexPath = collectionView?.indexPathForItem(at: loc) {
+            favouriteCell.deleteBtn.isHidden = true
             Database.shared.deleteFavourite(index: indexPath.row)
             collectionView.reloadData()
         }
@@ -77,7 +79,7 @@ extension FavouriteViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: favoriteCellId, for: indexPath) as! FavouriteCollectionViewCell
-        
+        favouriteCell = cell
         
         if Database.shared.getFavouriteList().isEmpty == false{
             let origami = Database.shared.getFavouriteList()[indexPath.row].origami

@@ -51,8 +51,7 @@ extension DifficultySelectionController:UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = difficultySelectionCollectionView.dequeueReusableCell(withReuseIdentifier: difficultySelectionCollectionViewCellId, for: indexPath) as! OrigamiTestCollectionViewCell
             
-        cell.origamiStepImg.image = UIImage(named: origamiCategorized[indexPath.row].image!)
-        
+        cell.setupCard(currentOrigami:origamiCategorized[indexPath.row])
         return cell
     }
     
