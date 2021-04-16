@@ -10,11 +10,15 @@ import UIKit
 class StepsViewController: UIViewController {
     
     @IBOutlet weak var stepsCollection: UICollectionView!
+    
     @IBOutlet weak var finishButton: UIBarButtonItem!
+    
     @IBOutlet weak var stepsNavigationBar: UINavigationItem!
     
     var selected : Origami? = nil
+    
     let stepCellID = "StepCell"
+    
     var dataLog = Database.shared.getLog()
     
     
@@ -22,7 +26,7 @@ class StepsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = selected?.name
-        
+    
         let nibcell = UINib(nibName: stepCellID, bundle: nil)
         
         stepsCollection.register(nibcell, forCellWithReuseIdentifier: stepCellID)
@@ -57,17 +61,19 @@ class StepsViewController: UIViewController {
 
 extension StepsViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width-40, height: collectionView.frame.height-40)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (selected?.instructions!.count)!
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width-40, height: collectionView.frame.height-40)
+    }
+    
+   
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = stepsCollection.dequeueReusableCell(withReuseIdentifier: stepCellID, for: indexPath) as! StepCell
+        let cell = stepsCollection.dequeueReusableCell(withReuseIdentifier: stepCellID, for: indexPath) as! StepCell
         let color = UIColor.init(named: (selected?.mode?.color)!)
         var imgs: [UIImage] = []
         for index in 0...(selected?.instructions![indexPath.row].images.count)!-1{
@@ -84,31 +90,6 @@ extension StepsViewController:UICollectionViewDelegate, UICollectionViewDataSour
         
     }
     
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset tartgetContentOffset: UnsafeMutablePointer<CGPoint>)
-    {
-        let layout = self.stepsCollection?.collectionViewLayout as!  UICollectionViewFlowLayout
-        
-        let cellWidthIncludingSpacing = (stepsCollection.frame.width-40) + layout.minimumLineSpacing
-        
-        var offset = tartgetContentOffset.pointee
-        
-        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
-        
-        let roundedIndex = round(index)
-        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left ,y: 0)
-        tartgetContentOffset.pointee = offset
-        
-        Database.shared.setLog(origami: selected!, steps: Int(roundedIndex))
-        
-        
-        if(Int(roundedIndex) == ((selected?.steps!)! - 1)){
-            self.navigationItem.rightBarButtonItem?.isEnabled = true
-        }else{
-            self.navigationItem.rightBarButtonItem?.isEnabled = false
-        }
-        
-    }
     
 }
 

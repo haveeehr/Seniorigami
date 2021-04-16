@@ -33,8 +33,8 @@
                     <navigationItem key="navigationItem" title="Play Now" id="jp3-Sg-c4c"/>
                     <connections>
                         <outlet property="tableView" destination="xBP-59-Ng0" id="Mcw-mW-2Wi"/>
-                        <segue destination="Hp1-BM-Oxk" kind="show" identifier="segueDifficulty" id="nEm-d3-jGJ"/>
                         <segue destination="POf-2K-E3u" kind="show" identifier="segueFeatured" id="7Ej-Y5-vUy"/>
+                        <segue destination="sVo-Gx-ekK" kind="show" identifier="segueDifficultySelection" id="dRs-bY-3WR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwn-ox-qPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,15 +51,15 @@
             </objects>
             <point key="canvasLocation" x="4280" y="-62"/>
         </scene>
-        <!--Difficulty-->
-        <scene sceneID="4lj-Rt-6a6">
+        <!--DifficultySelection-->
+        <scene sceneID="bcZ-W0-wab">
             <objects>
-                <viewControllerPlaceholder storyboardName="Difficulty" id="Hp1-BM-Oxk" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RVi-Pl-IuT"/>
+                <viewControllerPlaceholder storyboardName="DifficultySelection" id="sVo-Gx-ekK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Gpk-eE-bOM"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XpD-6e-TR8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PjL-CW-KYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4268" y="27"/>
+            <point key="canvasLocation" x="4128" y="90"/>
         </scene>
         <!--Play Now-->
         <scene sceneID="gdJ-3g-G2X">

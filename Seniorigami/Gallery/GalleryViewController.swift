@@ -11,21 +11,23 @@ class GalleryViewController: UIViewController {
     @IBOutlet weak var galleryCollectionView: UICollectionView!
     @IBOutlet weak var titleSegmented: UISegmentedControl!
     
-    var origamis = Database.shared.getOrigamiByMode(mode: "Easy") // dah sesuai mode ;
+    var origamis = Database.shared.getEasyOrigami()
     
     let galleryCellId = "GalleryCollectionViewCell" //untuk identifier
     let disabledCellId = "GalleryDisabledCell"
  
     @IBAction func suitDidChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            origamis = Database.shared.getOrigamiByMode(mode: "Easy")
+            origamis = Database.shared.getEasyOrigami()
         } else if sender.selectedSegmentIndex == 1 {
-            origamis = Database.shared.getOrigamiByMode(mode: "Medium")
+            origamis = Database.shared.getMediumOrigami()
         } else {
-            origamis = Database.shared.getOrigamiByMode(mode: "Hard")
+            origamis =   Database.shared.getHardOrigami()
         }
         galleryCollectionView.reloadData()
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,8 @@ class GalleryViewController: UIViewController {
         let nibDisabledCell = UINib(nibName: disabledCellId, bundle: nil)
         
         titleSegmented.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor(named: "AccentColor" ),
-            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18.0)
+            NSAttributedString.Key.foregroundColor: UIColor(named: "AccentColor" )!,
+            NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18.0)!
         ], for: UIControl.State.selected)
         
         galleryCollectionView.register(nibGalleryCell, forCellWithReuseIdentifier: galleryCellId)
@@ -44,10 +46,10 @@ class GalleryViewController: UIViewController {
         galleryCollectionView.reloadData()
         
         // tambah viewdidgesture
+
     }
     
 
-    
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let gallery = Database.shared.getGalleryList()[0]

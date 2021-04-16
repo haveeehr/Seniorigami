@@ -127,7 +127,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
     @IBAction func backToHome(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
         
-        galleryList.append(Gallery(origami: selectedOrigami, image: userImage, date: date, name: nameTextField.text ))
+        Database.shared.appendGalleryList(gallery: Gallery(origami: selectedOrigami, image: userImage, date: date, name: nameTextField.text ))
         
     }
     

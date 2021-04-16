@@ -84,19 +84,18 @@ class Database{
         
         origamis.append(Origami(name: "Bird", steps: 14, paper: "1 Origami Paper", mode: modes[0], quote: "The bird who dares to fall is the bird who learns to fly", image: "Bird", instructions: instructions[2], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Fox", steps: 28, paper: "2 Origami Paper" ,mode: modes[2], quote: "What does the fox say?", image: "Fox", instructions: instructions[3], finished: true, favourite: false))
+        origamis.append(Origami( name: "Fox", steps: 28, paper: "2 Origami Paper" ,mode: modes[2], quote: "What does the fox say?", image: "Fox", instructions: instructions[3], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Deer", steps: 20, paper: "1 Origami Paper", mode: modes[1],quote: "I'm quite fawn'd on you, my deer.", image: "Deer", instructions: instructions[3], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[3], finished: true, favourite: false))
+        origamis.append(Origami( name: "Butterfly", steps: 35, paper: "3 Origami Paper", mode: modes[2], quote: "The wings of transformation are born of patience and struggle.", image: "Butterfly", instructions: instructions[3], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Dog", steps: 23, paper: "1 Origami Paper", mode: modes[1], quote: "Dogs are not our whole life, but they make our lives whole.", image: "Dog", instructions: instructions[3], finished: false, favourite: false))
         
-        origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[3], finished: false, favourite: true))
+        origamis.append(Origami( name: "Cat", steps: 33, paper: "2 Origami Paper", mode: modes[2], quote: "Why couldn't the old cat see? He suffered from cataract.", image: "Cat", instructions: instructions[3], finished: false, favourite: false))
         
         origamis.append(Origami( name: "Squirrel", steps: 22, paper: "1 Origami Paper", mode: modes[1], quote: "What do you call a space travelling squirrel? An astronut.", image: "Squirrel", instructions: instructions[3], finished: false, favourite: false))
         
-        galleryList.append(Gallery(origami: origamis[1], image: nil , date: Date(), name: "Yola"))
     }
     
     func deleteOrigami(index: Int){
@@ -161,27 +160,54 @@ class Database{
                     for m in 0...favourites.count-1 {
                         if favourites[m].origami?.name == name {
                             favourites.remove(at: m)
-                            print("Delete Successful")
                             return
                         }
                     }
                 }
-                print("Added to favorites")
                 return
             }
         }
     }
     
-    func getOrigamiByMode(mode: String) -> [Origami] {
+    func getOrigamiByMode(mode: Mode) -> [Origami] {
         var origamiByMode = [Origami]()
         for i in 0...origamis.count-1 {
-            if origamis[i].mode?.difficulty == mode {
+            if origamis[i].mode?.difficulty == mode.difficulty {
                 origamiByMode.append(origamis[i])
             }
         }
         return origamiByMode
     }
     
+    func getEasyOrigami()-> [Origami]{
+        var origamiByMode = [Origami]()
+        for i in 0...origamis.count-1 {
+            if origamis[i].mode?.difficulty == "Easy" {
+                origamiByMode.append(origamis[i])
+            }
+        }
+        return origamiByMode
+    }
+    
+    func getMediumOrigami()-> [Origami]{
+        var origamiByMode = [Origami]()
+        for i in 0...origamis.count-1 {
+            if origamis[i].mode?.difficulty == "Medium" {
+                origamiByMode.append(origamis[i])
+            }
+        }
+        return origamiByMode
+    }
+    
+    func getHardOrigami()-> [Origami]{
+        var origamiByMode = [Origami]()
+        for i in 0...origamis.count-1 {
+            if origamis[i].mode?.difficulty == "Hard" {
+                origamiByMode.append(origamis[i])
+            }
+        }
+        return origamiByMode
+    }
     
     func getGalleryByName(named: String) -> [Gallery] {
         var galleryByName = [Gallery]()
@@ -197,7 +223,6 @@ class Database{
         for i in 0...galleryList.count - 1 {
             if galleryList[i].name == gallery.name {
                 galleryList[i].image = image
-                print("hello")
                 return
             }
         }
@@ -211,6 +236,16 @@ class Database{
             }
         }
         return Gallery()
+    }
+    
+    func appendGalleryList(gallery: Gallery){
+        galleryList.append(gallery)
+        for i in 0...origamis.count - 1 {
+            if origamis[i].name == gallery.origami?.name {
+                origamis[i].finished = true
+                return
+            }
+        }
     }
 }
 

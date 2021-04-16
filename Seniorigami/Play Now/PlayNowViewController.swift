@@ -51,7 +51,7 @@ class PlayNowViewController: UIViewController {
             }
             
         } else {
-            let destination = segue.destination as? DifficultyController
+            let destination = segue.destination as? DifficultySelectionController
                     destination?.selected = database[selectedRow - 2]
         }
     }
@@ -63,7 +63,7 @@ extension PlayNowViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             performSegue(withIdentifier: "segueFeatured", sender: self)
         } else if indexPath.row > 1 {
-            performSegue(withIdentifier: "segueDifficulty", sender: self)
+            performSegue(withIdentifier: "segueDifficultySelection", sender: self)
         }
     }
 }

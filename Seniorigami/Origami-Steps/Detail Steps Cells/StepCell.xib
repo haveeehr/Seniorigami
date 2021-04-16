@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-jD-OHU" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="141.33333333333334" y="350" width="67.333333333333343" height="32"/>
+                                <rect key="frame" x="151.33333333333334" y="350" width="47.333333333333343" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="kUI-jC-MNB"/>
                                 </constraints>
@@ -102,7 +102,7 @@
     </objects>
     <designables>
         <designable name="0BT-jD-OHU">
-            <size key="intrinsicContentSize" width="67.333333333333343" height="26.333333333333332"/>
+            <size key="intrinsicContentSize" width="47.333333333333336" height="20.333333333333332"/>
         </designable>
     </designables>
     <resources>

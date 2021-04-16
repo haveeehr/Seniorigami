@@ -18,6 +18,10 @@
 		3B78B8D42629AB9C00E2A478 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8CA2629AB9C00E2A478 /* PopupViewController.swift */; };
 		3B78B8DE2629ABF700E2A478 /* GalleryDisabledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8DC2629ABF700E2A478 /* GalleryDisabledCell.swift */; };
 		3B78B8DF2629ABF700E2A478 /* GalleryDisabledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8DD2629ABF700E2A478 /* GalleryDisabledCell.xib */; };
+		3B78B8F52629BFF900E2A478 /* OrigamiTestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8F32629BFF900E2A478 /* OrigamiTestCollectionViewCell.swift */; };
+		3B78B8F62629BFF900E2A478 /* OrigamiTestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8F42629BFF900E2A478 /* OrigamiTestCollectionViewCell.xib */; };
+		3B78B8F92629C24900E2A478 /* DifficultySelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B78B8F82629C24900E2A478 /* DifficultySelection.storyboard */; };
+		3B78B8FC2629C26000E2A478 /* DifficultySelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B8FB2629C26000E2A478 /* DifficultySelectionController.swift */; };
 		3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CBF261C2EEE009FA130 /* AppDelegate.swift */; };
 		3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */; };
 		3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CC3261C2EEE009FA130 /* ViewController.swift */; };
@@ -29,13 +33,10 @@
 		3B830CED261C3534009FA130 /* PlayNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEC261C3534009FA130 /* PlayNowViewController.swift */; };
 		3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CEF261C356A009FA130 /* FavouriteViewController.swift */; };
 		3B830CF9261C38EB009FA130 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B830CF8261C38EB009FA130 /* StepsViewController.swift */; };
-		3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */; };
 		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
 		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
 		3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD054242627627200BC91ED /* CongratulationsViewController.swift */; };
 		51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */; };
-		51E903222620081E0028F7A1 /* OrigamiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */; };
-		51E903232620081E0028F7A1 /* OrigamiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */; };
 		78758CA2261EB922005BFC36 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA1261EB922005BFC36 /* Database.swift */; };
 		78758CA6261EB92F005BFC36 /* Origami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA5261EB92F005BFC36 /* Origami.swift */; };
 		78758CA9261EB94F005BFC36 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA8261EB94F005BFC36 /* Favourite.swift */; };
@@ -53,7 +54,6 @@
 		9060BE0A261F68BA00AC8FBA /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9060BE08261F68BA00AC8FBA /* HeaderCell.xib */; };
 		9060BE0D261FBA2700AC8FBA /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060BE0C261FBA2700AC8FBA /* PaddingLabel.swift */; };
 		9092210D261FCB4D00514C57 /* OutlineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210C261FCB4D00514C57 /* OutlineLabel.swift */; };
-		90922110261FCF2000514C57 /* DifficultyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092210F261FCF2000514C57 /* DifficultyController.swift */; };
 		90922116261FEAC000514C57 /* GenericCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90922115261FEAC000514C57 /* GenericCard.swift */; };
 		90D336392621219D00222480 /* CardCellAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D336382621219D00222480 /* CardCellAnimation.swift */; };
 		9C00308926258FBC007D8182 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00308726258FBC007D8182 /* StepCell.swift */; };
@@ -72,6 +72,10 @@
 		3B78B8CA2629AB9C00E2A478 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		3B78B8DC2629ABF700E2A478 /* GalleryDisabledCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDisabledCell.swift; sourceTree = "<group>"; };
 		3B78B8DD2629ABF700E2A478 /* GalleryDisabledCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryDisabledCell.xib; sourceTree = "<group>"; };
+		3B78B8F32629BFF900E2A478 /* OrigamiTestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiTestCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B78B8F42629BFF900E2A478 /* OrigamiTestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiTestCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B78B8F82629C24900E2A478 /* DifficultySelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DifficultySelection.storyboard; sourceTree = "<group>"; };
+		3B78B8FB2629C26000E2A478 /* DifficultySelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionController.swift; sourceTree = "<group>"; };
 		3B830CBC261C2EEE009FA130 /* Seniorigami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seniorigami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B830CBF261C2EEE009FA130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B830CC1261C2EEE009FA130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,13 +89,10 @@
 		3B830CEC261C3534009FA130 /* PlayNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayNowViewController.swift; sourceTree = "<group>"; };
 		3B830CEF261C356A009FA130 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		3B830CF8261C38EB009FA130 /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
-		3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Difficulty.storyboard; sourceTree = "<group>"; };
 		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
 		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
 		3BD054242627627200BC91ED /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
 		51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiSelect.swift; sourceTree = "<group>"; };
-		51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiCollectionViewCell.swift; sourceTree = "<group>"; };
-		51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrigamiCollectionViewCell.xib; sourceTree = "<group>"; };
 		78758CA1261EB922005BFC36 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78758CA5261EB92F005BFC36 /* Origami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origami.swift; sourceTree = "<group>"; };
 		78758CA8261EB94F005BFC36 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		9060BE08261F68BA00AC8FBA /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		9060BE0C261FBA2700AC8FBA /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		9092210C261FCB4D00514C57 /* OutlineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineLabel.swift; sourceTree = "<group>"; };
-		9092210F261FCF2000514C57 /* DifficultyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyController.swift; sourceTree = "<group>"; };
 		90922115261FEAC000514C57 /* GenericCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCard.swift; sourceTree = "<group>"; };
 		90D336382621219D00222480 /* CardCellAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellAnimation.swift; sourceTree = "<group>"; };
 		9C00308726258FBC007D8182 /* StepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
@@ -215,8 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				51E9031D262007A90028F7A1 /* Cells */,
-				3BC0DEF9261CA71500AF0630 /* Difficulty.storyboard */,
-				9092210F261FCF2000514C57 /* DifficultyController.swift */,
+				3B78B8F82629C24900E2A478 /* DifficultySelection.storyboard */,
+				3B78B8FB2629C26000E2A478 /* DifficultySelectionController.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -243,8 +243,8 @@
 		51E9031D262007A90028F7A1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				51E903202620081E0028F7A1 /* OrigamiCollectionViewCell.swift */,
-				51E903212620081E0028F7A1 /* OrigamiCollectionViewCell.xib */,
+				3B78B8F32629BFF900E2A478 /* OrigamiTestCollectionViewCell.swift */,
+				3B78B8F42629BFF900E2A478 /* OrigamiTestCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -373,14 +373,14 @@
 				3B830CDA261C320C009FA130 /* Favourite.storyboard in Resources */,
 				78E1F5F0262737BE00196A02 /* FavouriteCollectionViewCell.xib in Resources */,
 				3B78B8DF2629ABF700E2A478 /* GalleryDisabledCell.xib in Resources */,
-				3BC0DEFA261CA71500AF0630 /* Difficulty.storyboard in Resources */,
 				3B830CD6261C31EE009FA130 /* PlayNow.storyboard in Resources */,
 				9060BE05261F688800AC8FBA /* RecentCell.xib in Resources */,
 				9060BDFA261F607400AC8FBA /* ModeCell.xib in Resources */,
-				51E903232620081E0028F7A1 /* OrigamiCollectionViewCell.xib in Resources */,
+				3B78B8F62629BFF900E2A478 /* OrigamiTestCollectionViewCell.xib in Resources */,
 				3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */,
 				3B78B8D02629AB9C00E2A478 /* Gallery.storyboard in Resources */,
 				3B78B8D12629AB9C00E2A478 /* PopupGalleryCVC.xib in Resources */,
+				3B78B8F92629C24900E2A478 /* DifficultySelection.storyboard in Resources */,
 				9C00308A26258FBC007D8182 /* StepCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				90922116261FEAC000514C57 /* GenericCard.swift in Sources */,
-				90922110261FCF2000514C57 /* DifficultyController.swift in Sources */,
 				9060BDF9261F607400AC8FBA /* ModeCell.swift in Sources */,
 				78758CA6261EB92F005BFC36 /* Origami.swift in Sources */,
 				3B830CC4261C2EEE009FA130 /* ViewController.swift in Sources */,
@@ -413,8 +412,8 @@
 				3B830CC0261C2EEE009FA130 /* AppDelegate.swift in Sources */,
 				9C00308926258FBC007D8182 /* StepCell.swift in Sources */,
 				78758CB2261EC4CD005BFC36 /* Instruction.swift in Sources */,
+				3B78B8FC2629C26000E2A478 /* DifficultySelectionController.swift in Sources */,
 				3B78B8CB2629AB9C00E2A478 /* PopupGalleryCVC.swift in Sources */,
-				51E903222620081E0028F7A1 /* OrigamiCollectionViewCell.swift in Sources */,
 				51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */,
 				9060BE04261F688800AC8FBA /* RecentCell.swift in Sources */,
 				3B830CF0261C356A009FA130 /* FavouriteViewController.swift in Sources */,
@@ -424,6 +423,7 @@
 				3B78B8D22629AB9C00E2A478 /* GalleryViewController.swift in Sources */,
 				3B830CC2261C2EEE009FA130 /* SceneDelegate.swift in Sources */,
 				3B78B8CD2629AB9C00E2A478 /* PopupGalleryNextCVC.swift in Sources */,
+				3B78B8F52629BFF900E2A478 /* OrigamiTestCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
