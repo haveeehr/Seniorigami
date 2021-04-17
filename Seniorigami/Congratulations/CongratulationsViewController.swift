@@ -19,6 +19,7 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var crownImage: UIImageView!
     @IBOutlet weak var selectedOrigamiQuotesLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var takeAPhotoButton: UIButton!
     @IBOutlet weak var doneButton: UIBarButtonItem!
@@ -107,6 +108,8 @@ class CongratulationsViewController: UIViewController, UINavigationControllerDel
         takeAPhotoButton.layer.cornerRadius = 21
         
         dateFormatter.dateFormat = "d MMMM yyyy"
+        print(dateFormatter.string(from: date))
+        dateLabel.text = "09 April 2002"
         dateLabel.text = dateFormatter.string(from: date)
         
         nameTextField.clipsToBounds = true

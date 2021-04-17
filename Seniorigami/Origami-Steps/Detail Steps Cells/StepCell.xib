@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-jD-OHU" customClass="PaddingLabel" customModule="Seniorigami" customModuleProvider="target">
-                                <rect key="frame" x="151.33333333333334" y="350" width="47.333333333333343" height="32"/>
+                                <rect key="frame" x="141.33333333333334" y="350" width="67.333333333333343" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="kUI-jC-MNB"/>
                                 </constraints>
@@ -59,24 +59,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8KC-H3-PvS">
-                                <rect key="frame" x="163" y="504" width="24" height="14.333333333333314"/>
-                                <color key="tintColor" name="darkGray"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYM-kF-vwI">
+                                <rect key="frame" x="166" y="522" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VYM-kF-vwI" secondAttribute="height" multiplier="1:1" id="s1e-fD-ljf"/>
+                                    <constraint firstAttribute="width" constant="20" id="zU7-Y4-4Rz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Button">
+                                    <imageReference key="image" image="speaker.wave.2.fill" catalog="system" symbolScale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnOnAudio:" destination="gTV-IL-0wX" eventType="touchUpInside" id="x4Z-9Z-nhm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T1m-EM-lAw" firstAttribute="top" secondItem="0BT-jD-OHU" secondAttribute="bottom" constant="10" id="4Fi-iP-jpk"/>
                             <constraint firstAttribute="trailing" secondItem="T1m-EM-lAw" secondAttribute="trailing" constant="30" id="6IJ-pd-jh3"/>
+                            <constraint firstItem="VYM-kF-vwI" firstAttribute="top" secondItem="T1m-EM-lAw" secondAttribute="bottom" constant="50" id="Akd-qC-O8H"/>
                             <constraint firstItem="0BT-jD-OHU" firstAttribute="centerX" secondItem="LDO-m6-hYa" secondAttribute="centerX" id="DLS-DX-rVS"/>
+                            <constraint firstAttribute="bottom" secondItem="VYM-kF-vwI" secondAttribute="bottom" constant="30" id="DqH-jf-0ij"/>
+                            <constraint firstItem="VYM-kF-vwI" firstAttribute="centerX" secondItem="LDO-m6-hYa" secondAttribute="centerX" id="FJz-DN-Zr8"/>
                             <constraint firstItem="T1m-EM-lAw" firstAttribute="leading" secondItem="LDO-m6-hYa" secondAttribute="leading" constant="30" id="GuR-K8-P4R"/>
-                            <constraint firstItem="8KC-H3-PvS" firstAttribute="centerX" secondItem="LDO-m6-hYa" secondAttribute="centerX" id="Hnh-aJ-WlZ"/>
                             <constraint firstAttribute="width" constant="350" id="Hof-rE-cu7"/>
                             <constraint firstAttribute="height" constant="570" id="OlH-5T-CIi"/>
                             <constraint firstItem="spF-i8-VFk" firstAttribute="leading" secondItem="LDO-m6-hYa" secondAttribute="leading" constant="30" id="PjB-bG-YOH"/>
                             <constraint firstAttribute="trailing" secondItem="spF-i8-VFk" secondAttribute="trailing" constant="30" id="Rzl-6y-Ojc"/>
-                            <constraint firstItem="8KC-H3-PvS" firstAttribute="top" secondItem="T1m-EM-lAw" secondAttribute="bottom" constant="30" id="Vzr-Uu-3cd"/>
-                            <constraint firstAttribute="bottom" secondItem="8KC-H3-PvS" secondAttribute="bottom" constant="50" id="odB-Bd-PxG"/>
                             <constraint firstItem="spF-i8-VFk" firstAttribute="top" secondItem="LDO-m6-hYa" secondAttribute="top" constant="30" id="vdq-FW-kTi"/>
                             <constraint firstItem="0BT-jD-OHU" firstAttribute="top" secondItem="spF-i8-VFk" secondAttribute="bottom" constant="30" id="yKH-Vp-Kar"/>
                         </constraints>
@@ -92,24 +102,21 @@
             </constraints>
             <size key="customSize" width="250" height="419"/>
             <connections>
-                <outlet property="Microphone" destination="8KC-H3-PvS" id="70C-d2-hT8"/>
                 <outlet property="origamiStepCount" destination="0BT-jD-OHU" id="yQ4-Hq-Xb5"/>
                 <outlet property="origamiStepDesc" destination="T1m-EM-lAw" id="KV6-z5-17f"/>
                 <outlet property="origamiStepImg" destination="spF-i8-VFk" id="o9E-Fe-6cT"/>
+                <outlet property="turnOnAudioButton" destination="VYM-kF-vwI" id="Dun-gj-G3t"/>
             </connections>
-            <point key="canvasLocation" x="168" y="29.55665024630542"/>
+            <point key="canvasLocation" x="167.69230769230768" y="29.14691943127962"/>
         </collectionViewCell>
     </objects>
     <designables>
         <designable name="0BT-jD-OHU">
-            <size key="intrinsicContentSize" width="47.333333333333336" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="67.333333333333343" height="26.333333333333332"/>
         </designable>
     </designables>
     <resources>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
-        <namedColor name="darkGray">
-            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

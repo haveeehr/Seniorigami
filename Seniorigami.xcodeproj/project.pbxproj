@@ -36,6 +36,7 @@
 		3BC0DF00261CA83400AF0630 /* StepByStep.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */; };
 		3BC0DF05261CA91D00AF0630 /* Congratulations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */; };
 		3BD054252627627200BC91ED /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD054242627627200BC91ED /* CongratulationsViewController.swift */; };
+		3BF2A874262A9C3500CB5815 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF2A873262A9C3500CB5815 /* AVFoundation.framework */; };
 		51E9031C2620074E0028F7A1 /* OrigamiSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */; };
 		78758CA2261EB922005BFC36 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA1261EB922005BFC36 /* Database.swift */; };
 		78758CA6261EB92F005BFC36 /* Origami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78758CA5261EB92F005BFC36 /* Origami.swift */; };
@@ -92,6 +93,7 @@
 		3BC0DEFF261CA83400AF0630 /* StepByStep.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StepByStep.storyboard; sourceTree = "<group>"; };
 		3BC0DF04261CA91D00AF0630 /* Congratulations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Congratulations.storyboard; sourceTree = "<group>"; };
 		3BD054242627627200BC91ED /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
+		3BF2A873262A9C3500CB5815 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		51E9031B2620074E0028F7A1 /* OrigamiSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrigamiSelect.swift; sourceTree = "<group>"; };
 		78758CA1261EB922005BFC36 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		78758CA5261EB92F005BFC36 /* Origami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origami.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF2A874262A9C3500CB5815 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,7 @@
 			children = (
 				3B830CBE261C2EEE009FA130 /* Seniorigami */,
 				3B830CBD261C2EEE009FA130 /* Products */,
+				3BF2A872262A9C3500CB5815 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,6 +242,14 @@
 				3BD054242627627200BC91ED /* CongratulationsViewController.swift */,
 			);
 			path = Congratulations;
+			sourceTree = "<group>";
+		};
+		3BF2A872262A9C3500CB5815 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BF2A873262A9C3500CB5815 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		51E9031D262007A90028F7A1 /* Cells */ = {

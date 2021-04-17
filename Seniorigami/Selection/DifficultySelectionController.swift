@@ -40,11 +40,20 @@ class DifficultySelectionController: UIViewController {
         origamiCategorized = Database.shared.getOrigamiByMode(mode: selected)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+            let vc = segue.destination as? StepsViewController
+            vc?.selected = selecteditem
+    
+        
+    }
 }
   
     
 
 extension DifficultySelectionController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return origamiCategorized.count
@@ -64,10 +73,26 @@ extension DifficultySelectionController:UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         selecteditem = origamiCategorized[indexPath.row]
-        let destination = (storyboard?.instantiateViewController(identifier: "StepByStep"))! as StepsViewController
-        destination.selected = selecteditem
+        selecteditem = origamiCategorized[indexPath.row]
+        print(selecteditem)
         performSegue(withIdentifier: "selectedOrigamiSegue", sender: self)
+   
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset tartgetContentOffset: UnsafeMutablePointer<CGPoint>)
+    {
+        let layout = self.difficultySelectionCollectionView?.collectionViewLayout as!  UICollectionViewFlowLayout
+        
+        let cellWidthIncludingSpacing = (difficultySelectionCollectionView.frame.width-40) + layout.minimumLineSpacing
+        
+        var offset = tartgetContentOffset.pointee
+        
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        
+        let roundedIndex = round(index)
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left ,y: 0)
+        tartgetContentOffset.pointee = offset
+    
         
     }
   

@@ -24,7 +24,6 @@ class StepsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = selected?.name
     
         let nibcell = UINib(nibName: stepCellID, bundle: nil)
@@ -36,6 +35,10 @@ class StepsViewController: UIViewController {
         stepsCollection?.dataSource = self
         
         self.navigationItem.rightBarButtonItem?.isEnabled = false
+        self.navigationItem.rightBarButtonItem?.tintColor = .clear
+        
+    
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,19 +77,37 @@ extension StepsViewController:UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = stepsCollection.dequeueReusableCell(withReuseIdentifier: stepCellID, for: indexPath) as! StepCell
-        let color = UIColor.init(named: (selected?.mode?.color)!)
-        var imgs: [UIImage] = []
-        for index in 0...(selected?.instructions![indexPath.row].images.count)!-1{
-            imgs.append(UIImage(named: (selected?.instructions![indexPath.row].images[index]!)!)!)
-        }
-        cell.origamiStepImg.image = UIImage.animatedImage(with: imgs, duration: 3)
-        cell.origamiStepCount.text = "\(indexPath.row+1) of \((selected?.steps)!)"
-        cell.origamiStepCount.sizeToFit()
-        cell.origamiStepDesc.text = selected?.instructions![indexPath.row].desc
-        cell.origamiStepCount.layer.backgroundColor = color?.cgColor
+       
         
-        
+        cell.setupCard(selected: selected!, indexPath: indexPath.row)
         return cell
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset tartgetContentOffset: UnsafeMutablePointer<CGPoint>)
+    {
+        let layout = self.stepsCollection?.collectionViewLayout as!  UICollectionViewFlowLayout
+        
+        let cellWidthIncludingSpacing = (stepsCollection.frame.width-40) + layout.minimumLineSpacing
+        
+        var offset = tartgetContentOffset.pointee
+        
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        
+        let roundedIndex = round(index)
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left ,y: 0)
+        tartgetContentOffset.pointee = offset
+        
+        Database.shared.setLog(origami: selected!, steps: Int(roundedIndex))
+        
+        
+        if(Int(roundedIndex) == ((selected?.steps!)! - 1)){
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.navigationItem.rightBarButtonItem?.tintColor = UIView().tintColor
+        }else{
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+            self.navigationItem.rightBarButtonItem?.tintColor = .clear
+        }
         
     }
     

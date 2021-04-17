@@ -271,12 +271,13 @@ class Database{
     }
     
     func getGallery(origami: Origami) -> Gallery {
-        
-        for i in 0...galleryList.count - 1 {
-            if galleryList[i].origami?.name == origami.name {
-                return galleryList[i]
+        if galleryList.count != 0 {
+            for i in 0...galleryList.count - 1 {
+                if galleryList[i].origami?.name == origami.name {
+                    return galleryList[i]
+                }
             }
-        }
+                    }
         return Gallery()
     }
     

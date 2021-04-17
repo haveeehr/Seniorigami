@@ -13,7 +13,8 @@ class GalleryViewController: UIViewController {
     
     var origamis = Database.shared.getEasyOrigami()
     
-    let galleryCellId = "GalleryCollectionViewCell" //untuk identifier
+    let galleryCellId = "GalleryCollectionViewCell"
+    
     let disabledCellId = "GalleryDisabledCell"
  
     @IBAction func suitDidChange(_ sender: UISegmentedControl) {
@@ -47,6 +48,10 @@ class GalleryViewController: UIViewController {
         
         // tambah viewdidgesture
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        galleryCollectionView.reloadData()
     }
     
 
@@ -103,14 +108,10 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let origami = origamis[indexPath.row]
         if origami.finished == true {
-            // print("finished") // taruh modal / pop up
             performSegue(withIdentifier: "PopupSegue", sender: self)
             
         }
-        
-//        else {
-//            print("\(indexPath.row) - \(origami.name!)")
-//        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{

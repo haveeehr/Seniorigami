@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="6123" y="17"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--StepByStep-->
         <scene sceneID="8mV-G7-0lB">
             <objects>
-                <viewControllerPlaceholder id="w4G-19-z6V" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="StepByStep" id="w4G-19-z6V" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Nk4-J2-FVx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suV-4j-nLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

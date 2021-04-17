@@ -45,7 +45,7 @@ class PlayNowViewController: UIViewController {
         if selectedRow == 0 {
             let destination = segue.destination as? StepsViewController
             if  dataLog.lastPlayed != nil {
-                destination?.selected = dataLog.lastPlayed
+                destination?.selected = dataLog.lastPlayed!
             } else {
                 destination?.selected = dataOrigami[randomNumber]
             }
