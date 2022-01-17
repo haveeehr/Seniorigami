@@ -5,6 +5,14 @@
 
 Seniorigami is an app to help the elderly to aimed for elderly to improve their well-being by crafting origamis.
 
+During the pandemic, the elderly is one of the most affected. 
+
+They face many Health Problems which is why physical and mental activity are important to maintain their health. 
+
+There are many challenges to keep them active, challenges like health restrictions, loneliness, lack of stimulations as mental concern can lower their motivation to do physical and mental activities. 
+
+There are lots of way in maintaining their motivation to keep both of their physical and mental health in check, like doing simple activities with the support of their family by walking, dancing, gardening, or making arts and craft.
+
 ## Demo
 
 https://user-images.githubusercontent.com/53168317/149781728-61532ccf-3120-470a-88c9-fdce102feae7.mp4
