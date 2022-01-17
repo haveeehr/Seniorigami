@@ -27,7 +27,7 @@ To choose our color palette, we start from the color that most elderly like whic
 - [Yahya Ayyash Asaduddin - Designer](https://www.linkedin.com/in/yahyayyasha/)
 - [Dimitri Yola - iOS Engineer](https://www.linkedin.com/in/dimitriyola/)
 - [Javier Fransiscus - iOS Engineer](https://www.linkedin.com/in/javier-fransiscus/)
-- [Ghirlandaio Hidayat](https://www.linkedin.com/in/ghirlandaio-koe/)
+- [Ghirlandaio Hidayat - iOS Engineer](https://www.linkedin.com/in/ghirlandaio-koe/)
 - [Clara Anggraini - iOS Engineer](https://www.linkedin.com/in/clara-anggraini/)
 - [Shiddiq Asy Syuhada - iOS Engineer](https://www.linkedin.com/in/shiddiq-asy-syuhada-728329178/)
 
