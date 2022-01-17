@@ -18,8 +18,6 @@ There are lots of way in maintaining their motivation to keep both of their phys
 https://user-images.githubusercontent.com/53168317/149781728-61532ccf-3120-470a-88c9-fdce102feae7.mp4
 
 ## Documentation
-![Seniorigami 2](https://user-images.githubusercontent.com/53168317/149781296-a67bccaa-5d25-4ab7-8da9-e87267ffe5b2.png)
-
 ### Seniorigami Logo
 ![Seniorigami4](https://user-images.githubusercontent.com/53168317/149781281-95432c29-912b-4b2c-9018-18b84c7f7f6f.png)
 
